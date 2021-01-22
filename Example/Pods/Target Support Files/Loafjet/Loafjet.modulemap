@@ -1,0 +1,6 @@
+framework module Loafjet {
+  umbrella header "Loafjet-umbrella.h"
+
+  export *
+  module * { export * }
+}

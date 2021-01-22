@@ -1,0 +1,16 @@
+PODS:
+  - Loafjet (0.1.0)
+
+DEPENDENCIES:
+  - Loafjet (from `../`)
+
+EXTERNAL SOURCES:
+  Loafjet:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Loafjet: 8d225cf1ee07d296d161c582c96283a4996d89c0
+
+PODFILE CHECKSUM: 712d69f1e141da1cfbf6b4b3828489a350f72c0f
+
+COCOAPODS: 1.9.3
