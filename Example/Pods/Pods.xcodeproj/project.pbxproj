@@ -10,11 +10,12 @@
 		124A491E61E58FC1F78D3839FD1257F5 /* Pods-Loafjet_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABB2B8F2139443A56373B3BD56C2DC3 /* Pods-Loafjet_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24858B071748C30792F339FEEE8DB4DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		29C0CD5431F381AEFDEF9606A2043D09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		55C636A425BB31FA0055A79F /* Loaf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C636A325BB31FA0055A79F /* Loaf.swift */; };
+		55C636AC25BB3FCE0055A79F /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C636AB25BB3FCE0055A79F /* Animation.swift */; };
 		5F0B371BC93DE41F7788E7CF23A1D864 /* Loafjet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A8063F45A07881D65D541563FB2C93 /* Loafjet-dummy.m */; };
 		9C10616F6CCA8FC262B7C9A96A4B0B80 /* Pods-Loafjet_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37786471297974A16C7EC24C9C8542A6 /* Pods-Loafjet_Tests-dummy.m */; };
 		B4CBE0031AAE38649E6A3A391697EEE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		E19F98E44A1A03BE2E15F1F96AC9A1E4 /* Loafjet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A11916D1C7EE41BDD94CAC938E11EE /* Loafjet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F7C81788DEF55BF7CEE9DEE360143FF1 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D783EC9B188DB59C14FD74B8FD825F6A /* ReplaceMe.swift */; };
 		FA23643899B350515742215E85BEBC64 /* Pods-Loafjet_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E941F9D8F09C92E15D21E5D04235473C /* Pods-Loafjet_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FECB436CBE93D041DF8AC68C9C71369D /* Pods-Loafjet_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 988C58905FDF2CECF7337F234CDA3B55 /* Pods-Loafjet_Example-dummy.m */; };
 /* End PBXBuildFile section */
@@ -41,17 +42,19 @@
 		1051CA1024C94E5DBA1DC20774430AFA /* Pods-Loafjet_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Loafjet_Example-frameworks.sh"; sourceTree = "<group>"; };
 		1AAE8CCB7DCE59ADC9BA75B8ADE02B0B /* Pods-Loafjet_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Loafjet_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		1CE44F838814E960D6FBB24B6A6C0937 /* Pods-Loafjet_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Loafjet_Tests-Info.plist"; sourceTree = "<group>"; };
-		1D2EAE74847051033FD5EA8D02A2D63C /* Pods_Loafjet_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Loafjet_Example.framework; path = "Pods-Loafjet_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D2EAE74847051033FD5EA8D02A2D63C /* Pods_Loafjet_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loafjet_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FBF10F7E9F7C123C6C7C1A94A3AA1DF /* Pods-Loafjet_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Loafjet_Example.release.xcconfig"; sourceTree = "<group>"; };
-		2749BDD25624A4591A53DDA74BBC96F7 /* Pods_Loafjet_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Loafjet_Tests.framework; path = "Pods-Loafjet_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2749BDD25624A4591A53DDA74BBC96F7 /* Pods_Loafjet_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loafjet_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		290DC0D0A87AC0667D6806B2E66DAF52 /* Pods-Loafjet_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Loafjet_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		297B3BDE7902A5E1287D7C66322637BF /* Pods-Loafjet_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Loafjet_Example.modulemap"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		37786471297974A16C7EC24C9C8542A6 /* Pods-Loafjet_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Loafjet_Tests-dummy.m"; sourceTree = "<group>"; };
-		37F1377614599F9AE4EB6ADD9B9DFBE5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		3B2F65C19C0BC0E838C73A4C6542CE3C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		4664D2FAF14F8BCA3759C82AEFAD2023 /* Loafjet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Loafjet.framework; path = Loafjet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37F1377614599F9AE4EB6ADD9B9DFBE5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		3B2F65C19C0BC0E838C73A4C6542CE3C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4664D2FAF14F8BCA3759C82AEFAD2023 /* Loafjet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Loafjet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8CF0FCE5B9BD94FEF1051446B44AD0 /* Loafjet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Loafjet.debug.xcconfig; sourceTree = "<group>"; };
+		55C636A325BB31FA0055A79F /* Loaf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loaf.swift; sourceTree = "<group>"; };
+		55C636AB25BB3FCE0055A79F /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		5E95D960F99F77ABDC08762196972B3A /* Pods-Loafjet_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Loafjet_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6ABB2B8F2139443A56373B3BD56C2DC3 /* Pods-Loafjet_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Loafjet_Tests-umbrella.h"; sourceTree = "<group>"; };
 		6BADB9110B223C7534B8051821E7A76E /* Loafjet-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Loafjet-Info.plist"; sourceTree = "<group>"; };
@@ -60,13 +63,12 @@
 		8D624BB4262FACF80322CD55C770670B /* Pods-Loafjet_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Loafjet_Tests.modulemap"; sourceTree = "<group>"; };
 		9843B3129418C28F895EEEEDD5A5C0F5 /* Loafjet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Loafjet.release.xcconfig; sourceTree = "<group>"; };
 		988C58905FDF2CECF7337F234CDA3B55 /* Pods-Loafjet_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Loafjet_Example-dummy.m"; sourceTree = "<group>"; };
-		9BAEB017C8B29AA1731505464C7338E9 /* Loafjet.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Loafjet.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9BAEB017C8B29AA1731505464C7338E9 /* Loafjet.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Loafjet.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BF33714A7B37B91E3EE0935448BC208F /* Pods-Loafjet_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Loafjet_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		C03F35D3C0AD098F51CB759006819556 /* Loafjet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Loafjet-prefix.pch"; sourceTree = "<group>"; };
 		D2975FF6006B27D696E2274AB6DFA3C7 /* Pods-Loafjet_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Loafjet_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D6B188ED44EBBF2A878DC004807CE2CE /* Pods-Loafjet_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Loafjet_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D783EC9B188DB59C14FD74B8FD825F6A /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = Loafjet/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		D84874E5A89D0963CF771DE817EAE696 /* Pods-Loafjet_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Loafjet_Example-Info.plist"; sourceTree = "<group>"; };
 		E941F9D8F09C92E15D21E5D04235473C /* Pods-Loafjet_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Loafjet_Example-umbrella.h"; sourceTree = "<group>"; };
 		F3880D3B317AA378523ED7B3AFD2DBAB /* Pods-Loafjet_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Loafjet_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -103,7 +105,7 @@
 		11697BA119C190C0E32B0727B07CB3F2 /* Loafjet */ = {
 			isa = PBXGroup;
 			children = (
-				D783EC9B188DB59C14FD74B8FD825F6A /* ReplaceMe.swift */,
+				55C6369F25BB31D80055A79F /* Source */,
 				568FB24A76CB795473CC95227B8F5A81 /* Pod */,
 				97C23C5F225E8914CDF922A459C7F208 /* Support Files */,
 			);
@@ -153,6 +155,15 @@
 				11697BA119C190C0E32B0727B07CB3F2 /* Loafjet */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		55C6369F25BB31D80055A79F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				55C636A325BB31FA0055A79F /* Loaf.swift */,
+				55C636AB25BB3FCE0055A79F /* Animation.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		568FB24A76CB795473CC95227B8F5A81 /* Pod */ = {
@@ -317,6 +328,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					1D43D5C44FD44A1FCCCEBF773613899F = {
+						LastSwiftMigration = 1230;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -384,7 +400,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F0B371BC93DE41F7788E7CF23A1D864 /* Loafjet-dummy.m in Sources */,
-				F7C81788DEF55BF7CEE9DEE360143FF1 /* ReplaceMe.swift in Sources */,
+				55C636AC25BB3FCE0055A79F /* Animation.swift in Sources */,
+				55C636A425BB31FA0055A79F /* Loaf.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,8 +543,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -635,6 +651,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4F8CF0FCE5B9BD94FEF1051446B44AD0 /* Loafjet.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -655,6 +672,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -699,6 +717,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9843B3129418C28F895EEEEDD5A5C0F5 /* Loafjet.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
