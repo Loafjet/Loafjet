@@ -138,17 +138,18 @@ public class Loaf{
                 }
             }
         }
+        
         else if AnimationDirection == .Top {
             
-            Loaf.LoafLabel.center = View.center
-            Loaf.LoafView.center = View.center
+            Loaf.LoafLabel.center.x = View.center.x
+            Loaf.LoafView.center.x = View.center.x
             Loaf.toastImageView.center.x = Loaf.LoafView.frame.origin.x+19
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
                 // For bottom to top
                 
                 Loaf.LoafLabel.frame.origin.y += View.frame.origin.y+5
                 Loaf.LoafView.frame.origin.y += View.frame.origin.y+5
-                Loaf.toastImageView.frame.origin.y += View.frame.origin.x
+                Loaf.toastImageView.frame.origin.y += View.frame.origin.x+5
                 
             }completion: { (isCompleted) in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
