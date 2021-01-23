@@ -56,7 +56,7 @@ public class Loaf{
         verifyLoafImage(view: LoafjetView, Image: LoafImage)
         
         // Animation method call
-        Animation(AnimationDirection: AnimationDirection, View: LoafjetView)
+        Animation(Direction: AnimationDirection, View: LoafjetView)
 
         // ADDING LOAF TO THE VIEW
         LoafjetView.addSubview(Loaf.LoafView)
@@ -64,11 +64,62 @@ public class Loaf{
         LoafjetView.addSubview(Loaf.toastImageView)
     }
     
+    
+    
+   public static func GradientLoaf(Message: String, Position:LoafPosition, LoafWidth:CGFloat = 150,LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor,LoafImage: String?, AnimationDirection: LoafAnimation, Duration: TimeInterval = 2.0, LoafjetView: UIView) {
+        
+        // LOAF VIEW METHOD
+        
+        Loaf.LoafView.frame = Position.centerPoint(view: LoafjetView, width: LoafWidth, height: LoafHeight)
+        Loaf.LoafView.layer.cornerRadius = CornerRadius
+        Loaf.LoafView.clipsToBounds = true
+        
+        // LOAF LABEL METHOD
+        
+        Loaf.LoafLabel.frame = CGRect(x: Loaf.LoafView.frame.origin.x, y: Loaf.LoafView.frame.origin.y, width: LoafWidth , height: LoafHeight)
+        Loaf.LoafLabel.textAlignment = .center
+        Loaf.LoafLabel.text = Message
+        Loaf.LoafLabel.font = UIFont(name: FontStyle, size: FontSize)
+        Loaf.LoafLabel.textColor = FontColor
+        Loaf.LoafLabel.numberOfLines = 3
+        Loaf.LoafLabel.center.y = Loaf.LoafView.center.y
+        
+        
+        // GRADIENT BG METHOD
+        
+        let gradientLayer: CAGradientLayer = {
+            let gradientLayer = CAGradientLayer()
+            gradientLayer.colors = [BGColor1.cgColor, BGColor2.cgColor]
+            gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
+            gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
+            gradientLayer.cornerRadius = CornerRadius
+            LoafView.layer.insertSublayer(gradientLayer, at: 0)
+            LoafView.clipsToBounds = true
+            LoafView.backgroundColor = .none
+            return gradientLayer
+        }()
+        gradientLayer.frame = LoafView.bounds
+        
+        
+        // LOAF IMAGE METHOD CALL
+        verifyLoafImage(view: LoafjetView, Image: LoafImage)
+        
+        // Animation method call
+        Animation(Direction: AnimationDirection, View: LoafjetView)
+
+        // ADDING LOAF TO THE VIEW
+        LoafjetView.addSubview(Loaf.LoafView)
+        LoafjetView.addSubview(Loaf.LoafLabel)
+        LoafjetView.addSubview(Loaf.toastImageView)
+
+    
+    }
+    
     //MARK:- Loaf Animation
     
-   public static func Animation(AnimationDirection: LoafAnimation, View: UIView){
+   public static func Animation(Direction: LoafAnimation, View: UIView){
         
-        if AnimationDirection == .Left {
+        if Direction == .Left {
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
                 
                 //  For left to right
@@ -88,7 +139,7 @@ public class Loaf{
             }
         }
         
-        else if AnimationDirection == .Right {
+        else if Direction == .Right {
             
             // Placing the label in left to fix the position in the start
             Loaf.LoafLabel.center.x = View.center.y
@@ -113,7 +164,7 @@ public class Loaf{
                 }
             }
         }
-        else if AnimationDirection == .Bottom {
+        else if Direction == .Bottom {
             
             Loaf.LoafLabel.center.x = View.center.x
             Loaf.LoafView.center.x = View.center.x
@@ -139,7 +190,7 @@ public class Loaf{
             }
         }
         
-        else if AnimationDirection == .Top {
+        else if Direction == .Top {
             
             Loaf.LoafLabel.center.x = View.center.x
             Loaf.LoafView.center.x = View.center.x
@@ -155,9 +206,9 @@ public class Loaf{
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                     UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
                         
-                        Loaf.LoafLabel.frame.origin.y -= View.frame.maxY
-                        Loaf.LoafView.frame.origin.y -= View.frame.maxY
-                        Loaf.toastImageView.frame.origin.y -= View.frame.maxY
+                        Loaf.LoafLabel.frame.origin.y -= View.frame.midY
+                        Loaf.LoafView.frame.origin.y -= View.frame.midY
+                        Loaf.toastImageView.frame.origin.y -= View.frame.midY
                     }
                 }
             }
