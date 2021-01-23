@@ -52,25 +52,16 @@ public class Loaf{
         Loaf.LoafLabel.numberOfLines = 3
         Loaf.LoafLabel.center.y = Loaf.LoafView.center.y
         
-        // LOAF IMAGE METHOD
-        
-        if LoafImage == nil {
-            // No image added
-        }else{
-            // If Image Added
-            let LoafImage = UIImage(named: LoafImage!)
-            Loaf.toastImageView.image = LoafImage!
-          //  Loaf.toastImageView.frame = CGRect(x: Loaf.LoafView.frame.origin.x+7, y: LoafjetView.frame.origin.y, width: 25, height: 25)
-          //  Loaf.toastImageView.center.y = Loaf.LoafView.center.y
-        }
-        
-        LoafjetView.addSubview(Loaf.LoafView)
-        LoafjetView.addSubview(Loaf.LoafLabel)
-        LoafjetView.addSubview(Loaf.toastImageView)
+        // LOAF IMAGE METHOD CALL
+        verifyLoafImage(view: LoafjetView, Image: LoafImage)
         
         // Animation method call
         Animation(AnimationDirection: AnimationDirection, View: LoafjetView)
 
+        // ADDING LOAF TO THE VIEW
+        LoafjetView.addSubview(Loaf.LoafView)
+        LoafjetView.addSubview(Loaf.LoafLabel)
+        LoafjetView.addSubview(Loaf.toastImageView)
     }
     
     //MARK:- Loaf Animation
@@ -81,9 +72,10 @@ public class Loaf{
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
                 
                 //  For left to right
-//                Loaf.LoafLabel.center.x = Loaf.LoafView.frame.origin.x
-//                Loaf.LoafView.center.y = Loaf.LoafView.frame.origin.y
-             //   Loaf.toastImageView.center.x = Loaf.LoafView.frame.origin.x+19
+                
+                Loaf.LoafLabel.center.x = View.center.x
+                Loaf.LoafView.center.x = View.center.x
+                Loaf.toastImageView.center.x = Loaf.LoafView.frame.origin.x+19
                 
             }completion: { (isCompleted) in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
@@ -168,6 +160,20 @@ public class Loaf{
                     }
                 }
             }
+        }
+    }
+    
+    //MARK:- Image verification method
+    
+    public static func verifyLoafImage(view: UIView,Image:String!){
+        if Image == nil {
+            // No image added
+        }else{
+            // If Image Added
+            let LoafImage = UIImage(named: Image)
+            Loaf.toastImageView.image = LoafImage!
+            Loaf.toastImageView.frame = CGRect(x: Loaf.LoafView.frame.origin.x+7, y: view.frame.origin.y, width: 25, height: 25)
+            Loaf.toastImageView.center.y = Loaf.LoafView.center.y
         }
     }
         

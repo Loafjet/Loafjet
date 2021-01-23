@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         
        // Loaf.PlainLoaf(Message: "Hello", Position: .bottom, AnimationDirection: .Left, LoafjetView: view)
         
-        Loaf.PlainLoaf(Message: "Xcode Loading", BGColor: .systemBlue, Position: .bottom, LoafWidth: 190, LoafHeight: 40, CornerRadius: 10, FontStyle: "Avenir-Medium", FontSize: 15, FontColor: .white, LoafImage: "Xcode", AnimationDirection: .Top, Duration: 2, LoafjetView: view)
+        Loaf.PlainLoaf(Message: "Xcode Loading", BGColor: .systemBlue, Position: .bottom, LoafWidth: 190, LoafHeight: 40, CornerRadius: 10, FontStyle: "Avenir-Medium", FontSize: 15, FontColor: .white, LoafImage: "Xcode", AnimationDirection: .Left, Duration: 2, LoafjetView: view)
         
     }
 }
