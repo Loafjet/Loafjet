@@ -20,20 +20,20 @@ public class Loaf{
     /// Plain Loaf is a Loaf view with custom background and various position placement option.
     /// - Parameters:
     ///   - Message: Message to show on Loaf
-    ///   - BGColor: Background color of  Loaf
-    ///   - position: Where to place the Loaf
-    ///   - ToastWidth: Width of Loaf
-    ///   - ToastHeight: Height of Loaf
+    ///   - Position: Where to place the Loaf
+    ///   - LoafWidth: Width of Loaf
+    ///   - LoafHeight: Height of Loaf
     ///   - CornerRadius: CornerRadius of Loaf
     ///   - FontStyle: Font style of Loaf
     ///   - FontSize: Fonst size of Loaf
     ///   - FontColor: Font color of Loaf
-    ///   - ToastImage: Image to show on Loaf
+    ///   - BGColor: Background color of  Loaf
+    ///   - LoafImage: Image to show on Loaf
     ///   - AnimationDirection: Loaf Animation Direction
     ///   - Duration: Animation Duration
     ///   - LoafjetView: UIView on which the Loaf is to be presented
     
-    public static func PlainLoaf(Message: String, BGColor: UIColor = .gray, Position:LoafPosition, LoafWidth:CGFloat = 150 , LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, FontColor: UIColor = .black, LoafImage: String? = nil , AnimationDirection: LoafAnimation , Duration: TimeInterval = 2.0, LoafjetView: UIView){
+    public static func PlainLoaf(Message: String, Position:LoafPosition, LoafWidth:CGFloat = 150 , LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor: UIColor = .gray,FontColor: UIColor = .black, LoafImage: String? = nil , AnimationDirection: LoafAnimation , Duration: TimeInterval = 2.0, LoafjetView: UIView){
         
         // LOAF VIEW METHOD
         
@@ -57,7 +57,7 @@ public class Loaf{
         
         // Animation method call
         Animation(Direction: AnimationDirection, View: LoafjetView)
-
+        
         // ADDING LOAF TO THE VIEW
         LoafjetView.addSubview(Loaf.LoafView)
         LoafjetView.addSubview(Loaf.LoafLabel)
@@ -66,7 +66,24 @@ public class Loaf{
     
     
     
-   public static func GradientLoaf(Message: String, Position:LoafPosition, LoafWidth:CGFloat = 150,LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor,LoafImage: String?, AnimationDirection: LoafAnimation, Duration: TimeInterval = 2.0, LoafjetView: UIView) {
+    /// Gradient Loafis a Loaf view with different types of gradient background and various position placement support.
+    /// - Parameters:
+    ///   - Message: Message to show on Loaf
+    ///   - Position: Where to place the Loaf
+    ///   - LoafWidth: Width of Loaf
+    ///   - LoafHeight: Height of Loaf
+    ///   - CornerRadius: CornerRadius of Loaf
+    ///   - FontStyle: Font style of Loaf
+    ///   - FontSize: Fonst size of Loaf
+    ///   - BGColor1: Gradient color 1
+    ///   - BGColor2: Gradient color 2
+    ///   - FontColor: Font color of Loaf
+    ///   - LoafImage: Image to show on Loaf
+    ///   - AnimationDirection: Loaf Animation Direction
+    ///   - Duration: Animation Duration
+    ///   - LoafjetView: UIView on which the Loaf is to be presented
+    
+    public static func GradientLoaf(Message: String, Position:LoafPosition, LoafWidth:CGFloat = 150,LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor,LoafImage: String?, AnimationDirection: LoafAnimation, Duration: TimeInterval = 2.0, LoafjetView: UIView) {
         
         // LOAF VIEW METHOD
         
@@ -106,18 +123,74 @@ public class Loaf{
         
         // Animation method call
         Animation(Direction: AnimationDirection, View: LoafjetView)
-
+        
         // ADDING LOAF TO THE VIEW
         LoafjetView.addSubview(Loaf.LoafView)
         LoafjetView.addSubview(Loaf.LoafLabel)
         LoafjetView.addSubview(Loaf.toastImageView)
-
-    
+        
+        
     }
     
+    
+}
+
+
+//MARK:- Enumeration Keys
+
+extension Loaf{
+    
+    //MARK:- Position Method
+    
+    public enum LoafPosition {
+        case top
+        case center
+        case bottom
+        
+        fileprivate func centerPoint(view: UIView, width:CGFloat, height:CGFloat) -> CGRect{
+            switch self {
+            case .top:
+                return CGRect(x: view.frame.origin.x, y: view.frame.origin.y+45, width: width, height: height)
+            case .center:
+                return CGRect(x: view.frame.origin.x, y: view.center.y, width: width, height: height)
+            case .bottom:
+                // return CGRect(x: view.frame.origin.x, y: view.bounds.height-60, width: width, height: height)
+                return CGRect(x: view.frame.origin.x-300, y: view.bounds.height-60, width: width, height: height)
+            }
+        }
+    }
+    
+    //MARK:- Toast Animation Method
+    
+    public enum LoafAnimation {
+        case Left
+        case Right
+        case Bottom
+        case Top
+    }
+    
+    //MARK:- Image verification method
+    
+    public static func verifyLoafImage(view: UIView,Image:String!){
+        if Image == nil {
+            // No image added
+        }else{
+            // If Image Added
+            let LoafImage = UIImage(named: Image)
+            Loaf.toastImageView.image = LoafImage!
+            Loaf.toastImageView.frame = CGRect(x: Loaf.LoafView.frame.origin.x+7, y: view.frame.origin.y, width: 25, height: 25)
+            Loaf.toastImageView.center.y = Loaf.LoafView.center.y
+        }
+    }
+}
+
+
+//MARK:- ANimation Methods
+
+extension Loaf{
     //MARK:- Loaf Animation
     
-   public static func Animation(Direction: LoafAnimation, View: UIView){
+    public static func Animation(Direction: LoafAnimation, View: UIView){
         
         if Direction == .Left {
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
@@ -215,48 +288,7 @@ public class Loaf{
         }
     }
     
-    //MARK:- Image verification method
-    
-    public static func verifyLoafImage(view: UIView,Image:String!){
-        if Image == nil {
-            // No image added
-        }else{
-            // If Image Added
-            let LoafImage = UIImage(named: Image)
-            Loaf.toastImageView.image = LoafImage!
-            Loaf.toastImageView.frame = CGRect(x: Loaf.LoafView.frame.origin.x+7, y: view.frame.origin.y, width: 25, height: 25)
-            Loaf.toastImageView.center.y = Loaf.LoafView.center.y
-        }
-    }
-        
-        //MARK:- Position Method
-        
-        public enum LoafPosition {
-            case top
-            case center
-            case bottom
-            
-            fileprivate func centerPoint(view: UIView, width:CGFloat, height:CGFloat) -> CGRect{
-                switch self {
-                case .top:
-                    return CGRect(x: view.frame.origin.x, y: view.frame.origin.y+45, width: width, height: height)
-                case .center:
-                    return CGRect(x: view.frame.origin.x, y: view.center.y, width: width, height: height)
-                case .bottom:
-                    // return CGRect(x: view.frame.origin.x, y: view.bounds.height-60, width: width, height: height)
-                    return CGRect(x: view.frame.origin.x-300, y: view.bounds.height-60, width: width, height: height)
-                }
-            }
-        }
-        
-        //MARK:- Toast Animation Method
-        
-        public enum LoafAnimation {
-            case Left
-            case Right
-            case Bottom
-            case Top
-        }
-        
-        
-    }
+}
+
+
+
