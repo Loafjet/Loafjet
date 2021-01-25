@@ -11,9 +11,10 @@ import UIKit
 
 public class Loaf{
     
-    static let LoafView = UIView()
-    static  let LoafLabel = UILabel()
-    static let LoafImageView = UIImageView()
+    private static let LoafView = UIView()
+    private static  let LoafLabel = UILabel()
+    private static let LoafImageView = UIImageView()
+    private static let wheel = UIActivityIndicatorView()
     
     //MARK:- Plain Loaf Method
     
@@ -37,34 +38,34 @@ public class Loaf{
         
         // LOAF VIEW METHOD
         
-        Loaf.LoafView.frame = Position.centerPoint(view: LoafjetView, width: LoafWidth, height: LoafHeight)
-        Loaf.LoafView.backgroundColor = BGColor
-        Loaf.LoafView.layer.cornerRadius = CornerRadius
-        Loaf.LoafView.clipsToBounds = true
+        LoafView.frame = Position.centerPoint(view: LoafjetView, width: LoafWidth, height: LoafHeight)
+        LoafView.backgroundColor = BGColor
+        LoafView.layer.cornerRadius = CornerRadius
+        LoafView.clipsToBounds = true
         
         // LOAF LABEL METHOD
         
-        Loaf.LoafLabel.frame = CGRect(x: Loaf.LoafView.frame.origin.x, y: Loaf.LoafView.frame.origin.y, width: LoafWidth , height: LoafHeight)
-        Loaf.LoafLabel.textAlignment = .center
-        Loaf.LoafLabel.text = Message
-        Loaf.LoafLabel.font = UIFont(name: FontStyle, size: FontSize)
-        Loaf.LoafLabel.textColor = FontColor
-        Loaf.LoafLabel.numberOfLines = 3
-        Loaf.LoafLabel.center.y = Loaf.LoafView.center.y
+        LoafLabel.frame = CGRect(x: Loaf.LoafView.frame.origin.x, y: Loaf.LoafView.frame.origin.y, width: LoafWidth , height: LoafHeight)
+        LoafLabel.textAlignment = .center
+        LoafLabel.text = Message
+        LoafLabel.font = UIFont(name: FontStyle, size: FontSize)
+        LoafLabel.textColor = FontColor
+        LoafLabel.numberOfLines = 3
+        LoafLabel.center.y = Loaf.LoafView.center.y
         
         // LOAF IMAGE METHOD CALL
         verifyLoafImage(view: LoafjetView, Image: LoafImage, Width: 25, Height: 25)
         
         // Animation method call
-        Animation(Direction: AnimationDirection, View: LoafjetView)
+        Animation(Direction: AnimationDirection, View: LoafjetView, DelayTime: Duration)
         
         // ADDING LOAF TO THE VIEW
-        LoafjetView.addSubview(Loaf.LoafView)
-        LoafjetView.addSubview(Loaf.LoafLabel)
-        LoafjetView.addSubview(Loaf.LoafImageView)
+        LoafjetView.addSubview(LoafView)
+        LoafjetView.addSubview(LoafLabel)
+        LoafjetView.addSubview(LoafImageView)
     }
     
-   //MARK:- Gradient Loaf Method
+    //MARK:- Gradient Loaf Method
     
     /// Gradient Loafis a Loaf view with different types of gradient background and various position placement support.
     /// - Parameters:
@@ -87,19 +88,18 @@ public class Loaf{
         
         // LOAF VIEW METHOD
         
-        Loaf.LoafView.frame = Position.centerPoint(view: LoafjetView, width: LoafWidth, height: LoafHeight)
-        Loaf.LoafView.layer.cornerRadius = CornerRadius
-        Loaf.LoafView.clipsToBounds = true
+        LoafView.frame = Position.centerPoint(view: LoafjetView, width: LoafWidth, height: LoafHeight)
+        LoafView.layer.cornerRadius = CornerRadius
+        LoafView.clipsToBounds = true
         
         // LOAF LABEL METHOD
         
-        Loaf.LoafLabel.frame = CGRect(x: Loaf.LoafView.frame.origin.x, y: Loaf.LoafView.frame.origin.y, width: LoafWidth , height: LoafHeight)
-        Loaf.LoafLabel.textAlignment = .center
-        Loaf.LoafLabel.text = Message
-        Loaf.LoafLabel.font = UIFont(name: FontStyle, size: FontSize)
-        Loaf.LoafLabel.textColor = FontColor
-        Loaf.LoafLabel.numberOfLines = 3
-        Loaf.LoafLabel.center.y = Loaf.LoafView.center.y
+        LoafLabel.frame = CGRect(x: Loaf.LoafView.frame.origin.x, y: Loaf.LoafView.frame.origin.y, width: LoafWidth , height: LoafHeight)
+        LoafLabel.textAlignment = .center
+        LoafLabel.text = Message
+        LoafLabel.font = UIFont(name: FontStyle, size: FontSize)
+        LoafLabel.textColor = FontColor
+        LoafLabel.center.y = Loaf.LoafView.center.y
         
         
         // GRADIENT BG METHOD
@@ -122,12 +122,12 @@ public class Loaf{
         verifyLoafImage(view: LoafjetView, Image: LoafImage, Width: 25, Height: 25)
         
         // Animation method call
-        Animation(Direction: AnimationDirection, View: LoafjetView)
+        Animation(Direction: AnimationDirection, View: LoafjetView, DelayTime: Duration)
         
         // ADDING LOAF TO THE VIEW
-        LoafjetView.addSubview(Loaf.LoafView)
-        LoafjetView.addSubview(Loaf.LoafLabel)
-        LoafjetView.addSubview(Loaf.LoafImageView)
+        LoafjetView.addSubview(LoafView)
+        LoafjetView.addSubview(LoafLabel)
+        LoafjetView.addSubview(LoafImageView)
         
         
     }
@@ -139,27 +139,41 @@ public class Loaf{
 
 extension Loaf{
     
+    /// PopupCard is a card animation used to display quick info on screen.
+    /// - Parameters:
+    ///   - Message: Message to show on Card
+    ///   - Position: Where to place the Card
+    ///   - LoafWidth: Width of Card
+    ///   - LoafHeight: Height of Card
+    ///   - CornerRadius: CornerRadius of Card
+    ///   - FontStyle: Font style of Card
+    ///   - FontSize: Fonst size of Card
+    ///   - BGColor1: Gradient color 1
+    ///   - BGColor2: Gradient color 2
+    ///   - FontColor: Font color of Card
+    ///   - LoafImage: Image to show on Card
+    ///   - Duration: Animation Duration
+    ///   - LoafjetView: UIView on which the Card is to be presented
+    
     public static func PopupCard(Message: String, Position:LoafPosition, LoafWidth:CGFloat = 150,LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor,LoafImage: String?, Duration: TimeInterval = 2.0, LoafjetView: UIView) {
-        
-        
         
         // LOAF VIEW METHOD
         
-        Loaf.LoafView.frame = Position.centerPoint(view: LoafjetView, width: LoafWidth, height: LoafHeight)
-        Loaf.LoafView.layer.cornerRadius = CornerRadius
-        Loaf.LoafView.clipsToBounds = true
+        LoafView.frame = CGRect(x: LoafjetView.center.x, y: LoafjetView.center.y, width: LoafWidth, height: LoafHeight)
+        LoafView.layer.cornerRadius = CornerRadius
+        LoafView.clipsToBounds = true
         
         // LOAF LABEL METHOD
         
-       Loaf.LoafLabel.frame = CGRect(x: Loaf.LoafView.frame.origin.x, y: Loaf.LoafView.frame.origin.y, width: LoafWidth , height: LoafHeight)
-        Loaf.LoafLabel.textAlignment = .center
-        Loaf.LoafLabel.numberOfLines = 5
-        Loaf.LoafLabel.text = Message
-        Loaf.LoafLabel.font = UIFont(name: FontStyle, size: FontSize)
-        Loaf.LoafLabel.textColor = FontColor
-        Loaf.LoafLabel.numberOfLines = 3
-        Loaf.LoafLabel.center.y = Loaf.LoafView.center.y
-        Loaf.LoafLabel.textAlignment = .center
+        LoafLabel.frame = CGRect(x: Loaf.LoafView.frame.origin.x, y: Loaf.LoafView.frame.origin.y, width: LoafWidth , height: LoafHeight)
+        LoafLabel.textAlignment = .center
+        LoafLabel.numberOfLines = 5
+        LoafLabel.text = Message
+        LoafLabel.font = UIFont(name: FontStyle, size: FontSize)
+        LoafLabel.textColor = FontColor
+        LoafLabel.numberOfLines = 3
+        LoafLabel.center.y = LoafView.center.y
+        LoafLabel.textAlignment = .center
         
         // GRADIENT BG METHOD
         
@@ -180,40 +194,110 @@ extension Loaf{
         verifyLoafImage(view: LoafjetView, Image: LoafImage, Width: 100, Height: 100)
         
         // Animation method call
-    
-        LoafjetView.addSubview(Loaf.LoafView)
-        LoafjetView.addSubview(Loaf.LoafLabel)
-        LoafjetView.addSubview(Loaf.LoafImageView)
         
-        Loaf.LoafLabel.center.x = LoafjetView.center.x
-        Loaf.LoafView.center.x = LoafjetView.center.x
-        Loaf.LoafLabel.center.y = LoafjetView.center.y + 800
-        Loaf.LoafView.center.y = LoafjetView.center.y + 800
-        Loaf.LoafImageView.center.y = LoafjetView.center.y + 800
-        Loaf.LoafImageView.center.x = LoafjetView.center.x
-
+        LoafjetView.addSubview(LoafView)
+        LoafjetView.addSubview(LoafLabel)
+        LoafjetView.addSubview(LoafImageView)
+        
+        LoafLabel.center.x = LoafjetView.center.x
+        LoafView.center.x = LoafjetView.center.x
+        LoafLabel.center.y = LoafjetView.center.y + 4000
+        LoafView.center.y = LoafjetView.center.y + 4000
+        LoafImageView.center.y = LoafjetView.center.y + 4000
+        LoafImageView.center.x = LoafjetView.center.x
+        
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
             // For bottom to top
-            Loaf.LoafLabel.center.x = LoafjetView.center.x
-            Loaf.LoafView.center.x = LoafjetView.center.x
-            Loaf.LoafLabel.center.y = LoafjetView.center.y + 40
-            Loaf.LoafView.center.y = LoafjetView.center.y+45
-            Loaf.LoafImageView.center.y = LoafjetView.center.y - 40
-            Loaf.LoafImageView.center.x = LoafjetView.center.x
-
+            LoafLabel.center.x = LoafjetView.center.x
+            LoafView.center.x = LoafjetView.center.x
+            LoafLabel.center.y = LoafjetView.center.y + 40
+            LoafView.center.y = LoafjetView.center.y+45
+            LoafImageView.center.y = LoafjetView.center.y - 40
+            LoafImageView.center.x = LoafjetView.center.x
+            
         }completion: { (isCompleted) in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
-                    // top to bottom direction
-                    Loaf.LoafLabel.center.y = LoafjetView.center.y + 800
-                    Loaf.LoafView.center.y = LoafjetView.center.y + 800
-                    Loaf.LoafImageView.center.y = LoafjetView.center.y + 800
-                }
+            UIView.animate(withDuration: 0.5, delay: Duration, options: .curveEaseOut) {
+                // top to bottom direction
+                LoafLabel.center.y = LoafjetView.center.y + 800
+                LoafView.center.y = LoafjetView.center.y + 800
+                LoafImageView.center.y = LoafjetView.center.y + 800
             }
         }
     }
+    
+    //MARK:- Loader Loaf Method
+    
+    
+    public static func LoafWheel(Message: String, LoafWidth:CGFloat = 50, LoafHeight:CGFloat = 50, CornerRadius:CGFloat = 20, BGColor1:UIColor, BGColor2:UIColor,FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, FontColor: UIColor = .black, Duration: TimeInterval = 2.0, WheelStyle: Style, LoafWheelView: UIView) {
+        
+        // LOAF VIEW METHOD
+        
+        LoafView.frame = CGRect(x: LoafWheelView.center.x , y: LoafWheelView.center.y, width: LoafWidth, height: LoafHeight)
+        LoafView.layer.cornerRadius = CornerRadius
+        LoafView.clipsToBounds = true
+        LoafView.center.x = LoafWheelView.center.x
+        LoafView.center.y = LoafWheelView.center.y
+        // GRADIENT BG METHOD
+        
+        let gradientLayer: CAGradientLayer = {
+            let gradientLayer = CAGradientLayer()
+            gradientLayer.colors = [BGColor1.cgColor, BGColor2.cgColor]
+            gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
+            gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
+            gradientLayer.cornerRadius = CornerRadius
+            LoafView.layer.insertSublayer(gradientLayer, at: 0)
+            LoafView.clipsToBounds = true
+            LoafView.backgroundColor = .none
+            return gradientLayer
+        }()
+        gradientLayer.frame = LoafView.bounds
+        
+        // LOAF LABEL METHOD
+        
+        LoafLabel.frame = CGRect(x: LoafWheelView.center.x, y: LoafWheelView.center.y, width: LoafWidth , height: LoafHeight)
+        LoafLabel.textAlignment = .center
+        LoafLabel.text = Message
+        LoafLabel.font = UIFont(name: FontStyle, size: FontSize)
+        LoafLabel.textColor = FontColor
+        LoafLabel.center.x = LoafWheelView.center.x
+        LoafLabel.center.y = LoafWheelView.center.y
+        
+        // Adding Indicator
+        
+        wheel.frame = CGRect(x: LoafWheelView.center.x, y: LoafWheelView.center.y, width: 50, height: 50)
+        wheel.hidesWhenStopped = true
+        wheel.startAnimating()
+        wheel.frame.origin.x = LoafView.frame.origin.x
+        wheel.center.y = LoafView.center.y
+        
+        // Indicator size slection method
+        wheelStyleSelection(WheelSize: WheelStyle , wheel: wheel)
+        
+            // BG Blur effect method
+        if #available(iOS 10.0, *) {
+            let blurEffect = UIBlurEffect(style: .regular)
+            let visualEffect = UIVisualEffectView(effect: blurEffect)
+            LoafWheelView.addSubview(visualEffect)
+        } else {
+            // Fallback on earlier versions
+        }
+        
+        LoafWheelView.addSubview(LoafView)
+        LoafWheelView.addSubview(LoafLabel)
+        LoafWheelView.addSubview(wheel)
+       
+    }
+    
+    
+    //MARK:- Loader Dismisal Method
+    
+    public static func dismissWheel(LoafWheelView:UIView){
+        LoafLabel.removeFromSuperview()
+        LoafView.removeFromSuperview()
+        wheel.removeFromSuperview()
+        LoafWheelView.isUserInteractionEnabled = true
+    }
 }
-
 
 
 //MARK:- Enumeration Keys
@@ -232,11 +316,11 @@ extension Loaf{
             case .top:
                 return CGRect(x: view.frame.origin.x, y: view.frame.origin.y+45, width: width, height: height)
             case .center:
-               // return CGRect(x: view.frame.origin.x, y: view.center.y, width: width, height: height)
+                // return CGRect(x: view.frame.origin.x, y: view.center.y, width: width, height: height)
                 return CGRect(x: view.center.x, y: view.center.y, width: width, height: height)
-
+                
             case .bottom:
-               // return CGRect(x: view.frame.origin.x, y: view.bounds.height-60, width: width, height: height)
+                //return CGRect(x: view.frame.origin.x, y: view.bounds.height-60, width: width, height: height)
                 return CGRect(x: view.frame.origin.x-300, y: view.bounds.height-60, width: width, height: height)
             }
         }
@@ -251,17 +335,35 @@ extension Loaf{
         case Top
     }
     
+    //MARK:- Wheel style selection method
+    
+    public enum Style {
+        case white
+        case whiteLarge
+    }
+    
+   private static func wheelStyleSelection(WheelSize: Style, wheel: UIActivityIndicatorView){
+        
+        if WheelSize == .white {
+            wheel.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.white
+        }
+        else if (WheelSize == .whiteLarge){
+            wheel.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+        }
+    }
+    
     //MARK:- Image verification method
     
-    public static func verifyLoafImage(view: UIView,Image:String!, Width: CGFloat, Height: CGFloat){
+    private static func verifyLoafImage(view: UIView,Image:String!, Width: CGFloat, Height: CGFloat){
         if Image == nil {
             // No image added
         }else{
             // If Image Added
             let LoafImage = UIImage(named: Image)
-            Loaf.LoafImageView.image = LoafImage!
-            Loaf.LoafImageView.frame = CGRect(x: Loaf.LoafView.frame.origin.x+7, y: view.frame.origin.y, width: Width, height: Height)
-            Loaf.LoafImageView.center.y = Loaf.LoafView.center.y
+            LoafImageView.image = LoafImage!
+            LoafImageView.frame = CGRect(x: LoafView.frame.origin.x+7, y: view.frame.origin.y, width: Width, height: Height)
+            LoafImageView.frame.origin.x = LoafView.frame.origin.x
+            LoafImageView.center.y = LoafView.center.y
         }
     }
 }
@@ -272,28 +374,26 @@ extension Loaf{
 extension Loaf{
     //MARK:- Loaf Animation
     
-    public static func Animation(Direction: LoafAnimation, View: UIView){
+    private static func Animation(Direction: LoafAnimation, View: UIView, DelayTime: TimeInterval){
         
         if Direction == .Left {
-            Loaf.LoafLabel.center.x = View.center.x - 1000
-            Loaf.LoafView.center.x = View.center.x - 1000
-           Loaf.LoafImageView.center.x = Loaf.LoafView.frame.origin.x - 1000
-           
+            LoafLabel.center.x = View.center.x - 4000
+            LoafView.center.x = View.center.x - 4000
+            LoafImageView.center.x = LoafView.frame.origin.x - 4000
+            
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
                 
                 //  For left to right
                 
-                Loaf.LoafLabel.center.x = View.center.x
-                Loaf.LoafView.center.x = View.center.x
-                Loaf.LoafImageView.center.x = Loaf.LoafView.frame.origin.x+19
+                LoafLabel.center.x = View.center.x
+                LoafView.center.x = View.center.x
+                LoafImageView.center.x = LoafView.frame.origin.x+19
                 
             }completion: { (isCompleted) in
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                    UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
-                        Loaf.LoafLabel.frame.origin.x += View.frame.maxX
-                        Loaf.LoafView.frame.origin.x += View.frame.maxX
-                        Loaf.LoafImageView.frame.origin.x += View.frame.maxX
-                    }
+                UIView.animate(withDuration: 0.5, delay: DelayTime, options: .curveEaseOut) {
+                    LoafLabel.frame.origin.x += View.frame.maxX
+                    LoafView.frame.origin.x += View.frame.maxX
+                    LoafImageView.frame.origin.x += View.frame.maxX
                 }
             }
         }
@@ -301,74 +401,68 @@ extension Loaf{
         else if Direction == .Right {
             
             // Placing the label in left to fix the position in the start
-            Loaf.LoafLabel.center.x = View.center.y
-            Loaf.LoafView.center.x = View.center.y
-            Loaf.LoafImageView.center.x = Loaf.LoafView.frame.origin.x+19
+            LoafLabel.center.x = View.center.y
+            LoafView.center.x = View.center.y
+            LoafImageView.frame.origin.x = LoafView.frame.origin.x+19
             
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
-                Loaf.LoafLabel.center.x = View.center.x
-                Loaf.LoafView.center.x = View.center.x
-                Loaf.LoafImageView.center.x = Loaf.LoafView.frame.origin.x+19
+                LoafLabel.center.x = View.center.x
+                LoafView.center.x = View.center.x
+                LoafImageView.frame.origin.x = LoafView.frame.origin.x+19
                 
             }completion: { (isCompleted) in
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                    UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
-                        
-                        // centre to left direction
-                        
-                        Loaf.LoafLabel.frame.origin.x -= View.frame.maxX
-                        Loaf.LoafView.frame.origin.x -= View.frame.maxX
-                        Loaf.LoafImageView.frame.origin.x -= View.frame.maxX
-                    }
+                UIView.animate(withDuration: 0.5, delay: DelayTime, options: .curveEaseOut) {
+                    
+                    // centre to left direction
+                    
+                    LoafLabel.frame.origin.x -= View.frame.maxX
+                    LoafView.frame.origin.x -= View.frame.maxX
+                    LoafImageView.frame.origin.x -= View.frame.maxX
                 }
             }
         }
         else if Direction == .Bottom {
             
-            Loaf.LoafLabel.center.x = View.center.x
-            Loaf.LoafView.center.x = View.center.x
-            Loaf.LoafImageView.center.x = Loaf.LoafView.frame.origin.x+19
+            LoafLabel.center.x = View.center.x
+            LoafView.center.x = View.center.x
+            LoafImageView.center.x = LoafView.frame.origin.x+19
             
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
                 // For bottom to top
                 
-                Loaf.LoafLabel.frame.origin.y -= View.frame.origin.y+5
-                Loaf.LoafView.frame.origin.y -= View.frame.origin.y+5
-                Loaf.LoafImageView.frame.origin.y -= View.frame.origin.y+5
+                LoafLabel.frame.origin.y -= View.frame.origin.y+5
+                LoafView.frame.origin.y -= View.frame.origin.y+5
+                LoafImageView.frame.origin.y -= View.frame.origin.y+5
                 
             }completion: { (isCompleted) in
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                    UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
-                        // top to bottom direction
-                        
-                        Loaf.LoafLabel.frame.origin.y = View.frame.maxY
-                        Loaf.LoafView.frame.origin.y = View.frame.maxY
-                        Loaf.LoafImageView.frame.origin.y = View.frame.maxY
-                    }
+                UIView.animate(withDuration: 0.5, delay: DelayTime, options: .curveEaseOut) {
+                    // top to bottom direction
+                    
+                    LoafLabel.frame.origin.y = View.frame.maxY
+                    LoafView.frame.origin.y = View.frame.maxY
+                    LoafImageView.frame.origin.y = View.frame.maxY
                 }
             }
         }
         
         else if Direction == .Top {
             
-            Loaf.LoafLabel.center.x = View.center.x
-            Loaf.LoafView.center.x = View.center.x
-            Loaf.LoafImageView.center.x = Loaf.LoafView.frame.origin.x+19
+            LoafLabel.center.x = View.center.x
+            LoafView.center.x = View.center.x
+            LoafImageView.frame.origin.x = LoafView.frame.origin.x+19
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
                 // For bottom to top
                 
-                Loaf.LoafLabel.frame.origin.y += View.frame.origin.y+5
-                Loaf.LoafView.frame.origin.y += View.frame.origin.y+5
-                Loaf.LoafImageView.frame.origin.y += View.frame.origin.x+5
+                LoafLabel.frame.origin.y += View.frame.origin.y+5
+                LoafView.frame.origin.y += View.frame.origin.y+5
+                LoafImageView.frame.origin.y += View.frame.origin.x+5
                 
             }completion: { (isCompleted) in
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                    UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
-                        
-                        Loaf.LoafLabel.frame.origin.y -= View.frame.midY
-                        Loaf.LoafView.frame.origin.y -= View.frame.midY
-                        Loaf.LoafImageView.frame.origin.y -= View.frame.midY
-                    }
+                UIView.animate(withDuration: 0.5, delay: DelayTime, options: .curveEaseOut) {
+                    
+                    LoafLabel.frame.origin.y -= View.frame.maxY
+                    LoafView.frame.origin.y -= View.frame.maxY
+                    LoafImageView.frame.origin.y -= View.frame.maxY
                 }
             }
         }
