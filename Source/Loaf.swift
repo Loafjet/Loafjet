@@ -37,6 +37,8 @@ public class Loaf{
     
     public static func PlainLoaf(Message: String, Position:LoafPosition, LoafWidth:CGFloat = 150 , LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor: UIColor = .gray,FontColor: UIColor = .black, LoafImage: String? = nil , AnimationDirection: LoafAnimation , Duration: TimeInterval = 2.0, LoafjetView: UIView){
         
+        LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
+        
         // LOAF VIEW METHOD
         
         LoafView.frame = Position.centerPoint(view: LoafjetView, width: LoafWidth, height: LoafHeight)
@@ -87,6 +89,8 @@ public class Loaf{
     
     public static func GradientLoaf(Message: String, Position:LoafPosition, LoafWidth:CGFloat = 150,LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor,LoafImage: String?, AnimationDirection: LoafAnimation, Duration: TimeInterval = 2.0, LoafjetView: UIView) {
         
+        LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
+        
         // LOAF VIEW METHOD
         
         LoafView.frame = Position.centerPoint(view: LoafjetView, width: LoafWidth, height: LoafHeight)
@@ -105,6 +109,7 @@ public class Loaf{
         
         // GRADIENT BG METHOD
         
+        
         let gradientLayer: CAGradientLayer = {
             let gradientLayer = CAGradientLayer()
             gradientLayer.colors = [BGColor1.cgColor, BGColor2.cgColor]
@@ -117,7 +122,7 @@ public class Loaf{
             return gradientLayer
         }()
         gradientLayer.frame = LoafView.bounds
-        
+    
         
         // LOAF IMAGE METHOD CALL
         verifyLoafImage(view: LoafjetView, Image: LoafImage, Width: 25, Height: 25)
@@ -129,7 +134,6 @@ public class Loaf{
         LoafjetView.addSubview(LoafView)
         LoafjetView.addSubview(LoafLabel)
         LoafjetView.addSubview(LoafImageView)
-        
         
     }
     
@@ -157,6 +161,8 @@ extension Loaf{
     ///   - LoafjetView: UIView on which the Card is to be presented
     
     public static func PopupCard(Message: String, Position:LoafPosition, LoafWidth:CGFloat = 150,LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor,LoafImage: String?, Duration: TimeInterval = 2.0, LoafjetView: UIView) {
+        
+        LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
         
         // LOAF VIEW METHOD
         
@@ -247,6 +253,8 @@ extension Loaf{
     ///   - BlurEffect: Blur Effect type
     ///   - LoafjetView: UIView on which the Loaf is to be presented
     public static func LoafWheel(Message: String, LoafWidth:CGFloat = 50, LoafHeight:CGFloat = 50, CornerRadius:CGFloat = 20, BGColor1:UIColor, BGColor2:UIColor,FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, FontColor: UIColor = .black, Duration: TimeInterval = 2.0, WheelStyle: UIActivityIndicatorViewStyle = .white, BlurEffect: UIBlurEffectStyle = .regular ,LoafWheelView: UIView) {
+        
+        LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
         
         // LOAF VIEW METHOD
         

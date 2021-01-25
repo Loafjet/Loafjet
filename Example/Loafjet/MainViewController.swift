@@ -97,7 +97,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             Loaf.PlainLoaf(Message: "Welcome", Position: .center, LoafWidth: 200, LoafHeight: 40, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 16, BGColor: .systemGray, FontColor: .black, LoafImage: nil, AnimationDirection: .Left, Duration: 2, LoafjetView: view)
             break
         case 2:
-            Loaf.PlainLoaf(Message: "Welcome", Position: .center, LoafWidth: 200, LoafHeight: 40, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 16, BGColor: .systemGray, FontColor: .black, LoafImage: nil, AnimationDirection: .Right, Duration: 2, LoafjetView: view)
+            Loaf.PlainLoaf(Message: "Welcome", Position: .center, LoafWidth: 200, LoafHeight: 40, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 16, BGColor: .systemGray, FontColor: .black, LoafImage: "Xcode", AnimationDirection: .Right, Duration: 2, LoafjetView: view)
             break
         case 3:
             Loaf.PlainLoaf(Message: "Welcome", Position: .bottom, LoafWidth: 200, LoafHeight: 40, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 16, BGColor: .systemGray, FontColor: .black, LoafImage: nil, AnimationDirection: .Bottom, Duration: 2, LoafjetView: view)
