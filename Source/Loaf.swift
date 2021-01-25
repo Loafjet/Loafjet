@@ -15,6 +15,7 @@ public class Loaf{
     private static  let LoafLabel = UILabel()
     private static let LoafImageView = UIImageView()
     private static let wheel = UIActivityIndicatorView()
+    private static let visualEffect = UIVisualEffectView()
     
     //MARK:- Plain Loaf Method
     
@@ -228,7 +229,24 @@ extension Loaf{
     //MARK:- Loader Loaf Method
     
     
-    public static func LoafWheel(Message: String, LoafWidth:CGFloat = 50, LoafHeight:CGFloat = 50, CornerRadius:CGFloat = 20, BGColor1:UIColor, BGColor2:UIColor,FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, FontColor: UIColor = .black, Duration: TimeInterval = 2.0, WheelStyle: Style, LoafWheelView: UIView) {
+    @available(iOS 10.0, *)
+    
+    /// LoafWheel is a custom loader view with gradient background support
+    /// - Parameters:
+    ///   - Message: Message to show on Loaf
+    ///   - LoafWidth: Width of Loaf
+    ///   - LoafHeight: Height of Loaf
+    ///   - CornerRadius: CornerRadius of Loaf
+    ///   - BGColor1: Gradient color 1
+    ///   - BGColor2: Gradient color 2
+    ///   - FontStyle: Font style of Loaf
+    ///   - FontSize: Fonst size of Loaf
+    ///   - FontColor: Font color of Loaf
+    ///   - Duration: Animation Duration
+    ///   - WheelStyle: Activity Indicator type
+    ///   - BlurEffect: Blur Effect type
+    ///   - LoafjetView: UIView on which the Loaf is to be presented
+    public static func LoafWheel(Message: String, LoafWidth:CGFloat = 50, LoafHeight:CGFloat = 50, CornerRadius:CGFloat = 20, BGColor1:UIColor, BGColor2:UIColor,FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, FontColor: UIColor = .black, Duration: TimeInterval = 2.0, WheelStyle: UIActivityIndicatorViewStyle = .white, BlurEffect: UIBlurEffectStyle = .regular ,LoafWheelView: UIView) {
         
         // LOAF VIEW METHOD
         
@@ -270,17 +288,12 @@ extension Loaf{
         wheel.frame.origin.x = LoafView.frame.origin.x
         wheel.center.y = LoafView.center.y
         
-        // Indicator size slection method
-        wheelStyleSelection(WheelSize: WheelStyle , wheel: wheel)
         
             // BG Blur effect method
-        if #available(iOS 10.0, *) {
-            let blurEffect = UIBlurEffect(style: .regular)
-            let visualEffect = UIVisualEffectView(effect: blurEffect)
+            let blurEffect = UIBlurEffect(style: BlurEffect)
+            visualEffect.effect = blurEffect
             LoafWheelView.addSubview(visualEffect)
-        } else {
-            // Fallback on earlier versions
-        }
+            visualEffect.frame = LoafWheelView.frame
         
         LoafWheelView.addSubview(LoafView)
         LoafWheelView.addSubview(LoafLabel)
@@ -295,6 +308,7 @@ extension Loaf{
         LoafLabel.removeFromSuperview()
         LoafView.removeFromSuperview()
         wheel.removeFromSuperview()
+        visualEffect.removeFromSuperview()
         LoafWheelView.isUserInteractionEnabled = true
     }
 }
@@ -334,24 +348,7 @@ extension Loaf{
         case Bottom
         case Top
     }
-    
-    //MARK:- Wheel style selection method
-    
-    public enum Style {
-        case white
-        case whiteLarge
-    }
-    
-   private static func wheelStyleSelection(WheelSize: Style, wheel: UIActivityIndicatorView){
-        
-        if WheelSize == .white {
-            wheel.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.white
-        }
-        else if (WheelSize == .whiteLarge){
-            wheel.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
-        }
-    }
-    
+
     //MARK:- Image verification method
     
     private static func verifyLoafImage(view: UIView,Image:String!, Width: CGFloat, Height: CGFloat){

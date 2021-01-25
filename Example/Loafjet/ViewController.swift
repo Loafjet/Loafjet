@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         }
        
     }
+    @available(iOS 10.0, *)
     @IBAction func check(_ sender: Any) {
         
        // Loaf.PlainLoaf(Message: "Hello", Position: .bottom, AnimationDirection: .Left, LoafjetView: view)
@@ -30,8 +31,7 @@ class ViewController: UIViewController {
         
    //   Loaf.PopupCard(Message: "sdfsdhfgdjhgfhjsdgfsjdgfjsdhgfjhsgdhjfgshdfgsdjfjdhfsjdgfjsghghghghgghhghgghghzzzzzzz", Position: .bottom, LoafWidth: 250, LoafHeight: 300, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 15, BGColor1: .systemBlue, BGColor2: .systemPink, FontColor: .black, LoafImage: "Xcode", Duration: 2, LoafjetView: view)
         
-       Loaf.LoafWheel(Message: "Loading", LoafWidth: 180, LoafHeight: 100, CornerRadius: 20, BGColor1: .systemRed, BGColor2: .systemBlue, FontStyle: "Avenir", FontSize: 20, FontColor: .black, Duration: 2, WheelStyle: .whiteLarge, LoafWheelView: view)
-        
+        Loaf.LoafWheel(Message: "Loading", LoafWidth: 180, LoafHeight: 100, CornerRadius: 20, BGColor1: .systemRed, BGColor2: .systemBlue, FontStyle: "Avenir", FontSize: 20, FontColor: .black, Duration: 2, WheelStyle: .whiteLarge, BlurEffect: .dark ,LoafWheelView: view)
         
     }
 }
