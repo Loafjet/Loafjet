@@ -9,7 +9,17 @@
 import UIKit
 import Loafjet
 
-class ViewController: UIViewController {
+class LoafTypes{
+    var loafName: String?
+    var loafType: [String]?
+    
+    init(loafName: String?, loafType: [String] ) {
+        self.loafName = loafName
+        self.loafType = loafType
+    }
+}
+
+class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
