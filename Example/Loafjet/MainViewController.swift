@@ -115,6 +115,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             Loaf.GradientLoaf(Message: "LoafJet", Position: .bottom, LoafWidth: 250, LoafHeight: 40, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 15, BGColor1: .systemPink, BGColor2: .systemBlue, FontColor: .black, LoafImage: "Xcode", AnimationDirection: .Bottom, Duration: 2, LoafjetView: view)
             break
         case 20:
+            if #available(iOS 10.0, *) {
+                Loaf.PopupCard(Message: "LoafJet is a custom library to create Toast , Loader & PopUp Card.", Position: .bottom, LoafWidth: 250, LoafHeight: 300, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 15, BGColor1: .systemBlue, BGColor2: .systemPink, FontColor: .black, LoafImage: "Xcode", Duration: 6, BlurEffect: nil, LoafjetView: view)
+            } else {
+                // Fallback on earlier versions
+            }
             break
         case 30:
             break

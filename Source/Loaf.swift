@@ -160,7 +160,7 @@ extension Loaf{
     ///   - Duration: Animation Duration
     ///   - LoafjetView: UIView on which the Card is to be presented
     
-    public static func PopupCard(Message: String, Position:LoafPosition, LoafWidth:CGFloat = 150,LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor,LoafImage: String?, Duration: TimeInterval = 2.0, LoafjetView: UIView) {
+    public static func PopupCard(Message: String, Position:LoafPosition, LoafWidth:CGFloat = 150,LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor,LoafImage: String?, Duration: TimeInterval = 2.0, BlurEffect: UIBlurEffectStyle?, LoafjetView: UIView) {
         
         LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
         
@@ -199,6 +199,9 @@ extension Loaf{
         
         // LOAF IMAGE METHOD CALL
         verifyLoafImage(view: LoafjetView, Image: LoafImage, Width: 100, Height: 100)
+        
+        // Blur Effect call
+        applyBlurEffect(effect: BlurEffect, view: LoafjetView)
         
         // Animation method call
         
@@ -298,10 +301,12 @@ extension Loaf{
         
         
             // BG Blur effect method
-            let blurEffect = UIBlurEffect(style: BlurEffect)
-            visualEffect.effect = blurEffect
-            LoafWheelView.addSubview(visualEffect)
-            visualEffect.frame = LoafWheelView.frame
+//            let blurEffect = UIBlurEffect(style: BlurEffect)
+//            visualEffect.effect = blurEffect
+//            LoafWheelView.addSubview(visualEffect)
+//            visualEffect.frame = LoafWheelView.frame
+        
+        applyBlurEffect(effect: BlurEffect, view: LoafWheelView)
         
         LoafWheelView.addSubview(LoafView)
         LoafWheelView.addSubview(LoafLabel)
@@ -370,6 +375,20 @@ extension Loaf{
             LoafImageView.frame.origin.x = LoafView.frame.origin.x
             LoafImageView.center.y = LoafView.center.y
         }
+    }
+    
+    //MARK:- Blur effect method
+    
+    private static func applyBlurEffect(effect: UIBlurEffectStyle?, view: UIView){
+        if effect == nil {
+            
+        }else{
+            let blurEffect = UIBlurEffect(style: effect!)
+            visualEffect.effect = blurEffect
+            view.addSubview(visualEffect)
+            visualEffect.frame = view.frame
+        }
+        
     }
 }
 
