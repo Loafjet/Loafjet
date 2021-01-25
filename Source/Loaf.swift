@@ -232,6 +232,10 @@ extension Loaf{
                 LoafView.center.y = LoafjetView.center.y + 800
                 LoafImageView.center.y = LoafjetView.center.y + 800
             }
+            // for dismisal of blur effect
+            DispatchQueue.main.asyncAfter(deadline: .now() + Duration-0.5) {
+                visualEffect.removeFromSuperview()
+            }
         }
     }
     
