@@ -33,8 +33,8 @@ class MainViewController: UIViewController {
             Loaf.dismissWheel(LoafWheelView: self.view)
         }
         
-        loafTypes.append(LoafTypes.init(loafName: "Plain Loaf", loafType: ["Top","Centre", "Centre","Bottom"], loafAnimation: ["Top -> Bottom","Right -> Left", "Left -> Right","Bottom -> Top"]))
-        loafTypes.append(LoafTypes.init(loafName: "Gradient Loaf", loafType: ["Top","Centre", "Centre","Bottom"], loafAnimation: ["Top -> Bottom","Right -> Left", "Left -> Right","Bottom -> Top"]))
+        loafTypes.append(LoafTypes.init(loafName: "Plain Loaf", loafType: ["Top","Centre", "Centre","Bottom"], loafAnimation: ["Top -> Bottom", "Left -> Right", "Right -> Left","Bottom -> Top"]))
+        loafTypes.append(LoafTypes.init(loafName: "Gradient Loaf", loafType: ["Top","Centre", "Centre","Bottom"], loafAnimation: ["Top -> Bottom", "Left -> Right", "Right -> Left","Bottom -> Top"]))
         loafTypes.append(LoafTypes.init(loafName: "Popup Card", loafType: ["Centre"], loafAnimation: [""]))
         loafTypes.append(LoafTypes.init(loafName: "Loaf Wheel", loafType: ["Centre"], loafAnimation: [""]))
         loafTypes.append(LoafTypes.init(loafName: "Customized Loafs", loafType: ["Xcode","Airpods","Error","Sucessful","Warning","Info"], loafAnimation: ["","","","","",""]))
@@ -73,12 +73,66 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = loafTypes[indexPath.section].loafType?[indexPath.row]
         cell.detailTextLabel?.text = loafTypes[indexPath.section].loafAnimation?[indexPath.row]
-        cell.isUserInteractionEnabled = false
+        cell.isSelected = false
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return loafTypes[section].loafName
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       // print("\(indexPath.section)\(indexPath.row)")
+        let CellNo = Int("\(indexPath.section)\(indexPath.row)")
+        performTask(cellNo: CellNo!)
+    }
+    
+    func performTask(cellNo: Int){
+        switch cellNo {
+        case 0:
+            Loaf.PlainLoaf(Message: "Welcome", Position: .top, LoafWidth: 200, LoafHeight: 40, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 16, BGColor: .systemGray, FontColor: .black, LoafImage: nil, AnimationDirection: .Top, Duration: 2, LoafjetView: view)
+            break
+        case 1:
+            Loaf.PlainLoaf(Message: "Welcome", Position: .center, LoafWidth: 200, LoafHeight: 40, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 16, BGColor: .systemGray, FontColor: .black, LoafImage: nil, AnimationDirection: .Left, Duration: 2, LoafjetView: view)
+            break
+        case 2:
+            Loaf.PlainLoaf(Message: "Welcome", Position: .center, LoafWidth: 200, LoafHeight: 40, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 16, BGColor: .systemGray, FontColor: .black, LoafImage: nil, AnimationDirection: .Right, Duration: 2, LoafjetView: view)
+            break
+        case 3:
+            Loaf.PlainLoaf(Message: "Welcome", Position: .bottom, LoafWidth: 200, LoafHeight: 40, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 16, BGColor: .systemGray, FontColor: .black, LoafImage: nil, AnimationDirection: .Bottom, Duration: 2, LoafjetView: view)
+            break
+        case 10:
+            Loaf.GradientLoaf(Message: "LoafJet", Position: .top, LoafWidth: 250, LoafHeight: 40, CornerRadius: 5, FontStyle: "Avenir-Medium", FontSize: 15, BGColor1: .systemPink, BGColor2: .systemOrange, FontColor: .black, LoafImage: "Xcode", AnimationDirection: .Top, Duration: 2, LoafjetView: view)
+            break
+        case 11:
+            Loaf.GradientLoaf(Message: "LoafJet", Position: .center, LoafWidth: 250, LoafHeight: 40, CornerRadius: 10, FontStyle: "Avenir-Medium", FontSize: 15, BGColor1: .systemRed, BGColor2: .systemBlue, FontColor: .black, LoafImage: "Xcode", AnimationDirection: .Left, Duration: 2, LoafjetView: view)
+            break
+        case 12:
+            Loaf.GradientLoaf(Message: "LoafJet", Position: .center, LoafWidth: 250, LoafHeight: 40, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 15, BGColor1: .systemYellow, BGColor2: .systemGreen, FontColor: .black, LoafImage: "Xcode", AnimationDirection: .Right, Duration: 2, LoafjetView: view)
+            break
+        case 13:
+            Loaf.GradientLoaf(Message: "LoafJet", Position: .bottom, LoafWidth: 250, LoafHeight: 40, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 15, BGColor1: .systemPink, BGColor2: .systemBlue, FontColor: .black, LoafImage: "Xcode", AnimationDirection: .Bottom, Duration: 2, LoafjetView: view)
+            break
+        case 20:
+            break
+        case 30:
+            break
+        case 40:
+            break
+        case 41:
+            break
+        case 42:
+            break
+        case 43:
+            break
+        case 44:
+            break
+        case 45:
+            break
+        default:
+            print("Error")
+        }
     }
     
 }
