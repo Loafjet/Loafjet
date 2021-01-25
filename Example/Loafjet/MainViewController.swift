@@ -29,9 +29,13 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        // Added to dismiss Loaf Wheel view
         DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
             Loaf.dismissWheel(LoafWheelView: self.view)
         }
+        
+        // Array Data
         
         loafTypes.append(LoafTypes.init(loafName: "Plain Loaf", loafType: ["Top","Centre", "Centre","Bottom"], loafAnimation: ["Top -> Bottom", "Left -> Right", "Right -> Left","Bottom -> Top"]))
         loafTypes.append(LoafTypes.init(loafName: "Gradient Loaf", loafType: ["Top","Centre", "Centre","Bottom"], loafAnimation: ["Top -> Bottom", "Left -> Right", "Right -> Left","Bottom -> Top"]))
@@ -40,26 +44,13 @@ class MainViewController: UIViewController {
         loafTypes.append(LoafTypes.init(loafName: "Customized Loafs", loafType: ["Xcode","Airpods","Error","Sucessful","Warning","Info"], loafAnimation: ["","","","","",""]))
        
     }
-   // @available(iOS 10.0, *)
-//    @IBAction func check(_ sender: Any) {
-//
-//       // Loaf.PlainLoaf(Message: "Hello", Position: .bottom, AnimationDirection: .Left, LoafjetView: view)
-//
-//      // Loaf.PlainLoaf(Message: "Xcode Loading", BGColor: .systemBlue, Position: .top, LoafWidth: 190, LoafHeight: 40, CornerRadius: 10, FontStyle: "Avenir-Medium", FontSize: 15, FontColor: .white, LoafImage: "Xcode", AnimationDirection: .Top, Duration: 2, LoafjetView: view)
-//
-//       // Loaf.GradientLoaf(Message: "Xcode Loading", Position: .bottom, BGColor1: .systemPink, BGColor2: .systemOrange, FontColor: .black, LoafImage: "Xcode", AnimationDirection: .Bottom, LoafjetView: view)
-//
-//    //  Loaf.GradientLoaf(Message: "Xcode Loading", Position: .top, LoafWidth: 250, LoafHeight: 40, CornerRadius: 5, FontStyle: "Avenir-Medium", FontSize: 15, BGColor1: .systemPink, BGColor2: .systemOrange, FontColor: .black, LoafImage: "Xcode", AnimationDirection: .Top, Duration: 2, LoafjetView: view)
-//
-//   //   Loaf.PopupCard(Message: "sdfsdhfgdjhgfhjsdgfsjdgfjsdhgfjhsgdhjfgshdfgsdjfjdhfsjdgfjsghghghghgghhghgghghzzzzzzz", Position: .bottom, LoafWidth: 250, LoafHeight: 300, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 15, BGColor1: .systemBlue, BGColor2: .systemPink, FontColor: .black, LoafImage: "Xcode", Duration: 2, LoafjetView: view)
-//
-//        Loaf.LoafWheel(Message: "Loading", LoafWidth: 180, LoafHeight: 100, CornerRadius: 20, BGColor1: .systemRed, BGColor2: .systemBlue, FontStyle: "Avenir", FontSize: 20, FontColor: .black, Duration: 2, WheelStyle: .whiteLarge, BlurEffect: .dark ,LoafWheelView: view)
-//
-//    }
+  
 }
 
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    //MARK:- Tableview Methods
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return loafTypes.count
@@ -88,6 +79,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
         performTask(cellNo: CellNo!)
     }
     
+ //MARK:- Test run method
+    
     func performTask(cellNo: Int){
         switch cellNo {
         case 0:
@@ -115,12 +108,24 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             Loaf.GradientLoaf(Message: "LoafJet", Position: .bottom, LoafWidth: 250, LoafHeight: 40, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 15, BGColor1: .systemPink, BGColor2: .systemBlue, FontColor: .black, LoafImage: "Xcode", AnimationDirection: .Bottom, Duration: 2, LoafjetView: view)
             break
         case 20:
+            if #available(iOS 10.0, *) {
+                Loaf.PopupCard(Message: "LoafJet is a custom library to create Toast , Loader & PopUp Card.", Position: .bottom, LoafWidth: 250, LoafHeight: 300, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 15, BGColor1: .systemBlue, BGColor2: .systemPink, FontColor: .black, LoafImage: "Xcode", Duration: 6, BlurEffect: .regular, LoafjetView: view)
+            } else {
+               print("Pod LoafJet: Your device dont support this blur effect type (require iOS 10.0+)")
+            }
             break
         case 30:
+            if #available(iOS 10.0, *) {
+                Loaf.LoafWheel(Message: "LoafJet loading!", LoafWidth: 250, LoafHeight: 90, CornerRadius: 20, BGColor1: .systemPink, BGColor2: .systemOrange, FontStyle: "Avenir-Heavy", FontSize: 15, FontColor: .black, Duration: 4, WheelStyle: .whiteLarge, BlurEffect: .dark, LoafWheelView: view)
+            } else {
+                print("Pod LoafJet: Your device dont support this blur effect type (require iOS 10.0+)")
+            }
             break
         case 40:
+            Loaf.PlainLoaf(Message: "Welcome", Position: .top, LoafWidth: 200, LoafHeight: 40, CornerRadius: 10, FontStyle: "Avenir-Medium", FontSize: 16, BGColor: .systemBlue, FontColor: .white, LoafImage: "Xcode", AnimationDirection: .Top, Duration: 3, LoafjetView: view)
             break
         case 41:
+            Loaf.PlainLoaf(Message: "AirPods Connected", Position: .top, LoafWidth: 250, LoafHeight: 50, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 16, BGColor: .systemGray, FontColor: .white, LoafImage: "Xcode", AnimationDirection: .Top, Duration: 3, LoafjetView: view)
             break
         case 42:
             break
