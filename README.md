@@ -106,6 +106,7 @@ if #available(iOS 10.0, *) {
  print("Error Message")
 }
 ```
+* Test Run of few Loafjets are give, have a look on it.
 
 ## Author 😊
 
