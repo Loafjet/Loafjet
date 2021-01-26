@@ -115,13 +115,14 @@ if #available(iOS 10.0, *) {.
  print("Error Message")
 }
 ```
-* Test Run of few Loafjets are give, have a look on it.
+* Test Run of few Loafjets are given, have a look on it (Running all Loafjets at a time may lead to irregular functioning!).
 
 ## Note 🔴
 
 * Currently 'Loafjet' dont support SF Symbols, if you need it just raise an issue and I will try to add it ⚓️.
 * The Loafimage you add must be present in the `Images.xcassets` file .
 * Loafimages which you add must be of AxA Size(Else images may get cutout!).
+* In the Test Run make sure you don't run all the Loafjets at a time, wait for one whole Loafjet to complete its task, then go for next.
 
 ## Author 😊
 
