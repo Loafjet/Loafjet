@@ -172,16 +172,16 @@ extension Loaf{
         
         // LOAF LABEL METHOD
         
-        LoafLabel.frame = CGRect(x: Loaf.LoafView.frame.origin.x, y: Loaf.LoafView.frame.origin.y, width: LoafWidth-8 , height: LoafHeight)
+        LoafLabel.frame = CGRect(x: Loaf.LoafView.frame.origin.x, y: Loaf.LoafView.frame.origin.y, width: LoafWidth-8 , height: LoafHeight-120)
         LoafLabel.textAlignment = .center
         LoafLabel.numberOfLines = 5
         LoafLabel.text = Message
         LoafLabel.font = UIFont(name: FontStyle, size: FontSize)
         LoafLabel.textColor = FontColor
-        LoafLabel.numberOfLines = 3
+        LoafLabel.numberOfLines = .max
         LoafLabel.center.y = LoafView.center.y
         LoafLabel.textAlignment = .center
-        
+
         // GRADIENT BG METHOD
         
         let gradientLayer: CAGradientLayer = {
@@ -220,7 +220,7 @@ extension Loaf{
             // For bottom to top
             LoafLabel.center.x = LoafjetView.center.x
             LoafView.center.x = LoafjetView.center.x
-            LoafLabel.center.y = LoafjetView.center.y + 40
+            LoafLabel.center.y = LoafjetView.center.y + 110
             LoafView.center.y = LoafjetView.center.y+45
             LoafImageView.center.y = LoafjetView.center.y - 40
             LoafImageView.center.x = LoafjetView.center.x
