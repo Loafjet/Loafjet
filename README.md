@@ -45,14 +45,14 @@ Loaf.PopupCard(Message: String, Position:LoafPosition, LoafWidth:CGFloat, LoafHe
 ```swift
 Loaf.LoafWheel(Message: String, LoafWidth:CGFloat, LoafHeight:CGFloat, CornerRadius:CGFloat, BGColor1:UIColor, BGColor2:UIColor,FontStyle: String, FontSize: CGFloat, FontColor: UIColor, Duration: TimeInterval, WheelStyle: UIActivityIndicatorViewStyle, BlurEffect: UIBlurEffectStyle ,LoafWheelView: UIView)
 ```
-# Combination of Positions and Animations 📙
+# Combination of Position and Animations 📙
 
 Position&Animation | Left | Right | Top | Bottom 
 --- | --- | --- | --- | --- 
 Top | ✅ | ✅ | ✅ | ✅ 
 Centre | ✅ | ✅ | ❌ | ✅ 
 Bottom | ✅ | ✅ | ❌ | ✅ 
-
+* Customise your Loaf according to the above given chart 🎛.
 
 ## Author
 
