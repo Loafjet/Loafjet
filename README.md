@@ -57,7 +57,7 @@ Bottom | ✅ | ✅ | ❌ | ✅
 
 ## Author
 
-gokulnair2001, “gokulnair.2001@gmail.com”
+[gokulnair2001](https://github.com/gokulnair2001)
 
 ## License
 
