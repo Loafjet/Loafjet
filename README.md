@@ -97,6 +97,8 @@ Top | ✅ | ✅ | ✅ | ❌
 Centre | ✅ | ✅ | ❌ | ❌ 
 Bottom | ✅ | ✅ | ❌ | ✅ 
 
+- The above mentioned ❌ means that particular combination of animation wont be working accurately .
+
 ## Instructions ⚠️
 
 * At a time you can only use one Loaf(Simultaneous use is allowed).
