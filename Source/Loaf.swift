@@ -60,7 +60,7 @@ public class Loaf{
         verifyLoafImage(view: LoafjetView, Image: LoafImage, Width: 25, Height: 25)
         
         // Animation method call
-        Animation(Direction: AnimationDirection, View: LoafjetView, DelayTime: Duration)
+        Animation(Direction: AnimationDirection, View: LoafjetView, DelayTime: Duration, totalTime: Duration)
         
         // ADDING LOAF TO THE VIEW
         LoafjetView.addSubview(LoafView)
@@ -122,13 +122,13 @@ public class Loaf{
             return gradientLayer
         }()
         gradientLayer.frame = LoafView.bounds
-    
+        
         
         // LOAF IMAGE METHOD CALL
         verifyLoafImage(view: LoafjetView, Image: LoafImage, Width: 25, Height: 25)
         
         // Animation method call
-        Animation(Direction: AnimationDirection, View: LoafjetView, DelayTime: Duration)
+        Animation(Direction: AnimationDirection, View: LoafjetView, DelayTime: Duration, totalTime: Duration)
         
         // ADDING LOAF TO THE VIEW
         LoafjetView.addSubview(LoafView)
@@ -304,18 +304,18 @@ extension Loaf{
         wheel.center.y = LoafView.center.y
         
         
-            // BG Blur effect method
-//            let blurEffect = UIBlurEffect(style: BlurEffect)
-//            visualEffect.effect = blurEffect
-//            LoafWheelView.addSubview(visualEffect)
-//            visualEffect.frame = LoafWheelView.frame
+        // BG Blur effect method
+        //            let blurEffect = UIBlurEffect(style: BlurEffect)
+        //            visualEffect.effect = blurEffect
+        //            LoafWheelView.addSubview(visualEffect)
+        //            visualEffect.frame = LoafWheelView.frame
         
         applyBlurEffect(effect: BlurEffect, view: LoafWheelView)
         
         LoafWheelView.addSubview(LoafView)
         LoafWheelView.addSubview(LoafLabel)
         LoafWheelView.addSubview(wheel)
-       
+        
         // for dismisal of blur effect
         DispatchQueue.main.asyncAfter(deadline: .now() + Duration-0.4) {
             LoafLabel.removeFromSuperview()
@@ -373,7 +373,7 @@ extension Loaf{
         case Bottom
         case Top
     }
-
+    
     //MARK:- Image verification method
     
     private static func verifyLoafImage(view: UIView,Image:String!, Width: CGFloat, Height: CGFloat){
@@ -410,7 +410,7 @@ extension Loaf{
 extension Loaf{
     //MARK:- Loaf Animation
     
-    private static func Animation(Direction: LoafAnimation, View: UIView, DelayTime: TimeInterval){
+    private static func Animation(Direction: LoafAnimation, View: UIView, DelayTime: TimeInterval, totalTime: TimeInterval){
         
         if Direction == .Left {
             LoafLabel.center.x = View.center.x - 4000
@@ -431,6 +431,13 @@ extension Loaf{
                     LoafView.frame.origin.x += View.frame.maxX
                     LoafImageView.frame.origin.x += View.frame.maxX
                 }
+                
+            }
+            // Important: To remove the used view from the screen
+            DispatchQueue.main.asyncAfter(deadline: .now() + totalTime+1){
+                LoafLabel.removeFromSuperview()
+                LoafView.removeFromSuperview()
+                LoafImageView.removeFromSuperview()
             }
         }
         
@@ -455,6 +462,13 @@ extension Loaf{
                     LoafView.frame.origin.x -= View.frame.maxX
                     LoafImageView.frame.origin.x -= View.frame.maxX
                 }
+                
+            }
+            // Important: To remove the used view from the screen
+            DispatchQueue.main.asyncAfter(deadline: .now() + totalTime+1){
+                LoafLabel.removeFromSuperview()
+                LoafView.removeFromSuperview()
+                LoafImageView.removeFromSuperview()
             }
         }
         else if Direction == .Bottom {
@@ -479,6 +493,13 @@ extension Loaf{
                     LoafImageView.frame.origin.y = View.frame.maxY
                     
                 }
+                
+            }
+            // Important: To remove the used view from the screen
+            DispatchQueue.main.asyncAfter(deadline: .now() + totalTime+1){
+                LoafLabel.removeFromSuperview()
+                LoafView.removeFromSuperview()
+                LoafImageView.removeFromSuperview()
             }
         }
         
@@ -495,13 +516,22 @@ extension Loaf{
                 LoafImageView.frame.origin.y += View.frame.origin.x+5
                 
             }completion: { (isCompleted) in
-                UIView.animate(withDuration: 0.5, delay: DelayTime, options: .curveEaseOut) {
+                UIView.animate(withDuration: 1.5, delay: DelayTime, options: .curveEaseOut) {
                     
-                    LoafLabel.frame.origin.y -= View.frame.maxY
-                    LoafView.frame.origin.y -= View.frame.maxY
-                    LoafImageView.frame.origin.y -= View.frame.maxY
+                    LoafLabel.frame.origin.y -= View.frame.midY
+                    LoafView.frame.origin.y -= View.frame.midY
+                    LoafImageView.frame.origin.y -= View.frame.midY
                 }
+                
             }
+            // Important: To remove the used view from the screen
+            DispatchQueue.main.asyncAfter(deadline: .now() + totalTime+1){
+                LoafLabel.removeFromSuperview()
+                LoafView.removeFromSuperview()
+                LoafImageView.removeFromSuperview()
+                
+            }
+            
         }
     }
     
