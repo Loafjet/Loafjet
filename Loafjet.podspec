@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Loafjet'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of Loafjet.'
+  s.version          = '1.0.0'
+  s.summary          = 'Loafjet is a custom library used to add Toast, Popup Card and Loading indicator in your Swift project'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+'Lofjet is a Toast generator library which allows the user to add customised Toast to his project. Loafjet comes with various types of Toast animation as well as toast position. It can be used to add gradient toasts too. Loafjet comes with extra features like Popup Card and Loading Indicator. This Popup Cards and Loading Indicator can be customised according to the needs.'
                        DESC
 
   s.homepage         = 'https://github.com/gokulnair2001/Loafjet'
@@ -26,11 +26,12 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'gokulnair2001' => '“gokulnair.2001@gmail.com”' }
   s.source           = { :git => 'https://github.com/gokulnair2001/Loafjet.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/GokulNair2303'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '12.0'
+  s.swift_version = '5.3'
 
-  s.source_files = 'Loafjet/Classes/**/*'
+    s.source_files = 'Source/**/*.swift'
   
   # s.resource_bundles = {
   #   'Loafjet' => ['Loafjet/Assets/*.png']
