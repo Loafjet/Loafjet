@@ -33,21 +33,38 @@ pod 'Loafjet'
 # How To Use 📁 ?
 
 ### Plain Loaf
+* With Default Parameters 
+```swift
+ Loaf.PlainLoaf(Message: String, Position: LoafPosition, AnimationDirection: LoafAnimation, LoafjetView: UIView)
+```
+* Without Default Parameters 
 ```swift
 Loaf.PlainLoaf(Message: String, Position:LoafPosition, LoafWidth:CGFloat , LoafHeight:CGFloat,CornerRadius: CGFloat, FontStyle: String, FontSize: CGFloat, BGColor: UIColor, FontColor: UIColor, LoafImage: String? , AnimationDirection: LoafAnimation , Duration: TimeInterval, LoafjetView: UIView)
 ```
 ### Gradient Loaf
-
+* With Default Parameters
+```swift
+Loaf.GradientLoaf(Message: String, Position: LoafPosition, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor, LoafImage: String?, AnimationDirection: LoafAnimation, LoafjetView: UIView)
+```
+* Without Default Parameters
 ```swift
 Loaf.GradientLoaf(Message: String, Position:LoafPosition, LoafWidth:CGFloat, LoafHeight:CGFloat, CornerRadius: CGFloat, FontStyle: String, FontSize: CGFloat, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor,LoafImage: String?, AnimationDirection: LoafAnimation, Duration: TimeInterval, LoafjetView: UIView)
 ```
 ### Popup Card
-
+* With Default Parameters
+```swift
+Loaf.PopupCard(Message: String, Position: LoafPosition, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor, LoafImage: String?, BlurEffect: UIBlurEffectStyle?, LoafjetView: UIView)
+```
+* Without Default Parameters
 ```swift
 Loaf.PopupCard(Message: String, Position:LoafPosition, LoafWidth:CGFloat, LoafHeight:CGFloat, CornerRadius: CGFloat, FontStyle: String, FontSize: CGFloat, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor, LoafImage: String?, Duration: TimeInterval, BlurEffect: UIBlurEffectStyle?, LoafjetView: UIView)
 ```
 ### LoafWheel
-
+* With Default Parameters
+```swift
+ Loaf.LoafWheel(Message: String, BGColor1: UIColor, BGColor2: UIColor, LoafWheelView: UIView)
+```
+* Without Default Parameters
 ```swift
 Loaf.LoafWheel(Message: String, LoafWidth:CGFloat, LoafHeight:CGFloat, CornerRadius:CGFloat, BGColor1:UIColor, BGColor2:UIColor,FontStyle: String, FontSize: CGFloat, FontColor: UIColor, Duration: TimeInterval, WheelStyle: UIActivityIndicatorViewStyle, BlurEffect: UIBlurEffectStyle ,LoafWheelView: UIView)
 ```
@@ -155,9 +172,14 @@ if #available(iOS 10.0, *) {.
 
 Loafjet is available under the MIT license. See the [LICENSE](https://github.com/gokulnair2001/Loafjet) file for more info.
 
+## How to Contribute 🖋
+* Run the app - Steps are mentioned above.
+* If you face issues in any step open a new issue (Format mentioned below).
+* To fix issues: Fork this repository, make your changes and make a Pull Request.
+
 ## Issues ❕
 
-* Create a new issue:
+* Create a new issue (Follow the format):
 ### Issue Report Format
 * `Subject` : Mention the issue in one line.
 * `Description` : Describe the issue.
