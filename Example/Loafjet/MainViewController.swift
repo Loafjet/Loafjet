@@ -91,7 +91,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             Loaf.PlainLoaf(Message: "Welcome", Position: .bottom, LoafWidth: 200, LoafHeight: 40, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 16, BGColor: .systemGray, FontColor: .black, LoafImage: nil, AnimationDirection: .Bottom, Duration: 2, LoafjetView: view)
             break
         case 10:
-            Loaf.GradientLoaf(Message: "LoafJet", Position: .top, LoafWidth: 250, LoafHeight: 40, CornerRadius: 5, FontStyle: "Avenir-Medium", FontSize: 15, BGColor1: .systemPink, BGColor2: .systemOrange, FontColor: .black, LoafImage: "Xcode", AnimationDirection: .Top, Duration: 2, LoafjetView: view)
+            Loaf.GradientLoaf(Message: "Grad LoafJet", Position: .top, LoafWidth: 210, LoafHeight: 40, CornerRadius: 5, FontStyle: "Avenir-Heavy", FontSize: 16, BGColor1: .systemPink, BGColor2: .systemOrange, FontColor: .black, LoafImage: "Xcode", AnimationDirection: .Top, Duration: 2, LoafjetView: view)
             break
         case 11:
             Loaf.GradientLoaf(Message: "LoafJet", Position: .center, LoafWidth: 250, LoafHeight: 40, CornerRadius: 10, FontStyle: "Avenir-Medium", FontSize: 15, BGColor1: .systemRed, BGColor2: .systemBlue, FontColor: .black, LoafImage: "Xcode", AnimationDirection: .Left, Duration: 2, LoafjetView: view)
@@ -104,7 +104,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             break
         case 20:
             if #available(iOS 10.0, *) {
-                Loaf.PopupCard(Message: "LoafJet is a custom library to create Toast , Loader & PopUp Card.", Position: .bottom, LoafWidth: 250, LoafHeight: 300, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 15, BGColor1: .systemBlue, BGColor2: .systemPink, FontColor: .black, LoafImage: "Xcode", Duration: 6, BlurEffect: .regular, LoafjetView: view)
+                Loaf.PopupCard(Message: "LoafJet is a custom library to create Toast , Loader & PopUp Card.", Position: .bottom, LoafWidth: 250, LoafHeight: 300, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 15, BGColor1: .systemBlue, BGColor2: .systemPink, FontColor: .black, LoafImage: "Xcode", Duration: 6, BlurEffect: .dark, LoafjetView: view)
             } else {
                print("Pod LoafJet: Your device dont support this blur effect type (require iOS 10.0+)")
             }
@@ -136,7 +136,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             break
         case 46:
             if #available(iOS 13.0, *) {
-                Loaf.PlainLoaf(Message: "Do Not Disturb LoafJet", Position: .bottom, LoafWidth: 260, LoafHeight: 40, CornerRadius: 10, FontStyle: "Avenir-Medium", FontSize: 17, BGColor: .systemIndigo, FontColor: .white, LoafImage: "DND", AnimationDirection: .Bottom, Duration: 4, LoafjetView: view)
+                Loaf.PlainLoaf(Message: "Do Not Disturb LoafJet", Position: .bottom, LoafWidth: 280, LoafHeight: 40, CornerRadius: 10, FontStyle: "Avenir-Medium", FontSize: 16, BGColor: .systemIndigo, FontColor: .white, LoafImage: "DND", AnimationDirection: .Bottom, Duration: 4, LoafjetView: view)
             } else {
                 print("Pod LoafJet: Your device dont support this color type (require iOS 13.0+)")
             }
