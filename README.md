@@ -115,6 +115,10 @@ if #available(iOS 10.0, *) {
 
 ## Note 🔴
 
+* Currently 'Loafjet' dont support SF Symbols, if you need it just raise an issue and I will try to add it ⚓️.
+* The Loafimage you add must be present in the 'Images.xcassets' file .
+* Loafimages which you add must be of AxA Size(Else images may get cutout!).
+
 ## Author 😊
 
 [gokulnair2001](https://github.com/gokulnair2001)
