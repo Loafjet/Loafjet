@@ -172,7 +172,7 @@ extension Loaf{
         
         // LOAF LABEL METHOD
         
-        LoafLabel.frame = CGRect(x: Loaf.LoafView.frame.origin.x, y: Loaf.LoafView.frame.origin.y, width: LoafWidth , height: LoafHeight)
+        LoafLabel.frame = CGRect(x: Loaf.LoafView.frame.origin.x, y: Loaf.LoafView.frame.origin.y, width: LoafWidth-8 , height: LoafHeight)
         LoafLabel.textAlignment = .center
         LoafLabel.numberOfLines = 5
         LoafLabel.text = Message
@@ -270,6 +270,7 @@ extension Loaf{
         LoafView.clipsToBounds = true
         LoafView.center.x = LoafWheelView.center.x
         LoafView.center.y = LoafWheelView.center.y
+        
         // GRADIENT BG METHOD
         
         let gradientLayer: CAGradientLayer = {
@@ -303,13 +304,7 @@ extension Loaf{
         wheel.frame.origin.x = LoafView.frame.origin.x
         wheel.center.y = LoafView.center.y
         
-        
-        // BG Blur effect method
-        //            let blurEffect = UIBlurEffect(style: BlurEffect)
-        //            visualEffect.effect = blurEffect
-        //            LoafWheelView.addSubview(visualEffect)
-        //            visualEffect.frame = LoafWheelView.frame
-        
+        // Apply Blur effect call
         applyBlurEffect(effect: BlurEffect, view: LoafWheelView)
         
         LoafWheelView.addSubview(LoafView)
