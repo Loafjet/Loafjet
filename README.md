@@ -12,9 +12,10 @@
 ## About 📒
 Lofjet is a Toast generator library which allows the user to add customised Toast to his project. Loafjet comes with various types of Toast animation as well as toast position. It can be used to add gradient and plain toasts. Loafjet comes with extra features like Popup Card and Loading Indicator. This Popup Cards and Loading Indicator can be customised according to the needs.
 
-## Example
+## Playground ⛳️
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+I've provided an example project to showcase uses of Loafjet! Simply clone this repo, and open `Loafjet.xcworkspace`.
+Run `pod install`, From here you can see and experiment custom Loaf styles in `Examples.swift`.
 
 ## Requirements
 
