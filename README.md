@@ -12,10 +12,11 @@
 ## About 📒
 Lofjet is a Toast generator library which allows the user to add customised Toast to his project. Loafjet comes with various types of Toast animation as well as toast position. It can be used to add gradient and plain toasts. Loafjet comes with extra features like Popup Card and Loading Indicator. This Popup Cards and Loading Indicator can be customised according to the needs.
 
-## Playground ⛳️
+## Playground 💻
 
-I've provided an example project to showcase uses of Loafjet! Simply clone this repo, and open `Loafjet.xcworkspace`.
-Run `pod install`, From here you can see and experiment custom Loaf styles in `Examples.swift`.
+* I've provided an example project to showcase uses of Loafjet! Simply clone this repo, and open `Loafjet.xcworkspace`.
+* Run `pod install`.
+* Here you can see and experiment custom Loaf styles in `Examples.swift`.
 
 ## Requirements
 
@@ -92,8 +93,8 @@ Loaf.dismissWheel(LoafWheelView:UIView)
 
 Position & Animation | Left | Right | Top | Bottom 
 --- | --- | --- | --- | --- 
-Top | ✅ | ✅ | ✅ | ✅ 
-Centre | ✅ | ✅ | ❌ | ✅ 
+Top | ✅ | ✅ | ✅ | ❌ 
+Centre | ✅ | ✅ | ❌ | ❌ 
 Bottom | ✅ | ✅ | ❌ | ✅ 
 
 ## Instructions ⚠️
@@ -104,7 +105,8 @@ Bottom | ✅ | ✅ | ❌ | ✅
 * To dismiss the loader use ``` Loaf.dismissWheel(LoafWheelView:UIView) ```.
 * For certain colors and blur effect particular iOS version is required, So to solve it use the below code (By default Xcode will show you this fix).
 ```swift
-if #available(iOS 10.0, *) {
+//iOS version will varry 
+if #available(iOS 10.0, *) {. 
  // write the code to run
  }
  else {
@@ -116,12 +118,12 @@ if #available(iOS 10.0, *) {
 ## Note 🔴
 
 * Currently 'Loafjet' dont support SF Symbols, if you need it just raise an issue and I will try to add it ⚓️.
-* The Loafimage you add must be present in the 'Images.xcassets' file .
+* The Loafimage you add must be present in the `Images.xcassets` file .
 * Loafimages which you add must be of AxA Size(Else images may get cutout!).
 
 ## Author 😊
 
-[gokulnair2001](https://github.com/gokulnair2001)
+[Gokul Nair](https://github.com/gokulnair2001)
 
 ## License ⚖️
 
