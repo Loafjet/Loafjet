@@ -47,12 +47,13 @@ Loaf.LoafWheel(Message: String, LoafWidth:CGFloat, LoafHeight:CGFloat, CornerRad
 ```
 # Combination of Position and Animations 📙
 
+* Customise your Loaf according to the below given chart 🎛.
+
 Position&Animation | Left | Right | Top | Bottom 
 --- | --- | --- | --- | --- 
 Top | ✅ | ✅ | ✅ | ✅ 
 Centre | ✅ | ✅ | ❌ | ✅ 
 Bottom | ✅ | ✅ | ❌ | ✅ 
-* Customise your Loaf according to the above given chart 🎛.
 
 ## Author
 
@@ -60,4 +61,18 @@ gokulnair2001, “gokulnair.2001@gmail.com”
 
 ## License
 
-Loafjet is available under the MIT license. See the LICENSE file for more info.
+Loafjet is available under the MIT license. See the [LICENSE](https://github.com/gokulnair2001/Loafjet) file for more info.
+
+# Like the Project ?
+If you like using any of my projects or like what I'm doing, please consider backing me with appreciating my work: [Message me](https://www.linkedin.com/in/gokul-r-nair/)🥰
+
+[<img width="200" alt="BMC logo+wordmark - Black" src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png">](https://www.buymeacoffee.com/gokulnair)
+
+OR
+
+**Drop a star ⭐ if you find this project interesting!**
+
+<p align="center" width="100%">
+   Made with ❤️ in 🇮🇳 By Gokul Nair   
+</p>
+
