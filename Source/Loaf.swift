@@ -35,7 +35,7 @@ public class Loaf{
     ///   - Duration: Animation Duration
     ///   - LoafjetView: UIView on which the Loaf is to be presented
     
-    public static func PlainLoaf(Message: String, Position:LoafPosition, LoafWidth:CGFloat = 150 , LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor: UIColor = .gray,FontColor: UIColor = .black, LoafImage: String? = nil , AnimationDirection: LoafAnimation , Duration: TimeInterval = 2.0, LoafjetView: UIView){
+    public static func PlainLoaf(Message: String, Position:LoafPosition, LoafWidth:CGFloat = 150 , LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor: UIColor = .gray,FontColor: UIColor = .black, LoafImage: String? = nil , AnimationDirection: LoafAnimation , Duration: TimeInterval = 3.0, LoafjetView: UIView){
         
         LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
         
@@ -259,7 +259,7 @@ extension Loaf{
     ///   - WheelStyle: Activity Indicator type
     ///   - BlurEffect: Blur Effect type
     ///   - LoafjetView: UIView on which the Loaf is to be presented
-    public static func LoafWheel(Message: String, LoafWidth:CGFloat = 50, LoafHeight:CGFloat = 50, CornerRadius:CGFloat = 20, BGColor1:UIColor, BGColor2:UIColor,FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, FontColor: UIColor = .black, Duration: TimeInterval = 2.0, WheelStyle: UIActivityIndicatorViewStyle = .white, BlurEffect: UIBlurEffectStyle = .regular ,LoafWheelView: UIView) {
+    public static func LoafWheel(Message: String, LoafWidth:CGFloat = 50, LoafHeight:CGFloat = 50, CornerRadius:CGFloat = 20, BGColor1:UIColor, BGColor2:UIColor,FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, FontColor: UIColor = .black, Duration: TimeInterval = 2.0, WheelStyle: UIActivityIndicatorViewStyle = .white, BlurEffect: UIBlurEffectStyle? = .regular ,LoafWheelView: UIView) {
         
         LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
         
@@ -310,6 +310,7 @@ extension Loaf{
         LoafWheelView.addSubview(LoafView)
         LoafWheelView.addSubview(LoafLabel)
         LoafWheelView.addSubview(wheel)
+        LoafWheelView.isUserInteractionEnabled = false
         
         // for dismisal of blur effect
         DispatchQueue.main.asyncAfter(deadline: .now() + Duration-0.4) {

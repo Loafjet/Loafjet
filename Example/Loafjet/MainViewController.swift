@@ -111,7 +111,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             break
         case 30:
             if #available(iOS 10.0, *) {
-                Loaf.LoafWheel(Message: "LoafJet loading!", LoafWidth: 250, LoafHeight: 90, CornerRadius: 20, BGColor1: .systemPink, BGColor2: .systemOrange, FontStyle: "Avenir-Heavy", FontSize: 18, FontColor: .white, Duration: 4, WheelStyle: .whiteLarge, BlurEffect: .dark, LoafWheelView: view)
+                Loaf.LoafWheel(Message: "LoafJet loading!", LoafWidth: 250, LoafHeight: 90, CornerRadius: 20, BGColor1: .systemPink, BGColor2: .systemOrange, FontStyle: "Avenir-Heavy", FontSize: 18, FontColor: .white, Duration: 10, WheelStyle: .whiteLarge, BlurEffect: nil, LoafWheelView: view)
             } else {
                 print("Pod LoafJet: Your device dont support this blur effect type (require iOS 10.0+)")
             }
