@@ -461,7 +461,7 @@ extension Loaf{
             
             LoafLabel.center.x = View.center.x
             LoafView.center.x = View.center.x
-            LoafImageView.center.x = LoafView.frame.origin.x+19
+            LoafImageView.center.x = LoafView.frame.origin.x+29
             
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
                 // For bottom to top
@@ -477,6 +477,7 @@ extension Loaf{
                     LoafLabel.frame.origin.y = View.frame.maxY
                     LoafView.frame.origin.y = View.frame.maxY
                     LoafImageView.frame.origin.y = View.frame.maxY
+                    
                 }
             }
         }
