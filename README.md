@@ -99,6 +99,19 @@ Bottom | ✅ | ✅ | ❌ | ✅
 
 - The above mentioned ❌ means that particular combination of animation wont be working accurately .
 
+# Customisation 🛠
+
+* Loafjet offers you a wide variety of customisation, select a style and apply your creativity on it.
+* This are some possible ways, "How Loafjet can be used ?".
+
+| Do Not Disturb | Information | Warning |
+:-------------------------:|:-------------------------: | :-------------------------:
+<img width="345" alt="Screenshot 2021-01-27 at 2 04 10 AM" src="https://user-images.githubusercontent.com/56252259/105902733-0d795f00-6045-11eb-833a-a364e8365987.png"> |  <img width="345" alt="Screenshot 2021-01-27 at 2 19 10 AM" src="https://user-images.githubusercontent.com/56252259/105903573-0d2d9380-6046-11eb-87b1-89f87c2f9da5.png"> | <img width="345" alt="Screenshot 2021-01-27 at 2 04 32 AM" src="https://user-images.githubusercontent.com/56252259/105902747-123e1300-6045-11eb-9033-b7e64e5febc1.png">
+| Success | Error | Device Detection |
+<img width="345" alt="Screenshot 2021-01-27 at 2 04 43 AM" src="https://user-images.githubusercontent.com/56252259/105902751-136f4000-6045-11eb-8412-d7565d39a753.png"> | <img width="345" alt="Screenshot 2021-01-27 at 2 05 00 AM" src="https://user-images.githubusercontent.com/56252259/105902752-1407d680-6045-11eb-8fae-33fbd96e61e2.png">  | <img width="345" alt="Screenshot 2021-01-27 at 2 05 14 AM" src="https://user-images.githubusercontent.com/56252259/105902753-14a06d00-6045-11eb-8d1c-e8d77aac8d9d.png">
+
+* What are you waiting for, write `pod Loafjet` and `pod install` it .
+
 ## Instructions ⚠️
 
 * At a time you can only use one Loaf(Simultaneous use is allowed).
