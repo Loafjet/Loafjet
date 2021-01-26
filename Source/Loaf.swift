@@ -233,7 +233,7 @@ extension Loaf{
                 LoafImageView.center.y = LoafjetView.center.y + 800
             }
             // for dismisal of blur effect
-            DispatchQueue.main.asyncAfter(deadline: .now() + Duration-0.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Duration-0.4) {
                 visualEffect.removeFromSuperview()
             }
         }
@@ -316,6 +316,14 @@ extension Loaf{
         LoafWheelView.addSubview(LoafLabel)
         LoafWheelView.addSubview(wheel)
        
+        // for dismisal of blur effect
+        DispatchQueue.main.asyncAfter(deadline: .now() + Duration-0.4) {
+            LoafLabel.removeFromSuperview()
+            LoafView.removeFromSuperview()
+            wheel.removeFromSuperview()
+            visualEffect.removeFromSuperview()
+            LoafWheelView.isUserInteractionEnabled = true
+        }
     }
     
     
