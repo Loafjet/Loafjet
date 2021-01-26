@@ -1,8 +1,12 @@
+<p align="center">
+<img src = "https://user-images.githubusercontent.com/56252259/105874888-21ac6480-6023-11eb-9915-954f2d41f5d0.png" width = 800, height = 400>
+</p>
+
 # Loafjet
 
 [![CI Status](https://img.shields.io/travis/gokulnair2001/Loafjet.svg?style=flat)](https://travis-ci.org/gokulnair2001/Loafjet)
 [![Version](https://img.shields.io/cocoapods/v/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet)
-[![License](https://img.shields.io/cocoapods/l/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet)
+![Badge](https://img.shields.io/badge/License-MIT-yellow) 
 [![Platform](https://img.shields.io/cocoapods/p/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet)
 
 ## About 📒
@@ -107,6 +111,8 @@ if #available(iOS 10.0, *) {
 }
 ```
 * Test Run of few Loafjets are give, have a look on it.
+
+## Note 🔴
 
 ## Author 😊
 
