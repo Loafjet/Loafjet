@@ -45,7 +45,13 @@ Loaf.PopupCard(Message: String, Position:LoafPosition, LoafWidth:CGFloat, LoafHe
 ```swift
 Loaf.LoafWheel(Message: String, LoafWidth:CGFloat, LoafHeight:CGFloat, CornerRadius:CGFloat, BGColor1:UIColor, BGColor2:UIColor,FontStyle: String, FontSize: CGFloat, FontColor: UIColor, Duration: TimeInterval, WheelStyle: UIActivityIndicatorViewStyle, BlurEffect: UIBlurEffectStyle ,LoafWheelView: UIView)
 ```
-# Parameters 
+### LoafWheel Dismissal 
+
+```swift
+Loaf.dismissWheel(LoafWheelView:UIView)
+```
+
+## Parameters 🎚
 
 <table>
 <tr><td>
@@ -59,22 +65,23 @@ Loaf.LoafWheel(Message: String, LoafWidth:CGFloat, LoafHeight:CGFloat, CornerRad
 | CornerRadius | CornerRadius of Loaf | 
 | FontStyle | Font Style of Message |
 | FontSize | Font size of Message|
+| BGColor | Background Color of Loaf |
 
-</td><td>
+</td><td> 
 
 | Parameter | Definition |             
 | --- | --- |
-| BGColor | Background Color of Loaf |
 | LoafImage | Image on Loaf |
 | Duration | Loaf Duration |
 | AnimationDirection | Loaf Animation type |
 | BlurEffect | Blur effect type |
 | WheelStyle | Wheel Style |
+| LoafWheelView | View on which LoafWheel is running |
 | LoafjetView | View on which Loaf is presented |
 
 </td></tr> </table>
 
-# Combination of Position and Animations 📙
+## Combination of Position and Animations 📙
 
 * Customise your Loaf according to the below given chart 🎛.
 
@@ -84,11 +91,27 @@ Top | ✅ | ✅ | ✅ | ✅
 Centre | ✅ | ✅ | ❌ | ✅ 
 Bottom | ✅ | ✅ | ❌ | ✅ 
 
-## Author
+## Instructions ⚠️
+
+* At a time you can only use one Loaf(Simultaneous use is allowed).
+* Customise Loaf Position and Anmation according to the above given table.
+* Use ```.greatestFiniteMagnitude``` in duration to get an infinte loader.
+* To dismiss the loader use ``` Loaf.dismissWheel(LoafWheelView:UIView) ```.
+* For certain color and blur effect use particular iOS version is required, So to solve it use the below code (By default Xcode will show you this fix).
+```swift
+if #available(iOS 10.0, *) {
+ // write the code to run
+ }
+ else {
+ print("Error Message")
+}
+```
+
+## Author 😊
 
 [gokulnair2001](https://github.com/gokulnair2001)
 
-## License
+## License ⚖️
 
 Loafjet is available under the MIT license. See the [LICENSE](https://github.com/gokulnair2001/Loafjet) file for more info.
 
