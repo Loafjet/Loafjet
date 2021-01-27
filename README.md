@@ -40,7 +40,7 @@ Loaf.PlainLoaf(Message: "Message goes here", Position: .Bottom, AnimationDirecti
 
 | Plain Default Loaf|
 | --- |
-|<img width="345" alt="Screenshot 2021-01-27 at 12 31 14 PM" src="https://user-images.githubusercontent.com/56252259/105955014-9b803480-609b-11eb-91f5-2b60732bea50.png">|
+|<img width="345" alt="Screenshot 2021-01-27 at 12 31 14 PM" src="https://user-images.githubusercontent.com/56252259/105955014-9b803480-609b-11eb-91f5-2b60732bea50.png"> |
 
 * This is the most basic Loafjet you can make with least line of code 😙.
 * Below all Loafjet types are mentioned , have a look on it 😊.
@@ -151,13 +151,13 @@ Bottom | ✅ | ✅ | ❌ | ✅
 | Success | Error | Device Detection |
 <img width="345" alt="Screenshot 2021-01-27 at 2 04 43 AM" src="https://user-images.githubusercontent.com/56252259/105902751-136f4000-6045-11eb-8412-d7565d39a753.png"> | <img width="345" alt="Screenshot 2021-01-27 at 2 05 00 AM" src="https://user-images.githubusercontent.com/56252259/105902752-1407d680-6045-11eb-8fae-33fbd96e61e2.png">  | <img width="345" alt="Screenshot 2021-01-27 at 2 05 14 AM" src="https://user-images.githubusercontent.com/56252259/105902753-14a06d00-6045-11eb-8d1c-e8d77aac8d9d.png">
 
-### Loafjet+ (Additional features)
+# Loafjet+ (Additional features)
 
 * `Gradient Loafwheel` & `Popup card` are the additional customisation which you get in Loafjet🥳.
 
-|Popup Card|
-|---|
-|<img width="345" alt="Screenshot 2021-01-27 at 2 06 42 AM" src="https://user-images.githubusercontent.com/56252259/105955866-f36b6b00-609c-11eb-8184-e7554471b5dc.png">|
+|Popup Card|Loaf Wheel|
+|---| --- |
+|<img width="345" alt="Screenshot 2021-01-27 at 2 06 42 AM" src="https://user-images.githubusercontent.com/56252259/105955866-f36b6b00-609c-11eb-8184-e7554471b5dc.png"> | <img width="345" alt="Screenshot 2021-01-27 at 2 06 06 AM" src="https://user-images.githubusercontent.com/56252259/105955860-f1091100-609c-11eb-93ef-bb0d40f7f21f.png"> |
 
 * What are you waiting for, write `pod Loafjet` and `pod install` it .
 * Done?, Now enjoy using Loafjet🚀.
