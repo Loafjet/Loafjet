@@ -22,14 +22,14 @@ class LoafTypes{
 }
 
 class MainViewController: UIViewController {
-
+    
     var loafTypes = [LoafTypes]()
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         // Array Data
         
         loafTypes.append(LoafTypes.init(loafName: "Plain Loaf", loafType: ["Top","Centre", "Centre","Bottom"], loafAnimation: ["Top -> Bottom", "Left -> Right", "Right -> Left","Bottom -> Top"]))
@@ -37,9 +37,9 @@ class MainViewController: UIViewController {
         loafTypes.append(LoafTypes.init(loafName: "Popup Card", loafType: ["Centre"], loafAnimation: ["Only one type of animation"]))
         loafTypes.append(LoafTypes.init(loafName: "Loaf Wheel", loafType: ["Centre"], loafAnimation: ["Only one type of animation"]))
         loafTypes.append(LoafTypes.init(loafName: "Customized Loafs", loafType: ["Xcode","Airpods","Error","Sucessful","Warning","Information","Do Not Disturb"], loafAnimation: ["","","","","","",""]))
-       
+        
     }
-  
+    
 }
 
 
@@ -60,7 +60,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
         cell.textLabel?.text = loafTypes[indexPath.section].loafType?[indexPath.row]
         cell.detailTextLabel?.text = loafTypes[indexPath.section].loafAnimation?[indexPath.row]
         cell.isSelected = false
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         return cell
     }
     
@@ -69,18 +69,17 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       // print("\(indexPath.section)\(indexPath.row)")
+        // print("\(indexPath.section)\(indexPath.row)")
         let CellNo = Int("\(indexPath.section)\(indexPath.row)")
         performTask(cellNo: CellNo!)
     }
     
- //MARK:- Test run method
+    //MARK:- Test run method
     
     func performTask(cellNo: Int){
         switch cellNo {
         case 0:
-            Loaf.PlainLoaf(Message: "Message goes here", Position: .bottom, AnimationDirection: .Bottom, LoafjetView: view)
-           // Loaf.PlainLoaf(Message: "Welcome", Position: .top, LoafWidth: 200, LoafHeight: 40, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 17, BGColor: .gray, FontColor: .black, LoafImage: nil, AnimationDirection: .Top, Duration: 2, LoafjetView: view)
+            Loaf.PlainLoaf(Message: "Welcome", Position: .top, LoafWidth: 200, LoafHeight: 40, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 17, BGColor: .gray, FontColor: .black, LoafImage: nil, AnimationDirection: .Top, Duration: 2, LoafjetView: view)
             break
         case 1:
             Loaf.PlainLoaf(Message: "LOAFJET", Position: .center, LoafWidth: 200, LoafHeight: 40, CornerRadius: 20, FontStyle: "Avenir", FontSize: 17, BGColor: .systemOrange, FontColor: .black, LoafImage: nil, AnimationDirection: .Left, Duration: 2, LoafjetView: view)
@@ -107,7 +106,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             if #available(iOS 12.0, *) {
                 Loaf.PopupCard(Message: "Loafjet is a custom library used to add Toast, Popup Card and Loading indicator in your Swift project.", Position: .bottom, LoafWidth: 250, LoafHeight: 300, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 17, BGColor1: .black, BGColor2: .systemRed, FontColor: .white, LoafImage: "Logo", Duration: 5, BlurEffect: .dark, LoafjetView: view)
             } else {
-               print("Pod LoafJet: Your device dont support this blur effect type (require iOS 10.0+)")
+                print("Pod LoafJet: Your device dont support this blur effect type (require iOS 10.0+)")
             }
             break
         case 30:
@@ -133,7 +132,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             Loaf.PlainLoaf(Message: "Warning LoafJet", Position: .bottom, LoafWidth: 250, LoafHeight: 40, CornerRadius: 10, FontStyle: "Avenir-Heavy", FontSize: 17, BGColor: .systemYellow, FontColor: .white, LoafImage: "warning", AnimationDirection: .Bottom, Duration: 2, LoafjetView: view)
             break
         case 45:
-                Loaf.PlainLoaf(Message: "Information LoafJet", Position: .bottom, LoafWidth: 250, LoafHeight: 40, CornerRadius: 10, FontStyle: "Avenir-Medium", FontSize: 17, BGColor: .systemOrange, FontColor: .white, LoafImage: "info", AnimationDirection: .Bottom, Duration: 2, LoafjetView: view)
+            Loaf.PlainLoaf(Message: "Information LoafJet", Position: .bottom, LoafWidth: 250, LoafHeight: 40, CornerRadius: 10, FontStyle: "Avenir-Medium", FontSize: 17, BGColor: .systemOrange, FontColor: .white, LoafImage: "info", AnimationDirection: .Bottom, Duration: 2, LoafjetView: view)
             break
         case 46:
             if #available(iOS 13.0, *) {
