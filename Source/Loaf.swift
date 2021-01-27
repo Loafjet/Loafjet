@@ -160,7 +160,7 @@ extension Loaf{
     ///   - Duration: Animation Duration
     ///   - LoafjetView: UIView on which the Card is to be presented
     
-    public static func PopupCard(Message: String, Position:LoafPosition, LoafWidth:CGFloat = 150,LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor,LoafImage: String?, Duration: TimeInterval = 2.0, BlurEffect: UIBlurEffectStyle?, LoafjetView: UIView) {
+    public static func PopupCard(Message: String, Position:LoafPosition, LoafWidth:CGFloat = 150,LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor,LoafImage: String?, Duration: TimeInterval = 2.0, BlurEffect: UIBlurEffect.Style?, LoafjetView: UIView) {
         
         LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
         
@@ -181,7 +181,7 @@ extension Loaf{
         LoafLabel.numberOfLines = .max
         LoafLabel.center.y = LoafView.center.y
         LoafLabel.textAlignment = .center
-
+        
         // GRADIENT BG METHOD
         
         let gradientLayer: CAGradientLayer = {
@@ -259,7 +259,7 @@ extension Loaf{
     ///   - WheelStyle: Activity Indicator type
     ///   - BlurEffect: Blur Effect type
     ///   - LoafjetView: UIView on which the Loaf is to be presented
-    public static func LoafWheel(Message: String, LoafWidth:CGFloat = 50, LoafHeight:CGFloat = 50, CornerRadius:CGFloat = 20, BGColor1:UIColor, BGColor2:UIColor,FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, FontColor: UIColor = .black, Duration: TimeInterval = 2.0, WheelStyle: UIActivityIndicatorViewStyle = .white, BlurEffect: UIBlurEffectStyle? = .regular ,LoafWheelView: UIView) {
+    public static func LoafWheel(Message: String, LoafWidth:CGFloat = 50, LoafHeight:CGFloat = 50, CornerRadius:CGFloat = 20, BGColor1:UIColor, BGColor2:UIColor,FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, FontColor: UIColor = .black, Duration: TimeInterval = 2.0, WheelStyle: UIActivityIndicatorView.Style = .white, BlurEffect: UIBlurEffect.Style? = .regular ,LoafWheelView: UIView) {
         
         LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
         
@@ -387,7 +387,7 @@ extension Loaf{
     
     //MARK:- Blur effect method
     
-    private static func applyBlurEffect(effect: UIBlurEffectStyle?, view: UIView){
+    private static func applyBlurEffect(effect: UIBlurEffect.Style?, view: UIView){
         if effect == nil {
             
         }else{
