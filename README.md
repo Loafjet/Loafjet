@@ -147,7 +147,7 @@ Bottom | ✅ | ✅ | ❌ | ✅
 * To dismiss the loader use ``` Loaf.dismissWheel(LoafWheelView:UIView) ```.
 * For certain colors and blur effect particular iOS version is required, So to solve it use the below code (By default Xcode will show you this fix).
 ```swift
-//iOS version will varry 
+// iOS versions will varry 
 if #available(iOS 10.0, *) {. 
  // write the code to run
  }
@@ -161,8 +161,9 @@ if #available(iOS 10.0, *) {.
 
 * Currently 'Loafjet' dont support SF Symbols, if you need it just raise an issue and I will try to add it ⚓️.
 * The Loafimage you add must be present in the `Images.xcassets` file .
-* Loafimages which you add must be of AxA Size(Else images may get cutout!).
+* Loafimages which you add must be of A x A Size(Else images may get cutout!).
 * In the Test Run make sure you don't run all the Loafjets at a time, wait for one whole Loafjet to complete its task, then go for next.
+* All the Loafjets are created with default parameters too, so notice carefully which one you are using (Functions with and without default parameters are shown ⬆️).
 
 ## Author 😊
 
