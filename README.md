@@ -12,12 +12,6 @@
 ## About 📒
 Lofjet is a Toast generator library which allows the user to add customised Toast to his project. Loafjet comes with various types of Toast animation as well as toast position. It can be used to add gradient and plain toasts. Loafjet comes with extra features like Popup Card and Loading Indicator. This Popup Cards and Loading Indicator can be customised according to the needs.
 
-## Playground 💻
-
-* I've provided an example project to showcase uses of Loafjet! Simply clone this repo, and open `Loafjet.xcworkspace`.
-* Run `pod install`.
-* Here you can see and experiment custom Loaf styles in `Examples.swift`.
-
 ## Requirements
 
 Device running on iOS/iPadOS 12.0+ versions 📱.
@@ -30,6 +24,12 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'Loafjet'
 ```
+## Playground 💻
+
+* I've provided an example project to showcase uses of Loafjet! Simply clone this repo, and open `Loafjet.xcworkspace`.
+* Run `pod install`.
+* Here you can see and experiment custom Loaf styles in `Examples.swift`.
+
 # How To Use 📁 ?
 From any view controller, a Loaf can be presented by calling:
 
