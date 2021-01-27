@@ -157,7 +157,7 @@ Bottom | ✅ | ✅ | ❌ | ✅
 
 |Popup Card|Loaf Wheel|
 |---| --- |
-|<img width="345" alt="Screenshot 2021-01-27 at 2 06 42 AM" src="https://user-images.githubusercontent.com/56252259/105955866-f36b6b00-609c-11eb-8184-e7554471b5dc.png"> | <img width="345" alt="Screenshot 2021-01-27 at 2 06 06 AM" src="https://user-images.githubusercontent.com/56252259/105955860-f1091100-609c-11eb-93ef-bb0d40f7f21f.png"> |
+|<img width="345" alt="Screenshot 2021-01-27 at 2 06 42 AM" src="https://user-images.githubusercontent.com/56252259/105955866-f36b6b00-609c-11eb-8184-e7554471b5dc.png"> | <img width="345" alt="Screenshot 2021-01-27 at 12 47 33 PM" src="https://user-images.githubusercontent.com/56252259/105956449-d5ead100-609d-11eb-9059-145df3cc141b.png"> |
 
 * What are you waiting for, write `pod Loafjet` and `pod install` it .
 * Done?, Now enjoy using Loafjet🚀.
