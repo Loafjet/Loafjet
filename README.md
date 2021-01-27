@@ -10,7 +10,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet)
 
 ## About 📒
-Lofjet is a Toast generator library which allows the user to add customised Toast to his project. Loafjet comes with various types of Toast animation as well as toast position. It can be used to add gradient and plain toasts. Loafjet comes with extra features like Popup Card and Loading Indicator. This Popup Cards and Loading Indicator can be customised according to the needs.
+Loafjet is a Toast generator library which allows the user to add customised Toasts to his/her projects. Loafjet comes with various types of Toast Animations as well as Toast Positions. It can be used to add gradient and plain toasts. Loafjet comes with extra features like Popup Card and Loading Indicator which can be customised according to your needs.
 
 ## Requirements
 
@@ -26,7 +26,7 @@ pod 'Loafjet'
 ```
 ## Playground 💻
 
-* I've provided an example project to showcase uses of Loafjet! Simply clone this repo, and open `Loafjet.xcworkspace`.
+* I've provided a demo project to showcase the uses of Loafjet! Simply clone this repo, and open `Loafjet.xcworkspace`.
 * Run `pod install`.
 * Here you can see and experiment custom Loaf styles in `Examples.swift`.
 
