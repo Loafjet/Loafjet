@@ -104,14 +104,14 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             Loaf.GradientLoaf(Message: "HomePod Mini Detected", Position: .bottom, LoafWidth: 300, LoafHeight: 50, CornerRadius: 20, FontStyle: "Avenir-Heavy", FontSize: 17, BGColor1: .systemPink, BGColor2: .black, FontColor: .white, LoafImage: "HomePodMini", AnimationDirection: .Bottom, Duration: 2, LoafjetView: view)
             break
         case 20:
-            if #available(iOS 10.0, *) {
+            if #available(iOS 12.0, *) {
                 Loaf.PopupCard(Message: "Loafjet is a custom library used to add Toast, Popup Card and Loading indicator in your Swift project.", Position: .bottom, LoafWidth: 250, LoafHeight: 300, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 17, BGColor1: .black, BGColor2: .systemRed, FontColor: .white, LoafImage: "Logo", Duration: 5, BlurEffect: .dark, LoafjetView: view)
             } else {
                print("Pod LoafJet: Your device dont support this blur effect type (require iOS 10.0+)")
             }
             break
         case 30:
-            if #available(iOS 10.0, *) {
+            if #available(iOS 12.0, *) {
                 Loaf.LoafWheel(Message: "LoafJet loading!", LoafWidth: 250, LoafHeight: 90, CornerRadius: 20, BGColor1: .systemPink, BGColor2: .systemOrange, FontStyle: "Avenir-Heavy", FontSize: 18, FontColor: .white, Duration: 5, WheelStyle: .whiteLarge, BlurEffect: .dark, LoafWheelView: view)
             } else {
                 print("Pod LoafJet: Your device dont support this blur effect type (require iOS 10.0+)")
