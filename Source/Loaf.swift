@@ -147,7 +147,6 @@ extension Loaf{
     /// PopupCard is a card animation used to display quick info on screen.
     /// - Parameters:
     ///   - Message: Message to show on Card
-    ///   - Position: Where to place the Card
     ///   - LoafWidth: Width of Card
     ///   - LoafHeight: Height of Card
     ///   - CornerRadius: CornerRadius of Card
@@ -160,7 +159,7 @@ extension Loaf{
     ///   - Duration: Animation Duration
     ///   - LoafjetView: UIView on which the Card is to be presented
     
-    public static func PopupCard(Message: String, Position:LoafPosition, LoafWidth:CGFloat = 150,LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor,LoafImage: String?, Duration: TimeInterval = 2.0, BlurEffect: UIBlurEffect.Style?, LoafjetView: UIView) {
+    public static func PopupCard(Message: String, LoafWidth:CGFloat = 150,LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor,LoafImage: String?, Duration: TimeInterval = 2.0, BlurEffect: UIBlurEffect.Style?, LoafjetView: UIView) {
         
         LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
         
