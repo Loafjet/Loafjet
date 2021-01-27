@@ -242,7 +242,7 @@ extension Loaf{
     //MARK:- Loader Loaf Method
     
     
-    @available(iOS 10.0, *)
+    @available(iOS 12.0, *)
     
     /// LoafWheel is a custom loader view with gradient background support
     /// - Parameters:
