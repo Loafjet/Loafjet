@@ -31,6 +31,19 @@ it, simply add the following line to your Podfile:
 pod 'Loafjet'
 ```
 # How To Use 📁 ?
+From any view controller, a Loaf can be presented by calling:
+
+```swift
+Loaf.PlainLoaf(Message: "Message goes here", Position: .Bottom, AnimationDirection: .Bottom, LoafjetView: View)
+```
+### Result:
+
+| Plain Default Loaf|
+| --- |
+|<img width="345" alt="Screenshot 2021-01-27 at 12 31 14 PM" src="https://user-images.githubusercontent.com/56252259/105955014-9b803480-609b-11eb-91f5-2b60732bea50.png">|
+
+* This is the most basic Loafjet you can make with least line of code 😙.
+* Below all Loafjet types are mentioned , have a look on it 😊.
 
 ### Plain Loaf
 * With Default Parameters 📗
@@ -122,6 +135,8 @@ Bottom | ✅ | ✅ | ❌ | ✅
 <img width="345" alt="Screenshot 2021-01-27 at 1 57 03 AM" src="https://user-images.githubusercontent.com/56252259/105906142-50d5cc80-6049-11eb-8e40-e30eac21516f.png">|  <img width="345" alt="Screenshot 2021-01-27 at 1 58 44 AM" src="https://user-images.githubusercontent.com/56252259/105906160-56331700-6049-11eb-8fba-3badbaa6ae1b.png"> | <img width="345" alt="Screenshot 2021-01-27 at 1 57 43 AM" src="https://user-images.githubusercontent.com/56252259/105906154-54695380-6049-11eb-94c5-deb7df585053.png"> | <img width="345" alt="Screenshot 2021-01-27 at 1 58 23 AM" src="https://user-images.githubusercontent.com/56252259/105906157-559a8080-6049-11eb-9c20-108f8510499a.png">
 | Gradient(Top) | Gradient(Bottom) | Gradient(Centre) | Gradient(Centre) |
  <img width="345" alt="Screenshot 2021-01-27 at 2 01 02 AM" src="https://user-images.githubusercontent.com/56252259/105906149-5206f980-6049-11eb-992e-3f600bf9ab48.png"> |<img width="345" alt="Screenshot 2021-01-27 at 2 00 11 AM" src="https://user-images.githubusercontent.com/56252259/105906162-57644400-6049-11eb-9bdf-c3c47ed3b29e.png"> | <img width="345" alt="Screenshot 2021-01-27 at 2 00 25 AM" src="https://user-images.githubusercontent.com/56252259/105906165-57fcda80-6049-11eb-81be-48acd7114a4e.png"> | <img width="345" alt="Screenshot 2021-01-27 at 2 00 46 AM" src="https://user-images.githubusercontent.com/56252259/105906168-58957100-6049-11eb-9bc0-d0d04175f95e.png">
+
+* Above shown are few possible ways, you can customise according to your need (Customisation shown below).
 
 # Customisation 🛠
 
