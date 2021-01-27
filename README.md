@@ -168,7 +168,7 @@ Bottom | ✅ | ✅ | ❌ | ✅
 * Customise Loaf Position and Anmation according to the above given table.
 * Use ```.greatestFiniteMagnitude``` in duration to get an infinte loader.
 * To dismiss the loader use ``` Loaf.dismissWheel(LoafWheelView:UIView) ```.
-* For certain colors and blur effect particular iOS version is required, So to solve it use the below code (By default Xcode will show you this fix).
+* For certain colors and blur effect particular iOS version is required, So to solve it use the below code (By default Xcode will show you both the fix).
 ```swift
 // iOS versions will varry 
 if #available(iOS 10.0, *) {. 
@@ -177,7 +177,14 @@ if #available(iOS 10.0, *) {.
  else {
  print("Error Message")
 }
+``` 
+### OR
+
+```swift
+// iOS versions will varry 
+ @available(iOS 10.0, *)
 ```
+
 * Test Run of few Loafjets are given, have a look on it (Running all Loafjets at a time may lead to irregular functioning!).
 
 ## Note 🔴
