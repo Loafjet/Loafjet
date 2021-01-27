@@ -35,7 +35,7 @@ public class Loaf{
     ///   - Duration: Animation Duration
     ///   - LoafjetView: UIView on which the Loaf is to be presented
     
-    public static func PlainLoaf(Message: String, Position:LoafPosition, LoafWidth:CGFloat = 150 , LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor: UIColor = .gray,FontColor: UIColor = .black, LoafImage: String? = nil , AnimationDirection: LoafAnimation , Duration: TimeInterval = 3.0, LoafjetView: UIView){
+    public static func PlainLoaf(Message: String, Position:LoafPosition, LoafWidth:CGFloat = 200 , LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor: UIColor = .gray,FontColor: UIColor = .black, LoafImage: String? = nil , AnimationDirection: LoafAnimation , Duration: TimeInterval = 3.0, LoafjetView: UIView){
         
         LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
         

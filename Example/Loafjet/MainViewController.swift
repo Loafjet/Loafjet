@@ -79,7 +79,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     func performTask(cellNo: Int){
         switch cellNo {
         case 0:
-            Loaf.PlainLoaf(Message: "Welcome", Position: .top, LoafWidth: 200, LoafHeight: 40, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 17, BGColor: .gray, FontColor: .black, LoafImage: nil, AnimationDirection: .Top, Duration: 2, LoafjetView: view)
+            Loaf.PlainLoaf(Message: "Message goes here", Position: .bottom, AnimationDirection: .Bottom, LoafjetView: view)
+           // Loaf.PlainLoaf(Message: "Welcome", Position: .top, LoafWidth: 200, LoafHeight: 40, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 17, BGColor: .gray, FontColor: .black, LoafImage: nil, AnimationDirection: .Top, Duration: 2, LoafjetView: view)
             break
         case 1:
             Loaf.PlainLoaf(Message: "LOAFJET", Position: .center, LoafWidth: 200, LoafHeight: 40, CornerRadius: 20, FontStyle: "Avenir", FontSize: 17, BGColor: .systemOrange, FontColor: .black, LoafImage: nil, AnimationDirection: .Left, Duration: 2, LoafjetView: view)
