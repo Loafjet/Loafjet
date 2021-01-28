@@ -2,7 +2,7 @@
 <img src = "https://user-images.githubusercontent.com/56252259/105874888-21ac6480-6023-11eb-9915-954f2d41f5d0.png" width = 800, height = 400>
 </p>
 
-# Loafjet
+# Loafjet 🚀
 
 [![CI Status](https://img.shields.io/travis/gokulnair2001/Loafjet.svg?style=flat)](https://travis-ci.org/gokulnair2001/Loafjet)
 [![Version](https://img.shields.io/cocoapods/v/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet)
@@ -12,11 +12,11 @@
 ## About 📒
 Loafjet is a Toast generator library which allows the user to add customised Toasts to his/her projects. Loafjet comes with various types of Toast Animations as well as Toast Positions. It can be used to add gradient and plain toasts. Loafjet comes with extra features like Popup Card and Loading Indicator which can be customised according to your needs.
 
-## Requirements
+## Requirements ❕
 
 Device running on iOS/iPadOS 12.0+ versions 📱.
 
-## Installation
+## Installation 🌏
 
 Loafjet is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -36,7 +36,7 @@ From any view controller, a Loaf can be presented by calling:
 ```swift
 Loaf.PlainLoaf(Message: "Message goes here", Position: .Bottom, AnimationDirection: .Bottom, LoafjetView: View)
 ```
-### Result:
+### Result: 💯
 
 | Plain Default Loaf|
 | --- |
