@@ -199,7 +199,7 @@ if #available(iOS 10.0, *) {.
 
 ## Author 😊
 
-[Gokul Nair](https://github.com/gokulnair2001)
+[Gokul Nair](https://twitter.com/GokulNair2303)
 
 ## License ⚖️
 
