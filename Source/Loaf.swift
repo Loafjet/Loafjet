@@ -421,7 +421,7 @@ extension Loaf{
                 LoafImageView.center.x = LoafView.frame.origin.x+19
                 
             }completion: { (isCompleted) in
-                UIView.animate(withDuration: DelayTime, delay: DelayTime, options: .curveEaseOut) {
+                UIView.animate(withDuration: 0.5, delay: DelayTime, options: .curveEaseOut) {
                     LoafLabel.frame.origin.x += View.frame.maxX
                     LoafView.frame.origin.x += View.frame.maxX
                     LoafImageView.frame.origin.x += View.frame.maxX
@@ -449,7 +449,7 @@ extension Loaf{
                 LoafImageView.frame.origin.x = LoafView.frame.origin.x+19
                 
             }completion: { (isCompleted) in
-                UIView.animate(withDuration: DelayTime, delay: DelayTime, options: .curveEaseOut) {
+                UIView.animate(withDuration: 0.5, delay: DelayTime, options: .curveEaseOut) {
                     
                     // centre to left direction
                     
@@ -480,7 +480,7 @@ extension Loaf{
                 LoafImageView.frame.origin.y -= View.frame.origin.y+5
                 
             }completion: { (isCompleted) in
-                UIView.animate(withDuration: DelayTime, delay: DelayTime, options: .curveEaseOut) {
+                UIView.animate(withDuration: 0.5, delay: DelayTime, options: .curveEaseOut) {
                     // top to bottom direction
                     
                     LoafLabel.frame.origin.y = View.frame.maxY
@@ -511,7 +511,7 @@ extension Loaf{
                 LoafImageView.frame.origin.y += View.frame.origin.x+5
                 
             }completion: { (isCompleted) in
-                UIView.animate(withDuration: DelayTime, delay: DelayTime, options: .curveEaseOut) {
+                UIView.animate(withDuration: 1.5, delay: DelayTime, options: .curveEaseOut) {
                     
                     LoafLabel.frame.origin.y -= View.frame.midY
                     LoafView.frame.origin.y -= View.frame.midY
