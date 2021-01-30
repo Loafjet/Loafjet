@@ -14,8 +14,8 @@ Loafjet is a Toast generator library which allows the user to add customised Toa
 
 ## Requirements ❕
 
-Device running on iOS/iPadOS 12.0+ versions 📱.
-Swift 5.1+ 💻
+* Device running on iOS/iPadOS 12.0+ versions 📱.
+* Swift 5.1+ 💻
 
 ## Installation 🌏
 
