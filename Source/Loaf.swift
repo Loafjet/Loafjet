@@ -92,13 +92,11 @@ public class Loaf{
         LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
         
         // LOAF VIEW METHOD
-        
         LoafView.frame = Position.centerPoint(view: LoafjetView, width: LoafWidth, height: LoafHeight)
         LoafView.layer.cornerRadius = CornerRadius
         LoafView.clipsToBounds = true
         
         // LOAF LABEL METHOD
-        
         LoafLabel.frame = CGRect(x: Loaf.LoafView.frame.origin.x, y: Loaf.LoafView.frame.origin.y, width: LoafWidth , height: LoafHeight)
         LoafLabel.textAlignment = .center
         LoafLabel.text = Message
@@ -106,10 +104,7 @@ public class Loaf{
         LoafLabel.textColor = FontColor
         LoafLabel.center.y = Loaf.LoafView.center.y
         
-        
         // GRADIENT BG METHOD
-        
-        
         let gradientLayer: CAGradientLayer = {
             let gradientLayer = CAGradientLayer()
             gradientLayer.colors = [BGColor1.cgColor, BGColor2.cgColor]
@@ -123,7 +118,6 @@ public class Loaf{
         }()
         gradientLayer.frame = LoafView.bounds
         
-        
         // LOAF IMAGE METHOD CALL
         verifyLoafImage(view: LoafjetView, Image: LoafImage, Width: 25, Height: 25)
         
@@ -134,10 +128,7 @@ public class Loaf{
         LoafjetView.addSubview(LoafView)
         LoafjetView.addSubview(LoafLabel)
         LoafjetView.addSubview(LoafImageView)
-        
     }
-    
-    
 }
 
 //MARK:- Popup Card Method
@@ -164,13 +155,11 @@ extension Loaf{
         LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
         
         // LOAF VIEW METHOD
-        
         LoafView.frame = CGRect(x: LoafjetView.center.x, y: LoafjetView.center.y, width: LoafWidth, height: LoafHeight)
         LoafView.layer.cornerRadius = CornerRadius
         LoafView.clipsToBounds = true
         
         // LOAF LABEL METHOD
-        
         LoafLabel.frame = CGRect(x: Loaf.LoafView.frame.origin.x, y: Loaf.LoafView.frame.origin.y, width: LoafWidth-8 , height: LoafHeight-120)
         LoafLabel.textAlignment = .center
         LoafLabel.numberOfLines = 5
@@ -182,7 +171,6 @@ extension Loaf{
         LoafLabel.textAlignment = .center
         
         // GRADIENT BG METHOD
-        
         let gradientLayer: CAGradientLayer = {
             let gradientLayer = CAGradientLayer()
             gradientLayer.colors = [BGColor1.cgColor, BGColor2.cgColor]
@@ -195,7 +183,6 @@ extension Loaf{
             return gradientLayer
         }()
         gradientLayer.frame = LoafView.bounds
-        
         // LOAF IMAGE METHOD CALL
         verifyLoafImage(view: LoafjetView, Image: LoafImage, Width: 100, Height: 100)
         
@@ -203,7 +190,6 @@ extension Loaf{
         applyBlurEffect(effect: BlurEffect, view: LoafjetView)
         
         // Animation method call
-        
         LoafjetView.addSubview(LoafView)
         LoafjetView.addSubview(LoafLabel)
         LoafjetView.addSubview(LoafImageView)
@@ -223,7 +209,6 @@ extension Loaf{
             LoafView.center.y = LoafjetView.center.y+45
             LoafImageView.center.y = LoafjetView.center.y - 40
             LoafImageView.center.x = LoafjetView.center.x
-            
         }completion: { (isCompleted) in
             UIView.animate(withDuration: 0.5, delay: Duration, options: .curveEaseOut) {
                 // top to bottom direction
@@ -261,17 +246,13 @@ extension Loaf{
     public static func LoafWheel(Message: String, LoafWidth:CGFloat = 50, LoafHeight:CGFloat = 50, CornerRadius:CGFloat = 20, BGColor1:UIColor, BGColor2:UIColor,FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, FontColor: UIColor = .black, Duration: TimeInterval = 2.0, WheelStyle: UIActivityIndicatorView.Style = .white, BlurEffect: UIBlurEffect.Style? = .regular ,LoafWheelView: UIView) {
         
         LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
-        
         // LOAF VIEW METHOD
-        
         LoafView.frame = CGRect(x: LoafWheelView.center.x , y: LoafWheelView.center.y, width: LoafWidth, height: LoafHeight)
         LoafView.layer.cornerRadius = CornerRadius
         LoafView.clipsToBounds = true
         LoafView.center.x = LoafWheelView.center.x
         LoafView.center.y = LoafWheelView.center.y
-        
         // GRADIENT BG METHOD
-        
         let gradientLayer: CAGradientLayer = {
             let gradientLayer = CAGradientLayer()
             gradientLayer.colors = [BGColor1.cgColor, BGColor2.cgColor]
@@ -284,9 +265,7 @@ extension Loaf{
             return gradientLayer
         }()
         gradientLayer.frame = LoafView.bounds
-        
         // LOAF LABEL METHOD
-        
         LoafLabel.frame = CGRect(x: LoafWheelView.center.x, y: LoafWheelView.center.y, width: LoafWidth , height: LoafHeight)
         LoafLabel.textAlignment = .center
         LoafLabel.text = Message
@@ -294,23 +273,18 @@ extension Loaf{
         LoafLabel.textColor = FontColor
         LoafLabel.center.x = LoafWheelView.center.x
         LoafLabel.center.y = LoafWheelView.center.y
-        
         // Adding Indicator
-        
         wheel.frame = CGRect(x: LoafWheelView.center.x, y: LoafWheelView.center.y, width: 50, height: 50)
         wheel.hidesWhenStopped = true
         wheel.startAnimating()
         wheel.frame.origin.x = LoafView.frame.origin.x
         wheel.center.y = LoafView.center.y
-        
         // Apply Blur effect call
         applyBlurEffect(effect: BlurEffect, view: LoafWheelView)
-        
         LoafWheelView.addSubview(LoafView)
         LoafWheelView.addSubview(LoafLabel)
         LoafWheelView.addSubview(wheel)
         LoafWheelView.isUserInteractionEnabled = false
-        
         // for dismisal of blur effect
         DispatchQueue.main.asyncAfter(deadline: .now() + Duration-0.4) {
             LoafLabel.removeFromSuperview()
@@ -321,9 +295,7 @@ extension Loaf{
         }
     }
     
-    
     //MARK:- Loader Dismisal Method
-    
     public static func dismissWheel(LoafWheelView:UIView){
         LoafLabel.removeFromSuperview()
         LoafView.removeFromSuperview()
@@ -333,18 +305,15 @@ extension Loaf{
     }
 }
 
-
 //MARK:- Enumeration Keys
 
 extension Loaf{
-    
     //MARK:- Position Method
     
     public enum LoafPosition {
         case top
         case center
         case bottom
-        
         fileprivate func centerPoint(view: UIView, width:CGFloat, height:CGFloat) -> CGRect{
             switch self {
             case .top:
@@ -361,7 +330,6 @@ extension Loaf{
     }
     
     //MARK:- Toast Animation Method
-    
     public enum LoafAnimation {
         case Left
         case Right
@@ -370,7 +338,6 @@ extension Loaf{
     }
     
     //MARK:- Image verification method
-    
     private static func verifyLoafImage(view: UIView,Image:String!, Width: CGFloat, Height: CGFloat){
         if Image == nil {
             // No image added
@@ -385,48 +352,36 @@ extension Loaf{
     }
     
     //MARK:- Blur effect method
-    
     private static func applyBlurEffect(effect: UIBlurEffect.Style?, view: UIView){
         if effect == nil {
-            
         }else{
             let blurEffect = UIBlurEffect(style: effect!)
             visualEffect.effect = blurEffect
             view.addSubview(visualEffect)
             visualEffect.frame = view.frame
         }
-        
     }
 }
 
-
 //MARK:- ANimation Methods
-
 extension Loaf{
     //MARK:- Loaf Animation
-    
     private static func Animation(Direction: LoafAnimation, View: UIView, DelayTime: TimeInterval){
-        
         if Direction == .Left {
             LoafLabel.center.x = View.center.x - 4000
             LoafView.center.x = View.center.x - 4000
             LoafImageView.center.x = LoafView.frame.origin.x - 4000
-            
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
-                
                 //  For left to right
-                
                 LoafLabel.center.x = View.center.x
                 LoafView.center.x = View.center.x
                 LoafImageView.center.x = LoafView.frame.origin.x+19
-                
             }completion: { (isCompleted) in
                 UIView.animate(withDuration: 0.5, delay: DelayTime, options: .curveEaseOut) {
                     LoafLabel.frame.origin.x += View.frame.maxX
                     LoafView.frame.origin.x += View.frame.maxX
                     LoafImageView.frame.origin.x += View.frame.maxX
                 }
-                
             }
             // Important: To remove the used view from the screen
             DispatchQueue.main.asyncAfter(deadline: .now() + DelayTime+1){
@@ -435,29 +390,22 @@ extension Loaf{
                 LoafImageView.removeFromSuperview()
             }
         }
-        
         else if Direction == .Right {
-            
             // Placing the label in left to fix the position in the start
             LoafLabel.center.x = View.center.y
             LoafView.center.x = View.center.y
             LoafImageView.frame.origin.x = LoafView.frame.origin.x+19
-            
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
                 LoafLabel.center.x = View.center.x
                 LoafView.center.x = View.center.x
                 LoafImageView.frame.origin.x = LoafView.frame.origin.x+19
-                
             }completion: { (isCompleted) in
                 UIView.animate(withDuration: 0.5, delay: DelayTime, options: .curveEaseOut) {
-                    
                     // centre to left direction
-                    
                     LoafLabel.frame.origin.x -= View.frame.maxX
                     LoafView.frame.origin.x -= View.frame.maxX
                     LoafImageView.frame.origin.x -= View.frame.maxX
                 }
-                
             }
             // Important: To remove the used view from the screen
             DispatchQueue.main.asyncAfter(deadline: .now() + DelayTime+1){
@@ -467,28 +415,21 @@ extension Loaf{
             }
         }
         else if Direction == .Bottom {
-            
             LoafLabel.center.x = View.center.x
             LoafView.center.x = View.center.x
             LoafImageView.center.x = LoafView.frame.origin.x+29
-            
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
                 // For bottom to top
-                
                 LoafLabel.frame.origin.y -= View.frame.origin.y+5
                 LoafView.frame.origin.y -= View.frame.origin.y+5
                 LoafImageView.frame.origin.y -= View.frame.origin.y+5
-                
             }completion: { (isCompleted) in
                 UIView.animate(withDuration: 0.5, delay: DelayTime, options: .curveEaseOut) {
                     // top to bottom direction
-                    
                     LoafLabel.frame.origin.y = View.frame.maxY
                     LoafView.frame.origin.y = View.frame.maxY
                     LoafImageView.frame.origin.y = View.frame.maxY
-                    
                 }
-                
             }
             // Important: To remove the used view from the screen
             DispatchQueue.main.asyncAfter(deadline: .now() + DelayTime+1){
@@ -497,19 +438,15 @@ extension Loaf{
                 LoafImageView.removeFromSuperview()
             }
         }
-        
         else if Direction == .Top {
-            
             LoafLabel.center.x = View.center.x
             LoafView.center.x = View.center.x
             LoafImageView.frame.origin.x = LoafView.frame.origin.x+19
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
                 // For bottom to top
-                
                 LoafLabel.frame.origin.y += View.frame.origin.y+5
                 LoafView.frame.origin.y += View.frame.origin.y+5
                 LoafImageView.frame.origin.y += View.frame.origin.x+5
-                
             }completion: { (isCompleted) in
                 UIView.animate(withDuration: 1.5, delay: DelayTime, options: .curveEaseOut) {
                     
@@ -517,7 +454,6 @@ extension Loaf{
                     LoafView.frame.origin.y -= View.frame.midY
                     LoafImageView.frame.origin.y -= View.frame.midY
                 }
-                
             }
             // Important: To remove the used view from the screen
             DispatchQueue.main.asyncAfter(deadline: .now() + DelayTime+1){
@@ -526,9 +462,7 @@ extension Loaf{
                 LoafImageView.removeFromSuperview()
                 
             }
-            
         }
     }
-    
 }
 
