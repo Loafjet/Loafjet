@@ -20,7 +20,6 @@ class LoafTypes{
         self.loafAnimation = loafAnimation
     }
 }
-
 class MainViewController: UIViewController {
     
     var loafTypes = [LoafTypes]()
@@ -31,30 +30,22 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         // Array Data
-        
         loafTypes.append(LoafTypes.init(loafName: "Plain Loaf", loafType: ["Top","Centre", "Centre","Bottom"], loafAnimation: ["Top -> Bottom", "Left -> Right", "Right -> Left","Bottom -> Top"]))
         loafTypes.append(LoafTypes.init(loafName: "Gradient Loaf", loafType: ["Top","Centre", "Centre","Bottom"], loafAnimation: ["Top -> Bottom", "Left -> Right", "Right -> Left","Bottom -> Top"]))
         loafTypes.append(LoafTypes.init(loafName: "Popup Card", loafType: ["Centre"], loafAnimation: ["Only one type of animation"]))
         loafTypes.append(LoafTypes.init(loafName: "Loaf Wheel", loafType: ["Centre"], loafAnimation: ["Only one type of animation"]))
         loafTypes.append(LoafTypes.init(loafName: "Customized Loafs", loafType: ["Xcode","Airpods","Error","Sucessful","Warning","Information","Do Not Disturb"], loafAnimation: ["","","","","","",""]))
-        
     }
-    
 }
 
-
 extension MainViewController: UITableViewDelegate, UITableViewDataSource{
-    
     //MARK:- Tableview Methods
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return loafTypes.count
     }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return loafTypes[section].loafType?.count ?? 0
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = loafTypes[indexPath.section].loafType?[indexPath.row]
@@ -63,11 +54,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         return cell
     }
-    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return loafTypes[section].loafName
     }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // print("\(indexPath.section)\(indexPath.row)")
         let CellNo = Int("\(indexPath.section)\(indexPath.row)")
@@ -75,7 +64,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     //MARK:- Test run method
-    
     func performTask(cellNo: Int){
         switch cellNo {
         case 0:
@@ -145,5 +133,4 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             print("Error")
         }
     }
-    
 }
