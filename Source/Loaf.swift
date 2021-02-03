@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-
 public class Loaf{
     
     private static let LoafView = UIView()
@@ -40,14 +39,12 @@ public class Loaf{
         LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
         
         // LOAF VIEW METHOD
-        
         LoafView.frame = Position.centerPoint(view: LoafjetView, width: LoafWidth, height: LoafHeight)
         LoafView.backgroundColor = BGColor
         LoafView.layer.cornerRadius = CornerRadius
         LoafView.clipsToBounds = true
         
         // LOAF LABEL METHOD
-        
         LoafLabel.frame = CGRect(x: Loaf.LoafView.frame.origin.x, y: Loaf.LoafView.frame.origin.y, width: LoafWidth , height: LoafHeight)
         LoafLabel.textAlignment = .center
         LoafLabel.text = Message
@@ -90,7 +87,6 @@ public class Loaf{
     public static func GradientLoaf(Message: String, Position:LoafPosition, LoafWidth:CGFloat = 150,LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor,LoafImage: String?, AnimationDirection: LoafAnimation, Duration: TimeInterval = 2.0, LoafjetView: UIView) {
         
         LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
-        
         // LOAF VIEW METHOD
         LoafView.frame = Position.centerPoint(view: LoafjetView, width: LoafWidth, height: LoafHeight)
         LoafView.layer.cornerRadius = CornerRadius
