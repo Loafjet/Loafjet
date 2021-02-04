@@ -175,7 +175,7 @@ if #available(iOS 10.0, *) {.
  print("Error Message")
 }
 ``` 
-### OR
+### Or
 
 ```swift
 // iOS versions will varry 
