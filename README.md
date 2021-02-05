@@ -62,25 +62,25 @@ Loaf.GradientLoaf(message: String, position:LoafPosition, loafWidth:CGFloat, loa
 ### Popup Card
 * With Default Parameters 📗
 ```swift
-Loaf.PopupCard(Message: String, Position: LoafPosition, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor, LoafImage: String?, BlurEffect: UIBlurEffectStyle?, LoafjetView: UIView)
+Loaf.PopupCard(message: String, position: LoafPosition, bgColor1: UIColor, bgColor2: UIColor, fontColor: UIColor, loafImage: String?, blurEffect: UIBlurEffectStyle?, loafjetView: UIView)
 ```
 * Without Default Parameters 📘
 ```swift
-Loaf.PopupCard(Message: String, Position:LoafPosition, LoafWidth:CGFloat, LoafHeight:CGFloat, CornerRadius: CGFloat, FontStyle: String, FontSize: CGFloat, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor, LoafImage: String?, Duration: TimeInterval, BlurEffect: UIBlurEffectStyle?, LoafjetView: UIView)
+Loaf.PopupCard(message: String, position:LoafPosition, loafWidth:CGFloat, loafHeight:CGFloat, cornerRadius: CGFloat, fontStyle: String, fontSize: CGFloat, bgColor1: UIColor, bgColor2: UIColor, fontColor: UIColor, loafImage: String?, duration: TimeInterval, blurEffect: UIBlurEffectStyle?, loafjetView: UIView)
 ```
 ### LoafWheel
 * With Default Parameters 📗
 ```swift
- Loaf.LoafWheel(Message: String, BGColor1: UIColor, BGColor2: UIColor, LoafWheelView: UIView)
+ Loaf.LoafWheel(message: String, bgColor1: UIColor, bgColor2: UIColor, loafWheelView: UIView)
 ```
 * Without Default Parameters 📘
 ```swift
-Loaf.LoafWheel(Message: String, LoafWidth:CGFloat, LoafHeight:CGFloat, CornerRadius:CGFloat, BGColor1:UIColor, BGColor2:UIColor,FontStyle: String, FontSize: CGFloat, FontColor: UIColor, Duration: TimeInterval, WheelStyle: UIActivityIndicatorViewStyle, BlurEffect: UIBlurEffectStyle ,LoafWheelView: UIView)
+Loaf.LoafWheel(message: String, loafWidth:CGFloat, loafHeight:CGFloat, cornerRadius:CGFloat, bgColor1:UIColor, bgColor2:UIColor, fontStyle: String, fontSize: CGFloat, fontColor: UIColor, duration: TimeInterval, wheelStyle: UIActivityIndicatorViewStyle, blurEffect: UIBlurEffectStyle ,loafWheelView: UIView)
 ```
 ### LoafWheel Dismissal 📕 
 
 ```swift
-Loaf.dismissWheel(LoafWheelView:UIView)
+Loaf.dismissWheel(loafWheelView:UIView)
 ```
 ## Parameters 🎚
 
@@ -89,26 +89,26 @@ Loaf.dismissWheel(LoafWheelView:UIView)
 
 | Parameter | Definition  |             
 | --- | --- |
-| Message | Message to show on Loaf |
-| Position | Position of Loaf |
-| LoafWidth | Loaf Width |
-| LoafHeight | Loaf Height |
-| CornerRadius | CornerRadius of Loaf | 
-| FontStyle | Font Style of Message |
-| FontSize | Font size of Message|
-| BGColor | Background Color of Loaf |
+| message | Message to show on Loaf |
+| position | Position of Loaf |
+| loafWidth | Loaf Width |
+| loafHeight | Loaf Height |
+| cornerRadius | CornerRadius of Loaf | 
+| fontStyle | Font Style of Message |
+| fontSize | Font size of Message|
+| bgColor | Background Color of Loaf |
 
 </td><td> 
 
 | Parameter | Definition |             
 | --- | --- |
-| LoafImage | Image on Loaf |
-| Duration | Loaf Duration |
-| AnimationDirection | Loaf Animation type |
-| BlurEffect | Blur effect type |
-| WheelStyle | Wheel Style |
-| LoafWheelView | View on which LoafWheel is running |
-| LoafjetView | View on which Loaf is presented |
+| loafImage | Image on Loaf |
+| duration | Loaf Duration |
+| animationDirection | Loaf Animation type |
+| blurEffect | Blur effect type |
+| wheelStyle | Wheel Style |
+| loafWheelView | View on which LoafWheel is running |
+| loafjetView | View on which Loaf is presented |
 
 </td></tr> </table>
 
