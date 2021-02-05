@@ -220,41 +220,39 @@ extension Loaf{
     }
     
     //MARK:- Loader Loaf Method
-    
-    
-    @available(iOS 12.0, *)
-    
+  // @available(iOS 12.0, *)
     /// LoafWheel is a custom loader view with gradient background support
     /// - Parameters:
-    ///   - Message: Message to show on Loaf
-    ///   - LoafWidth: Width of Loaf
-    ///   - LoafHeight: Height of Loaf
-    ///   - CornerRadius: CornerRadius of Loaf
-    ///   - BGColor1: Gradient color 1
-    ///   - BGColor2: Gradient color 2
-    ///   - FontStyle: Font style of Loaf
-    ///   - FontSize: Fonst size of Loaf
-    ///   - FontColor: Font color of Loaf
-    ///   - Duration: Animation Duration
-    ///   - WheelStyle: Activity Indicator type
-    ///   - BlurEffect: Blur Effect type
-    ///   - LoafjetView: UIView on which the Loaf is to be presented
-    public static func LoafWheel(Message: String, LoafWidth:CGFloat = 50, LoafHeight:CGFloat = 50, CornerRadius:CGFloat = 20, BGColor1:UIColor, BGColor2:UIColor,FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, FontColor: UIColor = .black, Duration: TimeInterval = 2.0, WheelStyle: UIActivityIndicatorView.Style = .white, BlurEffect: UIBlurEffect.Style? = .regular ,LoafWheelView: UIView) {
+    ///   - message: Message to show on Loaf
+    ///   - loafWidth: Width of Loaf
+    ///   - loafHeight: Height of Loaf
+    ///   - cornerRadius: CornerRadius of Loaf
+    ///   - bgColor1: Gradient color 1
+    ///   - bgColor2: Gradient color 2
+    ///   - fontStyle: Font style of Loaf
+    ///   - fontSize: Fonst size of Loaf
+    ///   - fontColor: Font color of Loaf
+    ///   - duration: Animation Duration
+    ///   - wheelStyle: Activity Indicator type
+    ///   - blurEffect: Blur Effect type
+    ///   - loafjetView: UIView on which the Loaf is to be presented
+    
+    public static func LoafWheel(message: String, loafWidth:CGFloat = 50, loafHeight:CGFloat = 50, cornerRadius:CGFloat = 20, bgColor1:UIColor, bgColor2:UIColor, fontStyle: String = "Avenir-Medium", fontSize: CGFloat = 17, fontColor: UIColor = .black, duration: TimeInterval = 2.0, wheelStyle: UIActivityIndicatorView.Style = .white, blurEffect: UIBlurEffect.Style? = .regular ,loafWheelView: UIView) {
         
         LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
         // LOAF VIEW METHOD
-        LoafView.frame = CGRect(x: LoafWheelView.center.x , y: LoafWheelView.center.y, width: LoafWidth, height: LoafHeight)
-        LoafView.layer.cornerRadius = CornerRadius
+        LoafView.frame = CGRect(x: loafWheelView.center.x , y: loafWheelView.center.y, width: loafWidth, height: loafHeight)
+        LoafView.layer.cornerRadius = cornerRadius
         LoafView.clipsToBounds = true
-        LoafView.center.x = LoafWheelView.center.x
-        LoafView.center.y = LoafWheelView.center.y
+        LoafView.center.x = loafWheelView.center.x
+        LoafView.center.y = loafWheelView.center.y
         // GRADIENT BG METHOD
         let gradientLayer: CAGradientLayer = {
             let gradientLayer = CAGradientLayer()
-            gradientLayer.colors = [BGColor1.cgColor, BGColor2.cgColor]
+            gradientLayer.colors = [bgColor1.cgColor, bgColor2.cgColor]
             gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
             gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
-            gradientLayer.cornerRadius = CornerRadius
+            gradientLayer.cornerRadius = cornerRadius
             LoafView.layer.insertSublayer(gradientLayer, at: 0)
             LoafView.clipsToBounds = true
             LoafView.backgroundColor = .none
@@ -262,32 +260,32 @@ extension Loaf{
         }()
         gradientLayer.frame = LoafView.bounds
         // LOAF LABEL METHOD
-        LoafLabel.frame = CGRect(x: LoafWheelView.center.x, y: LoafWheelView.center.y, width: LoafWidth , height: LoafHeight)
+        LoafLabel.frame = CGRect(x: loafWheelView.center.x, y: loafWheelView.center.y, width: loafWidth , height: loafHeight)
         LoafLabel.textAlignment = .center
-        LoafLabel.text = Message
-        LoafLabel.font = UIFont(name: FontStyle, size: FontSize)
-        LoafLabel.textColor = FontColor
-        LoafLabel.center.x = LoafWheelView.center.x
-        LoafLabel.center.y = LoafWheelView.center.y
+        LoafLabel.text = message
+        LoafLabel.font = UIFont(name: fontStyle, size: fontSize)
+        LoafLabel.textColor = fontColor
+        LoafLabel.center.x = loafWheelView.center.x
+        LoafLabel.center.y = loafWheelView.center.y
         // Adding Indicator
-        wheel.frame = CGRect(x: LoafWheelView.center.x, y: LoafWheelView.center.y, width: 50, height: 50)
+        wheel.frame = CGRect(x: loafWheelView.center.x, y: loafWheelView.center.y, width: 50, height: 50)
         wheel.hidesWhenStopped = true
         wheel.startAnimating()
         wheel.frame.origin.x = LoafView.frame.origin.x
         wheel.center.y = LoafView.center.y
         // Apply Blur effect call
-        applyBlurEffect(effect: BlurEffect, view: LoafWheelView)
-        LoafWheelView.addSubview(LoafView)
-        LoafWheelView.addSubview(LoafLabel)
-        LoafWheelView.addSubview(wheel)
-        LoafWheelView.isUserInteractionEnabled = false
+        applyBlurEffect(effect: blurEffect, view: loafWheelView)
+        loafWheelView.addSubview(LoafView)
+        loafWheelView.addSubview(LoafLabel)
+        loafWheelView.addSubview(wheel)
+        loafWheelView.isUserInteractionEnabled = false
         // for dismisal of blur effect
-        DispatchQueue.main.asyncAfter(deadline: .now() + Duration-0.4) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + duration-0.4) {
             LoafLabel.removeFromSuperview()
             LoafView.removeFromSuperview()
             wheel.removeFromSuperview()
             visualEffect.removeFromSuperview()
-            LoafWheelView.isUserInteractionEnabled = true
+            loafWheelView.isUserInteractionEnabled = true
         }
     }
     
