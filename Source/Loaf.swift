@@ -133,35 +133,35 @@ extension Loaf{
     
     /// PopupCard is a card animation used to display quick info on screen.
     /// - Parameters:
-    ///   - Message: Message to show on Card
-    ///   - LoafWidth: Width of Card
-    ///   - LoafHeight: Height of Card
-    ///   - CornerRadius: CornerRadius of Card
-    ///   - FontStyle: Font style of Card
-    ///   - FontSize: Fonst size of Card
-    ///   - BGColor1: Gradient color 1
-    ///   - BGColor2: Gradient color 2
-    ///   - FontColor: Font color of Card
-    ///   - LoafImage: Image to show on Card
-    ///   - Duration: Animation Duration
-    ///   - LoafjetView: UIView on which the Card is to be presented
+    ///   - message: Message to show on Card
+    ///   - loafWidth: Width of Card
+    ///   - loafHeight: Height of Card
+    ///   - cornerRadius: CornerRadius of Card
+    ///   - fontStyle: Font style of Card
+    ///   - fontSize: Fonst size of Card
+    ///   - bgColor1: Gradient color 1
+    ///   - bgColor2: Gradient color 2
+    ///   - fontColor: Font color of Card
+    ///   - loafImage: Image to show on Card
+    ///   - duration: Animation Duration
+    ///   - loafjetView: UIView on which the Card is to be presented
     
-    public static func PopupCard(Message: String, LoafWidth:CGFloat = 150,LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor,LoafImage: String?, Duration: TimeInterval = 2.0, BlurEffect: UIBlurEffect.Style?, LoafjetView: UIView) {
+    public static func PopupCard(message: String, loafWidth:CGFloat = 150,loafHeight:CGFloat = 40,cornerRadius: CGFloat = 20, fontStyle: String = "Avenir-Medium", fontSize: CGFloat = 17, bgColor1: UIColor, bgColor2: UIColor, fontColor: UIColor,loafImage: String?, duration: TimeInterval = 2.0, blurEffect: UIBlurEffect.Style?, loafjetView: UIView) {
         
         LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
         
         // LOAF VIEW METHOD
-        LoafView.frame = CGRect(x: LoafjetView.center.x, y: LoafjetView.center.y, width: LoafWidth, height: LoafHeight)
-        LoafView.layer.cornerRadius = CornerRadius
+        LoafView.frame = CGRect(x: loafjetView.center.x, y: loafjetView.center.y, width: loafWidth, height: loafHeight)
+        LoafView.layer.cornerRadius = cornerRadius
         LoafView.clipsToBounds = true
         
         // LOAF LABEL METHOD
-        LoafLabel.frame = CGRect(x: Loaf.LoafView.frame.origin.x, y: Loaf.LoafView.frame.origin.y, width: LoafWidth-8 , height: LoafHeight-120)
+        LoafLabel.frame = CGRect(x: Loaf.LoafView.frame.origin.x, y: Loaf.LoafView.frame.origin.y, width: loafWidth-8 , height: loafHeight-120)
         LoafLabel.textAlignment = .center
         LoafLabel.numberOfLines = 5
-        LoafLabel.text = Message
-        LoafLabel.font = UIFont(name: FontStyle, size: FontSize)
-        LoafLabel.textColor = FontColor
+        LoafLabel.text = message
+        LoafLabel.font = UIFont(name: fontStyle, size: fontSize)
+        LoafLabel.textColor = fontColor
         LoafLabel.numberOfLines = .max
         LoafLabel.center.y = LoafView.center.y
         LoafLabel.textAlignment = .center
@@ -169,10 +169,10 @@ extension Loaf{
         // GRADIENT BG METHOD
         let gradientLayer: CAGradientLayer = {
             let gradientLayer = CAGradientLayer()
-            gradientLayer.colors = [BGColor1.cgColor, BGColor2.cgColor]
+            gradientLayer.colors = [bgColor1.cgColor, bgColor2.cgColor]
             gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
             gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
-            gradientLayer.cornerRadius = CornerRadius
+            gradientLayer.cornerRadius = cornerRadius
             LoafView.layer.insertSublayer(gradientLayer, at: 0)
             LoafView.clipsToBounds = true
             LoafView.backgroundColor = .none
@@ -180,40 +180,40 @@ extension Loaf{
         }()
         gradientLayer.frame = LoafView.bounds
         // LOAF IMAGE METHOD CALL
-        verifyLoafImage(view: LoafjetView, Image: LoafImage, Width: 100, Height: 100)
+        verifyLoafImage(view: loafjetView, Image: loafImage, Width: 100, Height: 100)
         
         // Blur Effect call
-        applyBlurEffect(effect: BlurEffect, view: LoafjetView)
+        applyBlurEffect(effect: blurEffect, view: loafjetView)
         
         // Animation method call
-        LoafjetView.addSubview(LoafView)
-        LoafjetView.addSubview(LoafLabel)
-        LoafjetView.addSubview(LoafImageView)
+        loafjetView.addSubview(LoafView)
+        loafjetView.addSubview(LoafLabel)
+        loafjetView.addSubview(LoafImageView)
         
-        LoafLabel.center.x = LoafjetView.center.x
-        LoafView.center.x = LoafjetView.center.x
-        LoafLabel.center.y = LoafjetView.center.y + 4000
-        LoafView.center.y = LoafjetView.center.y + 4000
-        LoafImageView.center.y = LoafjetView.center.y + 4000
-        LoafImageView.center.x = LoafjetView.center.x
+        LoafLabel.center.x = loafjetView.center.x
+        LoafView.center.x = loafjetView.center.x
+        LoafLabel.center.y = loafjetView.center.y + 4000
+        LoafView.center.y = loafjetView.center.y + 4000
+        LoafImageView.center.y = loafjetView.center.y + 4000
+        LoafImageView.center.x = loafjetView.center.x
         
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
             // For bottom to top
-            LoafLabel.center.x = LoafjetView.center.x
-            LoafView.center.x = LoafjetView.center.x
-            LoafLabel.center.y = LoafjetView.center.y + 110
-            LoafView.center.y = LoafjetView.center.y+45
-            LoafImageView.center.y = LoafjetView.center.y - 40
-            LoafImageView.center.x = LoafjetView.center.x
+            LoafLabel.center.x = loafjetView.center.x
+            LoafView.center.x = loafjetView.center.x
+            LoafLabel.center.y = loafjetView.center.y + 110
+            LoafView.center.y = loafjetView.center.y+45
+            LoafImageView.center.y = loafjetView.center.y - 40
+            LoafImageView.center.x = loafjetView.center.x
         }completion: { (isCompleted) in
-            UIView.animate(withDuration: 0.5, delay: Duration, options: .curveEaseOut) {
+            UIView.animate(withDuration: 0.5, delay: duration, options: .curveEaseOut) {
                 // top to bottom direction
-                LoafLabel.center.y = LoafjetView.center.y + 800
-                LoafView.center.y = LoafjetView.center.y + 800
-                LoafImageView.center.y = LoafjetView.center.y + 800
+                LoafLabel.center.y = loafjetView.center.y + 800
+                LoafView.center.y = loafjetView.center.y + 800
+                LoafImageView.center.y = loafjetView.center.y + 800
             }
             // for dismisal of blur effect
-            DispatchQueue.main.asyncAfter(deadline: .now() + Duration-0.4) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + duration-0.4) {
                 visualEffect.removeFromSuperview()
             }
         }

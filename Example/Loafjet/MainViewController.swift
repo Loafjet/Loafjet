@@ -92,7 +92,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             break
         case 20:
             if #available(iOS 12.0, *) {
-                Loaf.PopupCard(Message: "Loafjet is a custom library used to add Toast, Popup Card and Loading indicator in your Swift project.", LoafWidth: 250, LoafHeight: 300, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 17, BGColor1: .black, BGColor2: .systemRed, FontColor: .white, LoafImage: "Logo", Duration: 5, BlurEffect: .dark, LoafjetView: view)
+                Loaf.PopupCard(message: "Loafjet is a custom library used to add Toast, Popup Card and Loading indicator in your Swift project.", loafWidth: 250, loafHeight: 300, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor1: .black, bgColor2: .systemRed, fontColor: .white, loafImage: "Logo", duration: 5, blurEffect: .dark, loafjetView: view)
             } else {
                 print("Pod LoafJet: Your device dont support this blur effect type (require iOS 10.0+)")
             }
