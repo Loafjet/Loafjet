@@ -202,17 +202,8 @@ Loafjet is available under the MIT license. See the [LICENSE](https://github.com
 
 ## How to Contribute 🖋
 * Run the app - Steps are mentioned above.
-* If you face issues in any step open a new issue (Format mentioned below).
+* If you face issues in any step open a new issue.
 * To fix issues: Fork this repository, make your changes and make a Pull Request.
-
-## Issues ❕
-
-* Create a new issue (Follow the format):
-### Issue Report Format
-* `Subject` : Mention the issue in one line.
-* `Description` : Describe the issue.
-* `File Name` : Write the file name in which the bug is present.
-* `How to solve` : If you have the solution, mention it.
 
 ## Requirements ❕
 
