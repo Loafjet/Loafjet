@@ -53,11 +53,11 @@ Loaf.PlainLoaf(message: String, position:LoafPosition, loafWidth:CGFloat , loafH
 ### Gradient Loaf
 * With Default Parameters 📗
 ```swift
-Loaf.GradientLoaf(Message: String, Position: LoafPosition, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor, LoafImage: String?, AnimationDirection: LoafAnimation, LoafjetView: UIView)
+Loaf.GradientLoaf(message: String, position: LoafPosition, bgColor1: UIColor, bgColor2: UIColor, fontColor: UIColor, loafImage: String?, animationDirection: loafAnimation, loafjetView: UIView)
 ```
 * Without Default Parameters 📘
 ```swift
-Loaf.GradientLoaf(Message: String, Position:LoafPosition, LoafWidth:CGFloat, LoafHeight:CGFloat, CornerRadius: CGFloat, FontStyle: String, FontSize: CGFloat, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor,LoafImage: String?, AnimationDirection: LoafAnimation, Duration: TimeInterval, LoafjetView: UIView)
+Loaf.GradientLoaf(message: String, position:LoafPosition, loafWidth:CGFloat, loafHeight:CGFloat, cornerRadius: CGFloat, fontStyle: String, fontSize: CGFloat, bgColor1: UIColor, bgColor2: UIColor, fontColor: UIColor, loafImage: String?, animationDirection: LoafAnimation, duration: TimeInterval, loafjetView: UIView)
 ```
 ### Popup Card
 * With Default Parameters 📗
