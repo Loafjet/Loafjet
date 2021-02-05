@@ -290,12 +290,12 @@ extension Loaf{
     }
     
     //MARK:- Loader Dismisal Method
-    public static func dismissWheel(LoafWheelView:UIView){
+    public static func dismissWheel(loafWheelView:UIView){
         LoafLabel.removeFromSuperview()
         LoafView.removeFromSuperview()
         wheel.removeFromSuperview()
         visualEffect.removeFromSuperview()
-        LoafWheelView.isUserInteractionEnabled = true
+        loafWheelView.isUserInteractionEnabled = true
     }
 }
 
