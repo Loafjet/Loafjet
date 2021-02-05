@@ -69,44 +69,44 @@ public class Loaf{
     
     /// Gradient Loafis a Loaf view with different types of gradient background and various position placement support.
     /// - Parameters:
-    ///   - Message: Message to show on Loaf
-    ///   - Position: Where to place the Loaf
-    ///   - LoafWidth: Width of Loaf
-    ///   - LoafHeight: Height of Loaf
-    ///   - CornerRadius: CornerRadius of Loaf
-    ///   - FontStyle: Font style of Loaf
-    ///   - FontSize: Fonst size of Loaf
-    ///   - BGColor1: Gradient color 1
-    ///   - BGColor2: Gradient color 2
-    ///   - FontColor: Font color of Loaf
-    ///   - LoafImage: Image to show on Loaf
-    ///   - AnimationDirection: Loaf Animation Direction
-    ///   - Duration: Animation Duration
-    ///   - LoafjetView: UIView on which the Loaf is to be presented
+    ///   - message: Message to show on Loaf
+    ///   - position: Where to place the Loaf
+    ///   - loafWidth: Width of Loaf
+    ///   - loafHeight: Height of Loaf
+    ///   - cornerRadius: CornerRadius of Loaf
+    ///   - fontStyle: Font style of Loaf
+    ///   - fontSize: Fonst size of Loaf
+    ///   - bgColor1: Gradient color 1
+    ///   - bgColor2: Gradient color 2
+    ///   - fontColor: Font color of Loaf
+    ///   - loafImage: Image to show on Loaf
+    ///   - animationDirection: Loaf Animation Direction
+    ///   - duration: Animation Duration
+    ///   - loafjetView: UIView on which the Loaf is to be presented
     
-    public static func GradientLoaf(Message: String, Position:LoafPosition, LoafWidth:CGFloat = 150,LoafHeight:CGFloat = 40,CornerRadius: CGFloat = 20, FontStyle: String = "Avenir-Medium", FontSize: CGFloat = 17, BGColor1: UIColor, BGColor2: UIColor, FontColor: UIColor,LoafImage: String?, AnimationDirection: LoafAnimation, Duration: TimeInterval = 2.0, LoafjetView: UIView) {
+    public static func GradientLoaf(message: String, position:LoafPosition, loafWidth:CGFloat = 150,loafHeight:CGFloat = 40,cornerRadius: CGFloat = 20, fontStyle: String = "Avenir-Medium", fontSize: CGFloat = 17, bgColor1: UIColor, bgColor2: UIColor, fontColor: UIColor, loafImage: String?, animationDirection: LoafAnimation, duration: TimeInterval = 2.0, loafjetView: UIView) {
         
         LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
         // LOAF VIEW METHOD
-        LoafView.frame = Position.centerPoint(view: LoafjetView, width: LoafWidth, height: LoafHeight)
-        LoafView.layer.cornerRadius = CornerRadius
+        LoafView.frame = position.centerPoint(view: loafjetView, width: loafWidth, height: loafHeight)
+        LoafView.layer.cornerRadius = cornerRadius
         LoafView.clipsToBounds = true
         
         // LOAF LABEL METHOD
-        LoafLabel.frame = CGRect(x: Loaf.LoafView.frame.origin.x, y: Loaf.LoafView.frame.origin.y, width: LoafWidth , height: LoafHeight)
+        LoafLabel.frame = CGRect(x: Loaf.LoafView.frame.origin.x, y: Loaf.LoafView.frame.origin.y, width: loafWidth , height: loafHeight)
         LoafLabel.textAlignment = .center
-        LoafLabel.text = Message
-        LoafLabel.font = UIFont(name: FontStyle, size: FontSize)
-        LoafLabel.textColor = FontColor
+        LoafLabel.text = message
+        LoafLabel.font = UIFont(name: fontStyle, size: fontSize)
+        LoafLabel.textColor = fontColor
         LoafLabel.center.y = Loaf.LoafView.center.y
         
         // GRADIENT BG METHOD
         let gradientLayer: CAGradientLayer = {
             let gradientLayer = CAGradientLayer()
-            gradientLayer.colors = [BGColor1.cgColor, BGColor2.cgColor]
+            gradientLayer.colors = [bgColor1.cgColor, bgColor2.cgColor]
             gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
             gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
-            gradientLayer.cornerRadius = CornerRadius
+            gradientLayer.cornerRadius = cornerRadius
             LoafView.layer.insertSublayer(gradientLayer, at: 0)
             LoafView.clipsToBounds = true
             LoafView.backgroundColor = .none
@@ -115,15 +115,15 @@ public class Loaf{
         gradientLayer.frame = LoafView.bounds
         
         // LOAF IMAGE METHOD CALL
-        verifyLoafImage(view: LoafjetView, Image: LoafImage, Width: 25, Height: 25)
+        verifyLoafImage(view: loafjetView, Image: loafImage, Width: 25, Height: 25)
         
         // Animation method call
-        Animation(Direction: AnimationDirection, View: LoafjetView, DelayTime: Duration)
+        Animation(Direction: animationDirection, View: loafjetView, DelayTime: duration)
         
         // ADDING LOAF TO THE VIEW
-        LoafjetView.addSubview(LoafView)
-        LoafjetView.addSubview(LoafLabel)
-        LoafjetView.addSubview(LoafImageView)
+        loafjetView.addSubview(LoafView)
+        loafjetView.addSubview(LoafLabel)
+        loafjetView.addSubview(LoafImageView)
     }
 }
 

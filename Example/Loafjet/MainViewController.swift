@@ -79,16 +79,16 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             Loaf.PlainLoaf(message: "🚀 Loafjet   ", position: .bottom, loafWidth: 200, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir-Heavy", fontSize: 17, bgColor: .black, fontColor: .white, loafImage: nil, animationDirection: .Bottom, duration: 2, loafjetView: view)
             break
         case 10:
-            Loaf.GradientLoaf(Message: "Grad LoafJet", Position: .top, LoafWidth: 250, LoafHeight: 45, CornerRadius: 5, FontStyle: "Avenir-Heavy", FontSize: 17, BGColor1: .systemPink, BGColor2: .systemOrange, FontColor: .black, LoafImage: "Logo", AnimationDirection: .Top, Duration: 2, LoafjetView: view)
+            Loaf.GradientLoaf(message: "Grad LoafJet", position: .top, loafWidth: 250, loafHeight: 45, cornerRadius: 5, fontStyle: "Avenir-Heavy", fontSize: 17, bgColor1: .systemPink, bgColor2: .systemOrange, fontColor: .black, loafImage: "Logo", animationDirection: .Top, duration: 2, loafjetView: view)
             break
         case 11:
-            Loaf.GradientLoaf(Message: "Xcode Loading", Position: .center, LoafWidth: 250, LoafHeight: 40, CornerRadius: 10, FontStyle: "Avenir-Medium", FontSize: 16, BGColor1: .systemRed, BGColor2: .systemBlue, FontColor: .black, LoafImage: "Xcode", AnimationDirection: .Left, Duration: 2, LoafjetView: view)
+            Loaf.GradientLoaf(message: "Xcode Loading", position: .center, loafWidth: 250, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 16, bgColor1: .systemRed, bgColor2: .systemBlue, fontColor: .black, loafImage: "Xcode", animationDirection: .Left, duration: 2, loafjetView: view)
             break
         case 12:
-            Loaf.GradientLoaf(Message: "Airpods Detected", Position: .center, LoafWidth: 250, LoafHeight: 40, CornerRadius: 20, FontStyle: "Avenir-Medium", FontSize: 16, BGColor1: .brown, BGColor2: .cyan, FontColor: .black, LoafImage: "Airpods", AnimationDirection: .Right, Duration: 2, LoafjetView: view)
+            Loaf.GradientLoaf(message: "Airpods Detected", position: .center, loafWidth: 250, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 16, bgColor1: .brown, bgColor2: .cyan, fontColor: .black, loafImage: "Airpods", animationDirection: .Right, duration: 2, loafjetView: view)
             break
         case 13:
-            Loaf.GradientLoaf(Message: "HomePod Mini Detected", Position: .bottom, LoafWidth: 300, LoafHeight: 50, CornerRadius: 20, FontStyle: "Avenir-Heavy", FontSize: 17, BGColor1: .systemPink, BGColor2: .black, FontColor: .white, LoafImage: "HomePodMini", AnimationDirection: .Bottom, Duration: 2, LoafjetView: view)
+            Loaf.GradientLoaf(message: "HomePod Mini Detected", position: .bottom, loafWidth: 300, loafHeight: 50, cornerRadius: 20, fontStyle: "Avenir-Heavy", fontSize: 17, bgColor1: .systemPink, bgColor2: .black, fontColor: .white, loafImage: "HomePodMini", animationDirection: .Bottom, duration: 2, loafjetView: view)
             break
         case 20:
             if #available(iOS 12.0, *) {
