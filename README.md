@@ -30,7 +30,7 @@ pod 'Loafjet'
 From any view controller, a Loaf can be presented by calling:
 
 ```swift
-Loaf.PlainLoaf(Message: "Message goes here", Position: .Bottom, AnimationDirection: .Bottom, LoafjetView: View)
+Loaf.PlainLoaf(message: "Message goes here", position: .Bottom, animationDirection: .Bottom, loafjetView: View)
 ```
 ### Result: 💯
 
@@ -44,11 +44,11 @@ Loaf.PlainLoaf(Message: "Message goes here", Position: .Bottom, AnimationDirecti
 ### Plain Loaf
 * With Default Parameters 📗
 ```swift
- Loaf.PlainLoaf(Message: String, Position: LoafPosition, AnimationDirection: LoafAnimation, LoafjetView: UIView)
+ Loaf.PlainLoaf(message: String, position: loafPosition, animationDirection: loafAnimation, loafjetView: UIView)
 ```
 * Without Default Parameters 📘
 ```swift
-Loaf.PlainLoaf(Message: String, Position:LoafPosition, LoafWidth:CGFloat , LoafHeight:CGFloat,CornerRadius: CGFloat, FontStyle: String, FontSize: CGFloat, BGColor: UIColor, FontColor: UIColor, LoafImage: String? , AnimationDirection: LoafAnimation , Duration: TimeInterval, LoafjetView: UIView)
+Loaf.PlainLoaf(message: String, position:LoafPosition, loafWidth:CGFloat , loafHeight:CGFloat, cornerRadius: CGFloat, fontStyle: String, fontSize: CGFloat, bgColor: UIColor, fontColor: UIColor, loafImage: String? , animationDirection: LoafAnimation , duration: TimeInterval, loafjetView: UIView)
 ```
 ### Gradient Loaf
 * With Default Parameters 📗
