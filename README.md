@@ -42,7 +42,7 @@ Loaf.PlainLoaf(message: "Message goes here", position: .Bottom, animationDirecti
 * Below all Loafjet types are mentioned , have a look on it 😊.
 
 ### Plain Loaf
-* With Default Parameters 📗  (Demo)[https://github.com/Loafjet/Loafjet#readme#Snapshots]
+* With Default Parameters 📗 
 ```swift
  Loaf.PlainLoaf(message: String, position: loafPosition, animationDirection: loafAnimation, loafjetView: UIView)
 ```
