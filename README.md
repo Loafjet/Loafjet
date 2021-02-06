@@ -55,7 +55,7 @@ Loaf.PlainLoaf(message: "Message goes here", position: .Bottom, animationDirecti
 
 Loaf.PlainLoaf(message: String, position:LoafPosition, loafWidth:CGFloat , loafHeight:CGFloat, cornerRadius: CGFloat, fontStyle: String, fontSize: CGFloat, bgColor: UIColor, fontColor: UIColor, loafImage: String? , animationDirection: LoafAnimation , duration: TimeInterval, loafjetView: UIView)
 ```
-### [Loaf Demo 🎞](https://github.com/Loafjet/Loafjet/blob/master/README.md#snapshots-)
+### [Loaf Demo Photo 🎞](https://github.com/Loafjet/Loafjet/blob/master/README.md#snapshots-)
 
 ### Gradient Loaf
 ```swift
@@ -67,6 +67,8 @@ Loaf.GradientLoaf(message: String, position: LoafPosition, bgColor1: UIColor, bg
 
 Loaf.GradientLoaf(message: String, position:LoafPosition, loafWidth:CGFloat, loafHeight:CGFloat, cornerRadius: CGFloat, fontStyle: String, fontSize: CGFloat, bgColor1: UIColor, bgColor2: UIColor, fontColor: UIColor, loafImage: String?, animationDirection: LoafAnimation, duration: TimeInterval, loafjetView: UIView)
 ```
+### [Loaf Demo Photo 🎞](https://github.com/Loafjet/Loafjet/blob/master/README.md#snapshots-)
+
 ### Popup Card
 ```swift
 * With Default Parameters 📗
@@ -77,6 +79,7 @@ Loaf.PopupCard(message: String, position: LoafPosition, bgColor1: UIColor, bgCol
 
 Loaf.PopupCard(message: String, position:LoafPosition, loafWidth:CGFloat, loafHeight:CGFloat, cornerRadius: CGFloat, fontStyle: String, fontSize: CGFloat, bgColor1: UIColor, bgColor2: UIColor, fontColor: UIColor, loafImage: String?, duration: TimeInterval, blurEffect: UIBlurEffectStyle?, loafjetView: UIView)
 ```
+
 ### LoafWheel
 ```swift
 * With Default Parameters 📗
