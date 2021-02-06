@@ -55,6 +55,8 @@ Loaf.PlainLoaf(message: "Message goes here", position: .Bottom, animationDirecti
 
 Loaf.PlainLoaf(message: String, position:LoafPosition, loafWidth:CGFloat , loafHeight:CGFloat, cornerRadius: CGFloat, fontStyle: String, fontSize: CGFloat, bgColor: UIColor, fontColor: UIColor, loafImage: String? , animationDirection: LoafAnimation , duration: TimeInterval, loafjetView: UIView)
 ```
+### [Loaf Demo 🎞](https://github.com/Loafjet/Loafjet/blob/master/README.md#snapshots-)
+
 ### Gradient Loaf
 ```swift
 * With Default Parameters 📗
