@@ -47,35 +47,38 @@ Loaf.PlainLoaf(message: "Message goes here", position: .Bottom, animationDirecti
 
  Loaf.PlainLoaf(message: String, position: loafPosition, animationDirection: loafAnimation, loafjetView: UIView)
 
-// Without Default Parameters 📘
+* Without Default Parameters 📘
 
 Loaf.PlainLoaf(message: String, position:LoafPosition, loafWidth:CGFloat , loafHeight:CGFloat, cornerRadius: CGFloat, fontStyle: String, fontSize: CGFloat, bgColor: UIColor, fontColor: UIColor, loafImage: String? , animationDirection: LoafAnimation , duration: TimeInterval, loafjetView: UIView)
 ```
 ### Gradient Loaf
+```swift
 * With Default Parameters 📗
-```swift
+
 Loaf.GradientLoaf(message: String, position: LoafPosition, bgColor1: UIColor, bgColor2: UIColor, fontColor: UIColor, loafImage: String?, animationDirection: loafAnimation, loafjetView: UIView)
-```
+
 * Without Default Parameters 📘
-```swift
+
 Loaf.GradientLoaf(message: String, position:LoafPosition, loafWidth:CGFloat, loafHeight:CGFloat, cornerRadius: CGFloat, fontStyle: String, fontSize: CGFloat, bgColor1: UIColor, bgColor2: UIColor, fontColor: UIColor, loafImage: String?, animationDirection: LoafAnimation, duration: TimeInterval, loafjetView: UIView)
 ```
 ### Popup Card
+```swift
 * With Default Parameters 📗
-```swift
+
 Loaf.PopupCard(message: String, position: LoafPosition, bgColor1: UIColor, bgColor2: UIColor, fontColor: UIColor, loafImage: String?, blurEffect: UIBlurEffectStyle?, loafjetView: UIView)
-```
+
 * Without Default Parameters 📘
-```swift
+
 Loaf.PopupCard(message: String, position:LoafPosition, loafWidth:CGFloat, loafHeight:CGFloat, cornerRadius: CGFloat, fontStyle: String, fontSize: CGFloat, bgColor1: UIColor, bgColor2: UIColor, fontColor: UIColor, loafImage: String?, duration: TimeInterval, blurEffect: UIBlurEffectStyle?, loafjetView: UIView)
 ```
 ### LoafWheel
+```swift
 * With Default Parameters 📗
-```swift
+
  Loaf.LoafWheel(message: String, bgColor1: UIColor, bgColor2: UIColor, loafWheelView: UIView)
-```
+
 * Without Default Parameters 📘
-```swift
+
 Loaf.LoafWheel(message: String, loafWidth:CGFloat, loafHeight:CGFloat, cornerRadius:CGFloat, bgColor1:UIColor, bgColor2:UIColor, fontStyle: String, fontSize: CGFloat, fontColor: UIColor, duration: TimeInterval, wheelStyle: UIActivityIndicatorViewStyle, blurEffect: UIBlurEffectStyle ,loafWheelView: UIView)
 ```
 ### LoafWheel Dismissal 📕 
