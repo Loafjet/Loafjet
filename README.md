@@ -27,8 +27,12 @@ pod 'Loafjet'
 * Here you can see and experiment custom Loaf styles in `Examples.swift`.
 
 # How To Use 📁 ?
-From any view controller, a Loaf can be presented by calling:
-
+From any view controller, a Loaf can be presented by following this two steps:
+### 1. Import Library 🗳
+```swift
+ import Loafjet
+```
+### 2. Call Loafjet 📞
 ```swift
 Loaf.PlainLoaf(message: "Message goes here", position: .Bottom, animationDirection: .Bottom, loafjetView: View)
 ```
