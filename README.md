@@ -55,7 +55,7 @@ Loaf.PlainLoaf(message: "Message goes here", position: .Bottom, animationDirecti
 
 Loaf.PlainLoaf(message: String, position:LoafPosition, loafWidth:CGFloat , loafHeight:CGFloat, cornerRadius: CGFloat, fontStyle: String, fontSize: CGFloat, bgColor: UIColor, fontColor: UIColor, loafImage: String? , animationDirection: LoafAnimation , duration: TimeInterval, loafjetView: UIView)
 ```
-### [Plain Loaf Demo Photo 🌁](https://github.com/Loafjet/Loafjet/blob/master/README.md#snapshots-)
+* Plain Loaf Demo [Photo 🌁](https://github.com/Loafjet/Loafjet/blob/master/README.md#snapshots-)
 
 ### Gradient Loaf
 ```swift
@@ -67,7 +67,7 @@ Loaf.GradientLoaf(message: String, position: LoafPosition, bgColor1: UIColor, bg
 
 Loaf.GradientLoaf(message: String, position:LoafPosition, loafWidth:CGFloat, loafHeight:CGFloat, cornerRadius: CGFloat, fontStyle: String, fontSize: CGFloat, bgColor1: UIColor, bgColor2: UIColor, fontColor: UIColor, loafImage: String?, animationDirection: LoafAnimation, duration: TimeInterval, loafjetView: UIView)
 ```
-### [Gradient Loaf Demo Photo 🌁](https://github.com/Loafjet/Loafjet/blob/master/README.md#snapshots-)
+* Gradient Loaf [Demo Photo 🌁](https://github.com/Loafjet/Loafjet/blob/master/README.md#snapshots-)
 
 ### Popup Card
 ```swift
@@ -79,7 +79,7 @@ Loaf.PopupCard(message: String, position: LoafPosition, bgColor1: UIColor, bgCol
 
 Loaf.PopupCard(message: String, position:LoafPosition, loafWidth:CGFloat, loafHeight:CGFloat, cornerRadius: CGFloat, fontStyle: String, fontSize: CGFloat, bgColor1: UIColor, bgColor2: UIColor, fontColor: UIColor, loafImage: String?, duration: TimeInterval, blurEffect: UIBlurEffectStyle?, loafjetView: UIView)
 ```
-### [Popup Card Demo Photo 🌁](https://github.com/Loafjet/Loafjet/blob/master/README.md#loafjet--1)
+* Popup Card [Demo Photo 🌁](https://github.com/Loafjet/Loafjet/blob/master/README.md#loafjet--1)
 
 ### LoafWheel
 ```swift
@@ -91,7 +91,7 @@ Loaf.PopupCard(message: String, position:LoafPosition, loafWidth:CGFloat, loafHe
 
 Loaf.LoafWheel(message: String, loafWidth:CGFloat, loafHeight:CGFloat, cornerRadius:CGFloat, bgColor1:UIColor, bgColor2:UIColor, fontStyle: String, fontSize: CGFloat, fontColor: UIColor, duration: TimeInterval, wheelStyle: UIActivityIndicatorViewStyle, blurEffect: UIBlurEffectStyle ,loafWheelView: UIView)
 ```
-### [Loafwheel Demo Photo 🌁](https://github.com/Loafjet/Loafjet/blob/master/README.md#loafjet--1)
+* Loafwheel [Demo Photo 🌁](https://github.com/Loafjet/Loafjet/blob/master/README.md#loafjet--1)
 
 ### LoafWheel Dismissal 📕 
 
