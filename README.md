@@ -235,8 +235,8 @@ OR
 
 **Drop a star ⭐ if you find this project interesting!**
 
-** If you ❤️ the project then there is a gift for you: **
-[Gift From Loafjet Organisation](https://ibb.co/fXYn0Ym)
+**If you ❤️ the project then there is a gift for you:**
+* [Gift From Loafjet Organisation](https://ibb.co/fXYn0Ym)
 * Set the following image as your iPhone's Lock Screen wallpaper and see the magic 🪄.
 * Thank Me later by giving a ⭐️ to Loafjet🚀 .
 
