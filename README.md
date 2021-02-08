@@ -92,6 +92,7 @@ Loaf.PopupCard(message: String, position:LoafPosition, loafWidth:CGFloat, loafHe
 Loaf.LoafWheel(message: String, loafWidth:CGFloat, loafHeight:CGFloat, cornerRadius:CGFloat, bgColor1:UIColor, bgColor2:UIColor, fontStyle: String, fontSize: CGFloat, fontColor: UIColor, duration: TimeInterval, wheelStyle: UIActivityIndicatorViewStyle, blurEffect: UIBlurEffectStyle ,loafWheelView: UIView)
 ```
 * Loafwheel [Demo Photo 🌁](https://github.com/Loafjet/Loafjet/blob/master/README.md#loafjet--1)
+* Calling `LoafWheel Dismissal` is required when LoafWheel is used for **Dynamic Processing**❕.
 
 ### LoafWheel Dismissal 📕 
 
