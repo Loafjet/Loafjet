@@ -198,7 +198,7 @@ if #available(iOS 10.0, *) {.
  @available(iOS 10.0, *)
 ```
 
-* Test Run of few Loafjets are given, have a look on it (Running all Loafjets at a time may lead to irregular functioning!).
+* Test Run of few Loafjets are given, have a look on it (Running all Loafjets at a time may lead to **irregular functioning!**).
 
 ## Note 🔴
 
