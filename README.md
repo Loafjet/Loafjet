@@ -170,11 +170,21 @@ Bottom | ✅ | ✅ | ❌ | ✅
 * `Gradient Loafwheel` & `Popup card` are the additional customisation which you get in Loafjet🥳.
 
 |Popup Card|Loaf Wheel|
-|---| --- |
-|<img width="345" alt="Screenshot 2021-01-27 at 2 06 42 AM" src="https://user-images.githubusercontent.com/56252259/105955866-f36b6b00-609c-11eb-8184-e7554471b5dc.png"> | <img width="345" alt="Screenshot 2021-01-27 at 12 47 33 PM" src="https://user-images.githubusercontent.com/56252259/105956449-d5ead100-609d-11eb-9059-145df3cc141b.png"> |
+|-- | -- |
+|<img src="https://user-images.githubusercontent.com/56252259/107311069-b13a2480-6ab3-11eb-8e06-9c9fc6cba61d.gif" width="345" height="300"/>|<img src="https://user-images.githubusercontent.com/56252259/107311073-b303e800-6ab3-11eb-9783-27a01fad8c4a.gif" width="345" height="300"/>|
 
 * What are you waiting for, write `pod Loafjet` and `pod install` it .
 * Done?, Now enjoy using Loafjet🚀.
+
+# Video Demo 🎥
+
+| A | B |
+|-- | -- |
+|<img src="https://user-images.githubusercontent.com/56252259/107311063-b0a18e00-6ab3-11eb-8e83-685564d22e3b.gif" width="300" height="100"/>|<img src="https://user-images.githubusercontent.com/56252259/107311074-b39c7e80-6ab3-11eb-8505-8181098b3744.gif" width="300" height="100"/>|
+
+| C | D |
+|-- | -- |
+|<img src="https://user-images.githubusercontent.com/56252259/107311053-ac757080-6ab3-11eb-9e86-a50c0a68042d.gif" width="300" height="100"/>|<img src="https://user-images.githubusercontent.com/56252259/107311058-af706100-6ab3-11eb-9229-02ce2cf8be21.gif" width="300" height="100"/>|
 
 ## Instructions ⚠️
 
