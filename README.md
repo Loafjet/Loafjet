@@ -178,11 +178,11 @@ Bottom | ✅ | ✅ | ❌ | ✅
 
 # Video Demo 🎥
 
-| A | B |
+| Top(Top) | Bottom(Bottom) |
 |-- | -- |
 |<img src="https://user-images.githubusercontent.com/56252259/107311063-b0a18e00-6ab3-11eb-8e83-685564d22e3b.gif" width="300" height="100"/>|<img src="https://user-images.githubusercontent.com/56252259/107311074-b39c7e80-6ab3-11eb-8505-8181098b3744.gif" width="300" height="100"/>|
 
-| C | D |
+| Centre(Right) | Centre(Left) |
 |-- | -- |
 |<img src="https://user-images.githubusercontent.com/56252259/107311053-ac757080-6ab3-11eb-9e86-a50c0a68042d.gif" width="300" height="100"/>|<img src="https://user-images.githubusercontent.com/56252259/107311058-af706100-6ab3-11eb-9229-02ce2cf8be21.gif" width="300" height="100"/>|
 
