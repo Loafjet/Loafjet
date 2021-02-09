@@ -14,7 +14,7 @@ Loafjet is a Toast generator library which allows the user to add customised Toa
 
 ## Now Customise Like Apple 
 
-|Airpods Detection|Sient|Normal|
+|Airpods Detection|Silent|Normal|
 |--|--|--|
 |<img width="345" alt="Screenshot 2021-01-27 at 2 04 10 AM" src="https://user-images.githubusercontent.com/56252259/107314591-f746b680-6aba-11eb-9190-1f4e2fde72ee.png"> |<img width="345" alt="Screenshot 2021-01-27 at 2 04 10 AM" src="https://user-images.githubusercontent.com/56252259/107314597-fada3d80-6aba-11eb-90f3-06912f9313a3.png">|<img width="345" alt="Screenshot 2021-01-27 at 2 04 10 AM" src="https://user-images.githubusercontent.com/56252259/107314598-fb72d400-6aba-11eb-80ab-e90e09557105.png">|
 
