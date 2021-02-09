@@ -186,8 +186,7 @@ Bottom | ✅ | ✅ | ❌ | ✅
 |-- | -- |
 |<img src="https://user-images.githubusercontent.com/56252259/107311053-ac757080-6ab3-11eb-9e86-a50c0a68042d.gif" width="300" height="100"/>|<img src="https://user-images.githubusercontent.com/56252259/107311058-af706100-6ab3-11eb-9229-02ce2cf8be21.gif" width="300" height="100"/>|
 
-* This are some possible ```Position X Animation``` combination, Loafjet supports various other [combinations]() 
-too.
+* This are some possible ```Position X Animation``` combination, Loafjet supports various other [combinations](https://github.com/Loafjet/Loafjet/blob/master/README.md#combination-of-position-and-animations-) too.
 
 ## Instructions ⚠️
 
