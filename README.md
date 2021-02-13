@@ -50,7 +50,7 @@ Loaf.PlainLoaf(message: "Message goes here", position: .Bottom, animationDirecti
 | --- |
 |<img width="345" alt="Screenshot 2021-01-27 at 12 31 14 PM" src="https://user-images.githubusercontent.com/56252259/105955014-9b803480-609b-11eb-91f5-2b60732bea50.png"> |
 
-* This is the most basic Loafjet you can make with least line of code 😙.
+* This is the most basic Loafjet you can make with least line of code 👆.
 * Below all Loafjet types are mentioned , have a look on it 😊.
 
 ### Plain Loaf
