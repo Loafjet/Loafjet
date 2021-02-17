@@ -92,7 +92,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             break
         case 20:
             if #available(iOS 12.0, *) {
-                Loaf.PopupCard(message: "Loafjet is a custom library used to add Toast, Popup Card and Loading indicator in your Swift project.", loafWidth: 250, loafHeight: 300, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor1: .black, bgColor2: .systemRed, fontColor: .white, loafImage: "Logo", duration: 5, blurEffect: .dark, loafjetView: view)
+                Loaf.PopupCard(message: "Loafjet is a custom library used to add Toast, Popup Card and Loading indicator in your Swift project.", loafWidth: 250, loafHeight: 300, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor1: .black, bgColor2: .systemRed, fontColor: .white, loafImage: "Logo", duration: 3, blurEffect: .dark, loafjetView: view)
             } else {
                 print("Pod LoafJet: Your device dont support this blur effect type (require iOS 10.0+)")
             }
@@ -105,10 +105,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             }
             break
         case 40:
-            Loaf.PlainLoaf(message: "Xcode", position: .top, loafWidth: 200, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .systemBlue, fontColor: .black, loafImage: "Xcode", animationDirection: .Top, duration: 2, loafjetView: view)
+            Loaf.PlainLoaf(message: "Xcode", position: .top, loafWidth: 200, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .systemBlue, fontColor: .black, loafImage: "Xcode", animationDirection: .Left, duration: 2, loafjetView: view)
             break
         case 41:
-            Loaf.PlainLoaf(message: "AirPods Connected", position: .top, loafWidth: 250, loafHeight: 50, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 16, bgColor: .systemGray, fontColor: .white, loafImage: "Airpods", animationDirection: .Top, duration: 2, loafjetView: view)
+            Loaf.PlainLoaf(message: "AirPods Connected", position: .top, loafWidth: 245, loafHeight: 45, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 16, bgColor: .black, fontColor: .white, loafImage: "Airpods", animationDirection: .Top, duration: 2, loafjetView: view)
             break
         case 42:
             Loaf.PlainLoaf(message: "Error Found! LoafJet", position: .bottom, loafWidth: 250, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Heavy", fontSize: 16, bgColor: .systemRed, fontColor: .white, loafImage: "error", animationDirection: .Bottom, duration: 2, loafjetView: view)

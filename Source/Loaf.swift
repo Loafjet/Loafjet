@@ -40,7 +40,7 @@ public class Loaf{
         
         // LOAF VIEW METHOD
         LoafView.frame = position.centerPoint(view: loafjetView, width: loafWidth, height: loafHeight)
-        LoafView.backgroundColor = bgColor
+        LoafView.backgroundColor = bgColor.withAlphaComponent(0.7)
         LoafView.layer.cornerRadius = cornerRadius
         LoafView.clipsToBounds = true
         
