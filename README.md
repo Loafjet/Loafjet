@@ -6,7 +6,7 @@
 
 [![CI Status](https://img.shields.io/travis/gokulnair2001/Loafjet.svg?style=flat)](https://travis-ci.org/gokulnair2001/Loafjet)
 [![Version](https://img.shields.io/cocoapods/v/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet)
-![Badge](https://img.shields.io/badge/License-MIT-yellow) 
+![Badgse](https://img.shields.io/badge/License-MIT-yellow) 
 [![Platform](https://img.shields.io/cocoapods/p/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet)
 
 ## About 📒
