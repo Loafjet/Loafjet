@@ -147,7 +147,7 @@ Top | ✅ | ✅ | ✅ | ❌
 Centre | ✅ | ✅ | ❌ | ❌ 
 Bottom | ✅ | ✅ | ❌ | ✅ 
 
-- The above mentioned ❌ means that particular combination of position & animation wont be working accurately .
+- The above mentioned ❌ means that particular combination of position & animation won't be working accurately .
 
 # Snapshots 📸
 
