@@ -113,7 +113,7 @@ Loaf.dismissWheel(loafWheelView:UIView)
  I have a solution 👀
 </summary>
  
- * Add this [Source Folder](https://github.com/Loafjet/Loafjet/tree/master/Source) into your project.</br>
+ * Add this [Loaf.swift file](https://github.com/Loafjet/Loafjet/tree/master/Source) into your project.</br>
  * Now you are ready to use Loafjet 🚀.</br>
  * Remaining steps are same 😁.</br>
  * Do read the documentation till last to get a reward 🎁. </br>
