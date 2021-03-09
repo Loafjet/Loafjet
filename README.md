@@ -12,6 +12,19 @@
 ## About 📒
 Loafjet is a Toast(Loaf) generator library which allows the user to add customised Toasts to his/her projects. Loafjet comes with various types of Toast Animations as well as Toast Positions. It can be used to add gradient and plain toasts. Loafjet comes with extra features like Popup Card and Loading Indicator which can be customised according to your needs.
 
+## Don't want to use CocoaPods❗️
+<details>
+<summary>
+ I have a solution 👀
+</summary>
+ 
+ * Add this [Source Folder](https://github.com/Loafjet/Loafjet/tree/master/Source) into your project.</br>
+ * Now you are ready to use Loafjet 🚀.</br>
+ * Remaining steps are same 😁.</br>
+ * Do read the documentation till last to get a reward 🎁. </br>
+
+</details>
+
 ## Now Customise Like Apple  !
 
 |Airpods Detection|Silent|Normal|
