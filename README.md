@@ -4,10 +4,11 @@
 
 # Loafjet 🚀
 
-[![LCS Status](https://img.shields.io/travis/gokulnair2001/Loafjet.svg?style=flat)](https://travis-ci.org/gokulnair2001/Loafjet)
 [![Versions](https://img.shields.io/cocoapods/v/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet)
 ![Badgse](https://img.shields.io/badge/License-MIT-yellow) 
 [![Platform](https://img.shields.io/cocoapods/p/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet)
+![Badge](https://img.shields.io/badge/Xcode-12.01-green)
+![badge](https://img.shields.io/badge/Swift-5.1-red)
 
 ## About 📒
 Loafjet is a Toast(Loaf) generator library which allows the user to add customised Toasts to his/her projects. Loafjet comes with various types of Toast Animations as well as Toast Positions. It can be used to add gradient and plain toasts. Loafjet comes with extra features like Popup Card and Loading Indicator which can be customised according to your needs.
