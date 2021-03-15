@@ -263,7 +263,7 @@ Loafjet is available under the MIT license. See the [LICENSE](https://github.com
 * Swift 5.1+ 💻
 
 ## Like the Project ?
-If you like using any of my projects or like what I'm doing, please consider backing me with appreciating my work: [Message me](https://www.linkedin.com/in/gokul-r-nair/)🥰
+If you like using any of my projects or like what I'm doing, please consider backing me with appreciating my work: [Message me](https://twitter.com/GokulNair2303)🥰
 
 [<img width="200" alt="BMC logo+wordmark - Black" src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png">](https://www.buymeacoffee.com/gokulnair)
 
