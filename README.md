@@ -7,7 +7,7 @@
 [![Versions](https://img.shields.io/cocoapods/v/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet)
 ![Badgse](https://img.shields.io/badge/License-MIT-yellow) 
 [![Platform](https://img.shields.io/cocoapods/p/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet)
-![Badge](https://img.shields.io/badge/Xcode-12.01-green)
+![Badge](https://img.shields.io/badge/Xcode-12.0-green)
 ![badge](https://img.shields.io/badge/Swift-5.1-red)
 
 ## About 📒
