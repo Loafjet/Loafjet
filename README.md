@@ -61,7 +61,7 @@ Loaf.PlainLoaf(message: "Message goes here", position: .Bottom, animationDirecti
 
 * Without Default Parameters 📘
 
-Loaf.PlainLoaf(message: String, position:LoafPosition, loafWidth:CGFloat , loafHeight:CGFloat, cornerRadius: CGFloat, fontStyle: String, fontSize: CGFloat, bgColor: UIColor, fontColor: UIColor, loafImage: String? , animationDirection: LoafAnimation , duration: TimeInterval, loafjetView: UIView)
+Loaf.PlainLoaf(message: String, position:LoafPosition, loafWidth:CGFloat , loafHeight:CGFloat, cornerRadius: CGFloat, fontStyle: String, fontSize: CGFloat, bgColor: UIColor, fontColor: UIColor, alphaValue:CGFloat, loafImage: String? , animationDirection: LoafAnimation , duration: TimeInterval, loafjetView: UIView)
 ```
 * Plain Loaf [Demo Photo 🌁](https://github.com/Loafjet/Loafjet/blob/master/README.md#snapshots-)
 
