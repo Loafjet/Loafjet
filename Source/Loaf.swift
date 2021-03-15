@@ -35,7 +35,7 @@ public class Loaf{
     ///   - loafjetView: UIView on which the Loaf is to be presented
     ///   - alphaValue: The opacity value of the background color parameter, specified as a value from 0.0 to 1.0.
     
-    public static func PlainLoaf(message: String, position:LoafPosition, loafWidth:CGFloat = 200 , loafHeight:CGFloat = 40,cornerRadius: CGFloat = 20, fontStyle: String = "Avenir-Medium", fontSize: CGFloat = 17, bgColor: UIColor = .gray,fontColor: UIColor = .black, alphaValue:CGFloat, loafImage: String? = nil , animationDirection: LoafAnimation , duration: TimeInterval = 3.0, loafjetView: UIView){
+    public static func PlainLoaf(message: String, position:LoafPosition, loafWidth:CGFloat = 200 , loafHeight:CGFloat = 40,cornerRadius: CGFloat = 20, fontStyle: String = "Avenir-Medium", fontSize: CGFloat = 17, bgColor: UIColor = .gray,fontColor: UIColor = .black, alphaValue:CGFloat = 1.0, loafImage: String? = nil , animationDirection: LoafAnimation , duration: TimeInterval = 3.0, loafjetView: UIView){
         
         LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
         
@@ -221,7 +221,7 @@ extension Loaf{
     }
     
     //MARK:- Loader Loaf Method
-  // @available(iOS 12.0, *)
+    // @available(iOS 12.0, *)
     /// LoafWheel is a custom loader view with gradient background support
     /// - Parameters:
     ///   - message: Message to show on Loaf
