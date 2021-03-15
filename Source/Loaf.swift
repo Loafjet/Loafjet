@@ -33,14 +33,15 @@ public class Loaf{
     ///   - animationDirection: Loaf Animation Direction
     ///   - duration: Animation Duration
     ///   - loafjetView: UIView on which the Loaf is to be presented
+    ///   - alphaValue: The opacity value of the background color parameter, specified as a value from 0.0 to 1.0.
     
-    public static func PlainLoaf(message: String, position:LoafPosition, loafWidth:CGFloat = 200 , loafHeight:CGFloat = 40,cornerRadius: CGFloat = 20, fontStyle: String = "Avenir-Medium", fontSize: CGFloat = 17, bgColor: UIColor = .gray,fontColor: UIColor = .black, loafImage: String? = nil , animationDirection: LoafAnimation , duration: TimeInterval = 3.0, loafjetView: UIView){
+    public static func PlainLoaf(message: String, position:LoafPosition, loafWidth:CGFloat = 200 , loafHeight:CGFloat = 40,cornerRadius: CGFloat = 20, fontStyle: String = "Avenir-Medium", fontSize: CGFloat = 17, bgColor: UIColor = .gray,fontColor: UIColor = .black, alphaValue:CGFloat, loafImage: String? = nil , animationDirection: LoafAnimation , duration: TimeInterval = 3.0, loafjetView: UIView){
         
         LoafView.layer.sublayers = nil                // Important: to remove the previously added layer
         
         // LOAF VIEW METHOD
         LoafView.frame = position.centerPoint(view: loafjetView, width: loafWidth, height: loafHeight)
-        LoafView.backgroundColor = bgColor.withAlphaComponent(0.7)
+        LoafView.backgroundColor = bgColor.withAlphaComponent(alphaValue)
         LoafView.layer.cornerRadius = cornerRadius
         LoafView.clipsToBounds = true
         
