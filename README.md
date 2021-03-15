@@ -140,6 +140,7 @@ Loaf.dismissWheel(loafWheelView:UIView)
 
 | Parameter | Definition |             
 | --- | --- |
+| alphaValue | Opacity value for Loaf's background|
 | loafImage | Image on Loaf |
 | duration | Loaf Duration |
 | animationDirection | Loaf Animation type |
