@@ -3,7 +3,7 @@
 </p>
 
 <a href="https://dev.to/gokulnair2001/loafjet-a-toast-replacement-for-swift-51e0"><img src="https://user-images.githubusercontent.com/56252259/112606155-0fda1880-8e3e-11eb-94b8-3e3db08fe822.png" width = 50, height = 50></img></a>
-<a href=""><img src="https://user-images.githubusercontent.com/56252259/112606158-110b4580-8e3e-11eb-95d0-ec514ed185a8.png" width = 50, height = 50></img></a>
+<a href="https://gokulnair-2001.medium.com/loafjet-a-toast-replacement-for-swift-3fd9a1563401"><img src="https://user-images.githubusercontent.com/56252259/112606158-110b4580-8e3e-11eb-95d0-ec514ed185a8.png" width = 50, height = 50></img></a>
 
 # Loafjet 🚀
 
