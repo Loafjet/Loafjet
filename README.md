@@ -32,7 +32,7 @@ Loafjet is a Toast(Loaf) generator library which allows the user to add customis
 
 ## Installation 🌏
 
-Loafjet is available through [CocoaPods](https://cocoapods.org). To install
+Loafjet is available through [CocoaPods](https://cocoapods.org/pods/Loafjet). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
