@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-Do follow our articles❤️
+Do follow our articles 📃
 </p>
 
 # Loafjet 🚀
