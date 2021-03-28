@@ -13,7 +13,7 @@ Do follow our articles 📃
 
 # Loafjet 🚀
 
-[![Version](https://img.shields.io/cocoapods/v/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet)
+[![Versions](https://img.shields.io/cocoapods/v/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet)
 ![Badgse](https://img.shields.io/badge/License-MIT-yellow) 
 [![Platform](https://img.shields.io/cocoapods/p/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet)
 ![Badge](https://img.shields.io/badge/Xcode-12.0-green)
