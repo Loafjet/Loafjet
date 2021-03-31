@@ -365,6 +365,7 @@ extension Loaf{
 
 //MARK:- ANimation Methods
 extension Loaf{
+    
     //MARK:- Loaf Animation
     private static func Animation(Direction: LoafAnimation, View: UIView, DelayTime: TimeInterval){
         if Direction == .Left {
@@ -381,13 +382,13 @@ extension Loaf{
                     LoafLabel.frame.origin.x += View.frame.maxX
                     LoafView.frame.origin.x += View.frame.maxX
                     LoafImageView.frame.origin.x += View.frame.maxX
+                    // Important: To remove the used view from the screen
+                    DispatchQueue.main.asyncAfter(deadline: .now() + DelayTime+1){
+                        LoafLabel.removeFromSuperview()
+                        LoafView.removeFromSuperview()
+                        LoafImageView.removeFromSuperview()
+                    }
                 }
-            }
-            // Important: To remove the used view from the screen
-            DispatchQueue.main.asyncAfter(deadline: .now() + DelayTime+1){
-                LoafLabel.removeFromSuperview()
-                LoafView.removeFromSuperview()
-                LoafImageView.removeFromSuperview()
             }
         }
         else if Direction == .Right {
@@ -405,13 +406,13 @@ extension Loaf{
                     LoafLabel.frame.origin.x -= View.frame.maxX
                     LoafView.frame.origin.x -= View.frame.maxX
                     LoafImageView.frame.origin.x -= View.frame.maxX
+                    // Important: To remove the used view from the screen
+                    DispatchQueue.main.asyncAfter(deadline: .now() + DelayTime+1){
+                        LoafLabel.removeFromSuperview()
+                        LoafView.removeFromSuperview()
+                        LoafImageView.removeFromSuperview()
+                    }
                 }
-            }
-            // Important: To remove the used view from the screen
-            DispatchQueue.main.asyncAfter(deadline: .now() + DelayTime+1){
-                LoafLabel.removeFromSuperview()
-                LoafView.removeFromSuperview()
-                LoafImageView.removeFromSuperview()
             }
         }
         else if Direction == .Bottom {
@@ -429,13 +430,13 @@ extension Loaf{
                     LoafLabel.frame.origin.y = View.frame.maxY
                     LoafView.frame.origin.y = View.frame.maxY
                     LoafImageView.frame.origin.y = View.frame.maxY
+                    // Important: To remove the used view from the screen
+                    DispatchQueue.main.asyncAfter(deadline: .now() + DelayTime+1){
+                        LoafLabel.removeFromSuperview()
+                        LoafView.removeFromSuperview()
+                        LoafImageView.removeFromSuperview()
+                    }
                 }
-            }
-            // Important: To remove the used view from the screen
-            DispatchQueue.main.asyncAfter(deadline: .now() + DelayTime+1){
-                LoafLabel.removeFromSuperview()
-                LoafView.removeFromSuperview()
-                LoafImageView.removeFromSuperview()
             }
         }
         else if Direction == .Top {
@@ -453,14 +454,14 @@ extension Loaf{
                     LoafLabel.frame.origin.y -= View.frame.midY
                     LoafView.frame.origin.y -= View.frame.midY
                     LoafImageView.frame.origin.y -= View.frame.midY
+                    // Important: To remove the used view from the screen
+                    DispatchQueue.main.asyncAfter(deadline: .now() + DelayTime+1){
+                        LoafLabel.removeFromSuperview()
+                        LoafView.removeFromSuperview()
+                        LoafImageView.removeFromSuperview()
+                        
+                    }
                 }
-            }
-            // Important: To remove the used view from the screen
-            DispatchQueue.main.asyncAfter(deadline: .now() + DelayTime+1){
-                LoafLabel.removeFromSuperview()
-                LoafView.removeFromSuperview()
-                LoafImageView.removeFromSuperview()
-                
             }
         }
     }

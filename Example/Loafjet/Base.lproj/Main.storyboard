@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TvN-SC-VGU">
-                                <rect key="frame" x="0.0" y="84" width="414" height="812"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="utd-4b-IlS" detailTextLabel="xTq-5L-BJV" style="IBUITableViewCellStyleSubtitle" id="U73-Sk-xKa">
@@ -55,10 +55,10 @@
                                 </connections>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="m0R-0X-tJe">
-                                <rect key="frame" x="20" y="44" width="80" height="31"/>
+                                <rect key="frame" x="20" y="52" width="80" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="3Ha-ZX-sed"/>
-                                    <constraint firstAttribute="height" constant="30" id="dPh-b6-6Pb"/>
+                                    <constraint firstAttribute="height" constant="30" id="Ut5-LW-s0a"/>
+                                    <constraint firstAttribute="width" constant="80" id="zno-Ax-rX1"/>
                                 </constraints>
                                 <segments>
                                     <segment title="☀️"/>
@@ -69,10 +69,10 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOAJET" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PE4-Uk-Rr2">
-                                <rect key="frame" x="169" y="45" width="76" height="28"/>
+                                <rect key="frame" x="169" y="52" width="76" height="28"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="OfM-Kt-tt0"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="76" id="jxa-mb-mcs"/>
+                                    <constraint firstAttribute="height" constant="28" id="1rT-wn-usM"/>
+                                    <constraint firstAttribute="width" constant="76" id="2xG-4a-Bdr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -81,13 +81,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TvN-SC-VGU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="40" id="3rw-dX-gI6"/>
-                            <constraint firstItem="PE4-Uk-Rr2" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="1" id="Hxi-7n-5Iq"/>
-                            <constraint firstItem="PE4-Uk-Rr2" firstAttribute="leading" secondItem="m0R-0X-tJe" secondAttribute="trailing" constant="69" id="PvZ-TE-mGK"/>
-                            <constraint firstItem="PE4-Uk-Rr2" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Yqx-6s-wyW"/>
-                            <constraint firstItem="m0R-0X-tJe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ebB-l6-3Z3"/>
+                            <constraint firstItem="m0R-0X-tJe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="2L1-bH-igf"/>
+                            <constraint firstItem="TvN-SC-VGU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="3rw-dX-gI6"/>
+                            <constraint firstItem="PE4-Uk-Rr2" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="DPB-Sh-hCG"/>
+                            <constraint firstItem="PE4-Uk-Rr2" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="V2G-u0-npM"/>
                             <constraint firstAttribute="trailing" secondItem="TvN-SC-VGU" secondAttribute="trailing" id="ffD-I9-poG"/>
-                            <constraint firstItem="m0R-0X-tJe" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="gKh-Xc-RzP"/>
+                            <constraint firstItem="m0R-0X-tJe" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="l2O-oQ-bMM"/>
                             <constraint firstAttribute="bottom" secondItem="TvN-SC-VGU" secondAttribute="bottom" id="pmr-dh-jog"/>
                             <constraint firstItem="TvN-SC-VGU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="sqF-Bb-NGq"/>
                         </constraints>
