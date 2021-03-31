@@ -28,7 +28,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        changeAppearance(mode: .light)
         // Array Data
         loafTypes.append(LoafTypes.init(loafName: "Plain Loaf", loafType: ["Top","Centre", "Centre","Bottom"], loafAnimation: ["Top -> Bottom", "Left -> Right", "Right -> Left","Bottom -> Top"]))
         loafTypes.append(LoafTypes.init(loafName: "Gradient Loaf", loafType: ["Top","Centre", "Centre","Bottom"], loafAnimation: ["Top -> Bottom", "Left -> Right", "Right -> Left","Bottom -> Top"]))
@@ -36,6 +36,23 @@ class MainViewController: UIViewController {
         loafTypes.append(LoafTypes.init(loafName: "Loaf Wheel", loafType: ["Centre"], loafAnimation: ["Only one type of animation"]))
         loafTypes.append(LoafTypes.init(loafName: "Customized Loafs", loafType: ["Xcode","Airpods","Error","Sucessful","Warning","Information","Do Not Disturb"], loafAnimation: ["","","","","","",""]))
     }
+    
+    @IBAction func segemntAction(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            changeAppearance(mode: .light)
+        }else if sender.selectedSegmentIndex == 1 {
+            changeAppearance(mode: .dark)
+        }
+    }
+    // Appearance Method
+    func changeAppearance(mode: UIUserInterfaceStyle) {
+        UIApplication.shared.windows.forEach { window in
+            if #available(iOS 13.0, *) {
+                view.overrideUserInterfaceStyle = mode
+            }
+        }
+    }
+    
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource{

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Loafjet-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="MainViewController" customModule="Loafjet_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TvN-SC-VGU">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="84" width="414" height="812"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="utd-4b-IlS" detailTextLabel="xTq-5L-BJV" style="IBUITableViewCellStyleSubtitle" id="U73-Sk-xKa">
@@ -54,22 +54,54 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="tbF-so-3TN"/>
                                 </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="m0R-0X-tJe">
+                                <rect key="frame" x="20" y="44" width="80" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="3Ha-ZX-sed"/>
+                                    <constraint firstAttribute="height" constant="30" id="dPh-b6-6Pb"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="☀️"/>
+                                    <segment title="🌒"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segemntAction:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Q7n-tk-eeX"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOAJET" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PE4-Uk-Rr2">
+                                <rect key="frame" x="169" y="45" width="76" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="OfM-Kt-tt0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="76" id="jxa-mb-mcs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TvN-SC-VGU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="3rw-dX-gI6"/>
+                            <constraint firstItem="TvN-SC-VGU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="40" id="3rw-dX-gI6"/>
+                            <constraint firstItem="PE4-Uk-Rr2" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="1" id="Hxi-7n-5Iq"/>
+                            <constraint firstItem="PE4-Uk-Rr2" firstAttribute="leading" secondItem="m0R-0X-tJe" secondAttribute="trailing" constant="69" id="PvZ-TE-mGK"/>
+                            <constraint firstItem="PE4-Uk-Rr2" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Yqx-6s-wyW"/>
+                            <constraint firstItem="m0R-0X-tJe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ebB-l6-3Z3"/>
                             <constraint firstAttribute="trailing" secondItem="TvN-SC-VGU" secondAttribute="trailing" id="ffD-I9-poG"/>
+                            <constraint firstItem="m0R-0X-tJe" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="gKh-Xc-RzP"/>
                             <constraint firstAttribute="bottom" secondItem="TvN-SC-VGU" secondAttribute="bottom" id="pmr-dh-jog"/>
                             <constraint firstItem="TvN-SC-VGU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="sqF-Bb-NGq"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Loafjet" largeTitleDisplayMode="always" id="ebq-ix-8HD"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="TvN-SC-VGU" id="c5g-ek-Vh9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="133.92857142857142"/>
         </scene>
     </scenes>
     <resources>
