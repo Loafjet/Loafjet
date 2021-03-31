@@ -281,6 +281,16 @@ Loafjet is available under the MIT license. See the [LICENSE](https://github.com
 * Device running on iOS/iPadOS 12.0+ versions 📱.
 * Swift 5.1+ 💻
 
+# Community 🍕
+* Want to be a part of our Organisation 🚀, then:
+* Mail us [here](gokulnair.2001@gmail.com)✉️
+* Do mention the following things: <br> 
+      1. Reason <br>
+      2. Motive <br>
+      3. Skills <br>
+      4. What you liked abou Loafjet❤️ <br>
+* We are eager to read you mail⚡️!
+
 ## Like the Project ?
 If you like using any of my projects or like what I'm doing, please consider backing me with appreciating my work: [Message me](https://twitter.com/GokulNair2303)🥰
 
