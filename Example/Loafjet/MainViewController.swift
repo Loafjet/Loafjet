@@ -13,11 +13,13 @@ class LoafTypes{
     var loafName: String?
     var loafType: [String]?
     var loafAnimation: [String]?
+    var loafImage: [String]?
     
-    init(loafName: String?, loafType: [String], loafAnimation: [String]) {
+    init(loafName: String?, loafType: [String], loafAnimation: [String], loafImage: [String]) {
         self.loafName = loafName
         self.loafType = loafType
         self.loafAnimation = loafAnimation
+        self.loafImage = loafImage
     }
 }
 class MainViewController: UIViewController {
@@ -30,11 +32,11 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         changeAppearance(mode: .light)
         // Array Data
-        loafTypes.append(LoafTypes.init(loafName: "Plain Loaf", loafType: ["Top","Centre", "Centre","Bottom"], loafAnimation: ["Top -> Bottom", "Left -> Right", "Right -> Left","Bottom -> Top"]))
-        loafTypes.append(LoafTypes.init(loafName: "Gradient Loaf", loafType: ["Top","Centre", "Centre","Bottom"], loafAnimation: ["Top -> Bottom", "Left -> Right", "Right -> Left","Bottom -> Top"]))
-        loafTypes.append(LoafTypes.init(loafName: "Popup Card", loafType: ["Centre"], loafAnimation: ["Only one type of animation"]))
-        loafTypes.append(LoafTypes.init(loafName: "Loaf Wheel", loafType: ["Centre"], loafAnimation: ["Only one type of animation"]))
-        loafTypes.append(LoafTypes.init(loafName: "Customized Loafs", loafType: ["Xcode","Airpods","Error","Sucessful","Warning","Information","Do Not Disturb"], loafAnimation: ["","","","","","",""]))
+        loafTypes.append(LoafTypes.init(loafName: "Plain Loaf", loafType: ["Top","Centre", "Centre","Bottom"], loafAnimation: ["Top -> Bottom", "Left -> Right", "Right -> Left","Bottom -> Top"], loafImage: ["top","mid","mid","bottom"]))
+        loafTypes.append(LoafTypes.init(loafName: "Gradient Loaf", loafType: ["Top","Centre", "Centre","Bottom"], loafAnimation: ["Top -> Bottom", "Left -> Right", "Right -> Left","Bottom -> Top"], loafImage: ["top","mid","mid","bottom"]))
+        loafTypes.append(LoafTypes.init(loafName: "Popup Card", loafType: ["Centre"], loafAnimation: ["Only one type of animation"], loafImage: ["pop"]))
+        loafTypes.append(LoafTypes.init(loafName: "Loaf Wheel", loafType: ["Centre"], loafAnimation: ["Only one type of animation"], loafImage: ["wheel"]))
+        loafTypes.append(LoafTypes.init(loafName: "Customized Loafs", loafType: ["Xcode","Airpods","Error","Sucessful","Warning","Information","Do Not Disturb"], loafAnimation: ["Optional","Optional","Optional","Optional","Optional","Optional","Optional"], loafImage: ["bottom","bottom","bottom","bottom","bottom","bottom","bottom"]))
     }
     //MARK:- Dark / Light mode toggle
     @IBAction func segemntAction(_ sender: UISegmentedControl) {
@@ -63,9 +65,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
         return loafTypes[section].loafType?.count ?? 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = loafTypes[indexPath.section].loafType?[indexPath.row]
-        cell.detailTextLabel?.text = loafTypes[indexPath.section].loafAnimation?[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! loafjetTableViewCell
+        cell.mainLbl.text = loafTypes[indexPath.section].loafType?[indexPath.row]
+        cell.subLbl.text = loafTypes[indexPath.section].loafAnimation?[indexPath.row]
+        cell.exImage.image = UIImage(named: (loafTypes[indexPath.section].loafImage?[indexPath.row])!)
         cell.isSelected = false
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         return cell

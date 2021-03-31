@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		551152962614C38B00A5E92B /* loafjetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551152952614C38B00A5E92B /* loafjetTableViewCell.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* MainViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		1BB206D12AE3608A0BD9B5FE /* Pods-Loafjet_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loafjet_Tests.release.xcconfig"; path = "Target Support Files/Pods-Loafjet_Tests/Pods-Loafjet_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		20E651B2ADBC621BEDFF48AC /* Pods_Loafjet_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loafjet_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		341852D3930DD1301C7118BD /* Pods-Loafjet_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loafjet_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Loafjet_Tests/Pods-Loafjet_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		551152952614C38B00A5E92B /* loafjetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loafjetTableViewCell.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Loafjet_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loafjet_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* MainViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				551152952614C38B00A5E92B /* loafjetTableViewCell.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -331,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				551152962614C38B00A5E92B /* loafjetTableViewCell.swift in Sources */,
 				607FACD81AFB9204008FA782 /* MainViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
