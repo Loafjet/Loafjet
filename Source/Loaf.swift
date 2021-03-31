@@ -158,8 +158,6 @@ extension Loaf{
         
         // LOAF LABEL METHOD
         LoafLabel.frame = CGRect(x: Loaf.LoafView.frame.origin.x, y: Loaf.LoafView.frame.origin.y, width: loafWidth-8 , height: loafHeight-120)
-        LoafLabel.textAlignment = .center
-        LoafLabel.numberOfLines = 5
         LoafLabel.text = message
         LoafLabel.font = UIFont(name: fontStyle, size: fontSize)
         LoafLabel.textColor = fontColor
@@ -204,18 +202,20 @@ extension Loaf{
             LoafView.center.x = loafjetView.center.x
             LoafLabel.center.y = loafjetView.center.y + 110
             LoafView.center.y = loafjetView.center.y+45
-            LoafImageView.center.y = loafjetView.center.y - 40
-            LoafImageView.center.x = loafjetView.center.x
+            LoafImageView.frame = CGRect(x: LoafView.center.x - 50 , y: LoafView.frame.origin.y + 10, width: 100, height: 100)
         }completion: { (isCompleted) in
             UIView.animate(withDuration: 0.5, delay: duration, options: .curveEaseOut) {
                 // top to bottom direction
                 LoafLabel.center.y = loafjetView.center.y + 800
                 LoafView.center.y = loafjetView.center.y + 800
                 LoafImageView.center.y = loafjetView.center.y + 800
-            }
-            // for dismisal of blur effect
-            DispatchQueue.main.asyncAfter(deadline: .now() + duration-0.4) {
-                visualEffect.removeFromSuperview()
+                // for dismisal of blur effect
+                DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+                    visualEffect.removeFromSuperview()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        LoafView.removeFromSuperview()
+                    }
+                }
             }
         }
     }

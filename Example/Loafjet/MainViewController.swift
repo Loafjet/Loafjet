@@ -36,7 +36,7 @@ class MainViewController: UIViewController {
         loafTypes.append(LoafTypes.init(loafName: "Loaf Wheel", loafType: ["Centre"], loafAnimation: ["Only one type of animation"]))
         loafTypes.append(LoafTypes.init(loafName: "Customized Loafs", loafType: ["Xcode","Airpods","Error","Sucessful","Warning","Information","Do Not Disturb"], loafAnimation: ["","","","","","",""]))
     }
-    
+    //MARK:- Dark / Light mode toggle
     @IBAction func segemntAction(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             changeAppearance(mode: .light)
@@ -52,7 +52,6 @@ class MainViewController: UIViewController {
             }
         }
     }
-    
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource{
