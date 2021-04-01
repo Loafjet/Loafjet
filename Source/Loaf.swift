@@ -10,11 +10,13 @@ import UIKit
 
 public class Loaf{
     
+    private static let dashView = UIView()
     private static let LoafView = UIView()
-    private static  let LoafLabel = UILabel()
+    private static let LoafLabel = UILabel()
     private static let LoafImageView = UIImageView()
     private static let wheel = UIActivityIndicatorView()
     private static let visualEffect = UIVisualEffectView()
+    private static var dashSpacingCopy:CGFloat = 0            // Passing on spacing to @objc func
     
     //MARK:- Plain Loaf Method
     
@@ -129,7 +131,6 @@ public class Loaf{
 }
 
 //MARK:- Popup Card Method
-
 extension Loaf{
     
     /// PopupCard is a card animation used to display quick info on screen.
@@ -219,8 +220,11 @@ extension Loaf{
             }
         }
     }
+}
+
+//MARK:- Loader Loaf Method
+extension Loaf {
     
-    //MARK:- Loader Loaf Method
     // @available(iOS 12.0, *)
     /// LoafWheel is a custom loader view with gradient background support
     /// - Parameters:
@@ -305,11 +309,112 @@ extension Loaf{
     }
 }
 
+//MARK:- Dash Board Methods
+extension Loaf {
+    
+    /// Dash board is an user interactive Loaf with image, title , content and button support.
+    /// - Parameters:
+    ///   - dashSpacing: space to be left on both the sides of dashBoard
+    ///   - dashRadius: cornerRadius of dsahBoard
+    ///   - dashColor: dashBoard background Color
+    ///   - dashImage: image used in dashBoard
+    ///   - dashImageRadius: cornerRadius of dash image
+    ///   - dashTitle: main title of dashBoard
+    ///   - dashTitleColor: dashBoard Title color
+    ///   - dashContent: content text on dashBoard
+    ///   - dashContentColor: content text color
+    ///   - dashButtonTitle: dashoard button title text
+    ///   - dashButtonTitleColor: dashoard button title color
+    ///   - dashButtonColor: dashoard button background color
+    ///   - dashButtonRadius: dashoard button cornerRadius
+    ///   - dashButtonBorderColor: dashoard button border color
+    ///   - dashButtonBorderWidth: dashoard button border width
+    ///   - dashDuration: duration of dashBoard presentation
+    ///   - mainView: view in which dashBoard is to be presented
+    
+    public static func dashBoard(dashSpacing: CGFloat = 40, dashRadius:CGFloat = 20, dashColor: UIColor = .white, dashImage: String, dashImageRadius: CGFloat = 20,dashTitle:String, dashTitleColor:UIColor = .black, dashContent: String, dashContentColor:UIColor = .black, dashButtonTitle:String, dashButtonTitleColor:UIColor = .black, dashButtonColor: UIColor = .white, dashButtonRadius:CGFloat = 20, dashButtonBorderColor: UIColor = .white, dashButtonBorderWidth:CGFloat = 2, dashDuration: TimeInterval = 0.75, mainView:UIView) {
+        
+        dashView.layer.sublayers = nil                // Important: to remove the previously added layer
+        
+        // Dash View Elements
+        let contentLabel = UILabel()
+        let titleLabel = UILabel()
+        let dashPic = UIImageView()
+        let dashButton = UIButton()
+        dashSpacingCopy = dashSpacing         // assigning value to dashPassOns
+        
+        // Main Card Setup
+        dashView.frame = CGRect(x: dashSpacing, y: (mainView.frame.height/3)*2 + 1000, width: mainView.frame.width-(2*dashSpacing), height: mainView.frame.height/3)
+        dashView.backgroundColor = dashColor
+        dashView.layer.cornerRadius = dashRadius
+        dashView.clipsToBounds = true
+        
+        // Title Label Setup
+        titleLabel.frame = CGRect(x: 10, y: dashView.bounds.height/2 - 10, width: dashView.frame.width-20, height: 30)
+        titleLabel.text = dashTitle
+        titleLabel.font = UIFont(name: "Avenir Heavy", size: 25)
+        titleLabel.textColor = dashTitleColor
+        titleLabel.textAlignment = .center
+        titleLabel.numberOfLines = 1
+        titleLabel.clipsToBounds = true
+        titleLabel.backgroundColor = UIColor.clear
+        
+        // Content Label Setup
+        contentLabel.frame = CGRect(x: 10, y: dashView.bounds.height/2 + 10 , width: dashView.frame.width-20, height: dashView.frame.height/4)
+        contentLabel.text = dashContent
+        contentLabel.textColor = dashContentColor
+        contentLabel.adjustsFontSizeToFitWidth = true
+        contentLabel.numberOfLines = 0
+        contentLabel.backgroundColor = UIColor.clear
+        contentLabel.textAlignment = .center
+        contentLabel.clipsToBounds = true
+        contentLabel.layer.cornerRadius = 20
+        
+        // Button Setup
+        dashButton.frame = CGRect(x: 10, y: dashView.bounds.height - dashView.frame.height/6 - 5, width: dashView.frame.width-20, height: dashView.frame.height/6)
+        dashButton.setTitle(dashButtonTitle, for: .normal)
+        dashButton.backgroundColor = dashButtonColor
+        dashButton.setTitleColor(dashButtonTitleColor, for: .normal)
+        dashButton.titleLabel?.font = UIFont(name: "Avenir", size: 20)
+        dashButton.layer.cornerRadius = dashButtonRadius
+        dashButton.layer.borderWidth = dashButtonBorderWidth
+        dashButton.layer.borderColor = dashButtonBorderColor.cgColor
+        dashButton.clipsToBounds = true
+        dashButton.addTarget(self, action: #selector(pressed), for: .touchUpInside)
+        
+        // ImageView Setup
+        dashPic.frame = CGRect(x: dashView.frame.width/2 - 50, y: dashView.frame.height/4 - 50, width: 100, height: 100)
+        dashPic.image = UIImage(named: dashImage)
+        dashPic.backgroundColor = UIColor.clear
+        dashPic.layer.cornerRadius = dashImageRadius
+        
+        // animation method
+        UIView.animate(withDuration: dashDuration, delay: 0, options: .curveEaseOut) {
+            // For bottom to top
+            self.dashView.frame = CGRect(x: dashSpacing, y: (mainView.frame.height/3)*2 - 20, width: mainView.frame.width-(2*dashSpacing), height: mainView.frame.height/3)
+        }
+        
+        // Adding Views
+        dashView.addSubview(titleLabel)
+        dashView.addSubview(dashPic)
+        dashView.addSubview(dashButton)
+        dashView.addSubview(contentLabel)
+        mainView.addSubview(dashView)
+    }
+    
+    // Dash board elimination function
+    @objc static func pressed(inView: UIView) {
+        UIView.animate(withDuration: 1.5, delay: 0, options: .curveEaseOut) {
+            // CGRect(x: dashSpacing, y: (mainView.frame.height/3)*2 + 1000, width: mainView.frame.width-(2*dashSpacing), height: mainView.frame.height/3)
+            Loaf.dashView.frame = CGRect(x: dashSpacingCopy, y: (inView.frame.height/3)*2 + 1000, width: inView.frame.width-20, height: inView.frame.height/3)
+        }
+    }
+}
 //MARK:- Enumeration Keys
 
-extension Loaf{
-    //MARK:- Position Method
+extension Loaf {
     
+    //MARK:- Position Method
     public enum LoafPosition {
         case top
         case center
@@ -319,11 +424,9 @@ extension Loaf{
             case .top:
                 return CGRect(x: view.frame.origin.x, y: view.frame.origin.y+45, width: width, height: height)
             case .center:
-                // return CGRect(x: view.frame.origin.x, y: view.center.y, width: width, height: height)
                 return CGRect(x: view.center.x, y: view.center.y, width: width, height: height)
                 
             case .bottom:
-                //return CGRect(x: view.frame.origin.x, y: view.bounds.height-60, width: width, height: height)
                 return CGRect(x: view.frame.origin.x-300, y: view.bounds.height-60, width: width, height: height)
             }
         }
