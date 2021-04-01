@@ -111,7 +111,7 @@ Loaf.dashBoard(dashImage: String, dashTitle: String, dashContent: String, dashBu
 Loaf.dashBoard(dashSpacing: CGFloat, dashRadius: CGFloat, dashColor: UIColor, dashImage: String, dashImageRadius: CGFloat, dashTitle: String, dashTitleColor: UIColor, dashContent: String, dashContentColor: UIColor, dashButtonTitle: String, dashButtonTitleColor: UIColor, dashButtonColor: UIColor, dashButtonRadius: CGFloat, dashButtonBorderColor: UIColor, dashButtonBorderWidth: CGFloat, dashDuration: TimeInterval, mainView: UIView)
 
 ```
-* Dash Board [Demo Photo 🌁]()
+* Dash Board [Demo Photo 🌁](https://github.com/Loafjet/Loafjet/blob/master/README.md#dash-board-1)
 
 ### LoafWheel
 ```swift
