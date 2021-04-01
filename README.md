@@ -100,6 +100,18 @@ Loaf.PopupCard(message: String, position:LoafPosition, loafWidth:CGFloat, loafHe
 ```
 * Popup Card [Demo Photo 🌁](https://github.com/Loafjet/Loafjet/blob/master/README.md#loafjet--1)
 
+### Dash Board
+```swift
+* With Default Parameters 📗
+
+Loaf.dashBoard(dashImage: String, dashTitle: String, dashContent: String, dashButtonTitle: String, mainView: UIView)
+
+* Without Default Parameters 📘
+
+Loaf.dashBoard(dashSpacing: CGFloat, dashRadius: CGFloat, dashColor: UIColor, dashImage: String, dashImageRadius: CGFloat, dashTitle: String, dashTitleColor: UIColor, dashContent: String, dashContentColor: UIColor, dashButtonTitle: String, dashButtonTitleColor: UIColor, dashButtonColor: UIColor, dashButtonRadius: CGFloat, dashButtonBorderColor: UIColor, dashButtonBorderWidth: CGFloat, dashDuration: TimeInterval, mainView: UIView)
+
+```
+
 ### LoafWheel
 ```swift
 * With Default Parameters 📗
