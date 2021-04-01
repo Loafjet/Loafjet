@@ -186,6 +186,21 @@ Bottom | ✅ | ✅ | ❌ | ✅
 
 - The above mentioned ❌ means that particular combination of position & animation won't be working accurately .
 
+## Portrait & Landscape Support 📱
+
+* Have a look on your Loafjet supports📇
+
+Loafjet | Portrait | Landscape
+-- | -- | --
+Plain Loaf | ✅ | ✅
+Gradient Loaf | ✅ | ✅
+Popup Card | ✅ | ✅
+Dash Board | ✅ | ❌
+Loaf Wheel | ✅ | ✅
+
+* Other than Dash board all the Loafjets support every type of orientation.
+* Dash Board Landscape support will be added soon 💻
+
 # Snapshots 📸
 
 |  Plain(Top)| Plain(Bottom) | Plain(Centre) | Plain(Centre)|
