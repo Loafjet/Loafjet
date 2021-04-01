@@ -227,11 +227,21 @@ Loaf Wheel | ✅ | ✅
 # Loafjet + 
 ### Additional features
 
-* `Gradient Loafwheel` & `Popup card` are the additional customisation which you get in Loafjet🥳.
+* `Dash Board`,`Gradient Loafwheel` & `Popup card` are the additional customisation which you get in Loafjet🥳.
 
 |Popup Card|Loaf Wheel|
 |-- | -- |
 |<img src="https://user-images.githubusercontent.com/56252259/107311069-b13a2480-6ab3-11eb-8e06-9c9fc6cba61d.gif" width="345" height="300"/>|<img src="https://user-images.githubusercontent.com/56252259/107311073-b303e800-6ab3-11eb-9783-27a01fad8c4a.gif" width="345" height="300"/>|
+
+## Dash Board
+| Loafjet Proprietary | Alert Style | Successful Style |  Reminder Style |
+|-- |-- |-- |-- |
+|<img width="345" alt="Screenshot 2021-01-27 at 2 04 10 AM" src="https://user-images.githubusercontent.com/56252259/113347394-be0c2380-9352-11eb-94f2-007051484985.png"> |<img width="345" alt="Screenshot 2021-01-27 at 2 04 10 AM" src="https://user-images.githubusercontent.com/56252259/113347390-bcdaf680-9352-11eb-8066-34c3ff8477dc.png"> | <img width="345" alt="Screenshot 2021-01-27 at 2 04 10 AM" src="https://user-images.githubusercontent.com/56252259/113347940-8c478c80-9353-11eb-8a12-07a81176b5bd.png">| <img width="345" alt="Screenshot 2021-01-27 at 2 04 10 AM" src="https://user-images.githubusercontent.com/56252259/113347792-4be80e80-9353-11eb-9715-bd0c77da3f85.png">|
+
+### Dark \ Light Mode Support
+| Dark Mode | Light Mode |
+|-- |-- |
+| <img width="345" alt="Screenshot 2021-01-27 at 2 04 10 AM" src="https://user-images.githubusercontent.com/56252259/113347792-4be80e80-9353-11eb-9715-bd0c77da3f85.png">|<img width="345" alt="Screenshot 2021-01-27 at 2 04 10 AM" src="https://user-images.githubusercontent.com/56252259/113347784-4985b480-9353-11eb-944c-92a71905239c.png"> |
 
 * What are you waiting for, write `pod Loafjet` and `pod install` it .
 * Done?, Now enjoy using Loafjet🚀.
