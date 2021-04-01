@@ -236,7 +236,7 @@ Bottom | ✅ | ✅ | ❌ | ✅
 * What are you waiting for, write `pod Loafjet` and `pod install` it .
 * Done?, Now enjoy using Loafjet🚀.
 
-## Portrait + Landscape Support 🔄
+# Portrait + Landscape Support 🔄
 * Loafjet is made with Landscape + Portrait support* 🔓.
 * Now You can use your favourite Loaf without taking care of orientation🌀.
 * Have a look on your favourite Loafjet supports 📇
