@@ -236,6 +236,28 @@ Bottom | ✅ | ✅ | ❌ | ✅
 * What are you waiting for, write `pod Loafjet` and `pod install` it .
 * Done?, Now enjoy using Loafjet🚀.
 
+## Portrait + Landscape Support 🔄
+* Loafjet is made with Landscape + Portrait support* 🔓.
+* Now You can use your favourite Loaf without taking care of orientation🌀.
+* Have a look on your favourite Loafjet supports 📇
+
+Loafjet | Portrait | Landscape
+-- | -- | --
+Plain Loaf |  ✅ | ✅
+Gradient Loaf |  ✅ | ✅
+Popup Card |  ✅ | ✅
+Dash Board |  ✅ | ❌
+Loaf Wheel |  ✅ | ✅
+
+* Other than Dash board all the Loafjets support every type of orientation 🎚.
+* Dash Board Landscape support will be added soon, stay tuned 💻
+
+ 
+<!-- | Landscape Demo |
+|-- |
+|<img src="https://user-images.githubusercontent.com/56252259/113085542-abcca100-91fd-11eb-81b1-3ded381efee9.gif" width="600" height="300"/>|
+-->
+
 # Video Demo 🎥
 
 | Top(Top) | Bottom(Bottom) |
@@ -282,27 +304,6 @@ if #available(iOS 10.0, *) {.
 * All the Loafjets are created with default parameters too, so notice carefully which one you are using (Functions with and without default parameters are shown ⬆️).
 * **Loafjet is still in developement stage, you might face some bugs; do create an [issue](https://github.com/Loafjet/Loafjet/issues/new/choose) and inform us☮️.**
 
-## Portrait + Landscape Support 🔄
-* Loafjet is made with Landscape + Portrait support* 🔓.
-* Now You can use your favourite Loaf without taking care of orientation🌀.
-* Have a look on your favourite Loafjet supports 📇
-
-Loafjet | Portrait | Landscape
--- | -- | --
-Plain Loaf |  ✅ | ✅
-Gradient Loaf |  ✅ | ✅
-Popup Card |  ✅ | ✅
-Dash Board |  ✅ | ❌
-Loaf Wheel |  ✅ | ✅
-
-* Other than Dash board all the Loafjets support every type of orientation 🎚.
-* Dash Board Landscape support will be added soon, stay tuned 💻
-
- 
-<!-- | Landscape Demo |
-|-- |
-|<img src="https://user-images.githubusercontent.com/56252259/113085542-abcca100-91fd-11eb-81b1-3ded381efee9.gif" width="600" height="300"/>|
--->
 ## Author 😊
 
 [Gokul Nair](https://twitter.com/GokulNair2303)
