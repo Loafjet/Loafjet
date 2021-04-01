@@ -25,6 +25,9 @@ class LoafTypes{
 class MainViewController: UIViewController {
     
     var loafTypes = [LoafTypes]()
+    let customGreen:UIColor = #colorLiteral(red: 0, green: 0.9810667634, blue: 0.5736914277, alpha: 1)
+    let customYellow:UIColor = #colorLiteral(red: 0.9541172385, green: 0.8875228763, blue: 0, alpha: 1)
+    let customRed:UIColor = #colorLiteral(red: 0.8431372549, green: 0.1725490196, blue: 0.2549019608, alpha: 0.8483028791)
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -35,6 +38,7 @@ class MainViewController: UIViewController {
         loafTypes.append(LoafTypes.init(loafName: "Plain Loaf", loafType: ["Top","Centre", "Centre","Bottom"], loafAnimation: ["Top -> Bottom", "Left -> Right", "Right -> Left","Bottom -> Top"], loafImage: ["top","mid","mid","bottom"]))
         loafTypes.append(LoafTypes.init(loafName: "Gradient Loaf", loafType: ["Top","Centre", "Centre","Bottom"], loafAnimation: ["Top -> Bottom", "Left -> Right", "Right -> Left","Bottom -> Top"], loafImage: ["top","mid","mid","bottom"]))
         loafTypes.append(LoafTypes.init(loafName: "Popup Card", loafType: ["Centre"], loafAnimation: ["Only one type of animation"], loafImage: ["pop"]))
+        loafTypes.append(LoafTypes.init(loafName: "Dash Board", loafType: ["Loafjet proprietary Style","Successful Style","Information Style","Alert Style"], loafAnimation: ["Bottom","Bottom","Bottom","Bottom"], loafImage: ["Dash","Dash","Dash","Dash"]))
         loafTypes.append(LoafTypes.init(loafName: "Loaf Wheel", loafType: ["Centre"], loafAnimation: ["Only one type of animation"], loafImage: ["wheel"]))
         loafTypes.append(LoafTypes.init(loafName: "Customized Loafs", loafType: ["Xcode","Airpods","Error","Sucessful","Warning","Information","Do Not Disturb"], loafAnimation: ["Optional","Optional","Optional","Optional","Optional","Optional","Optional"], loafImage: ["bottom","bottom","bottom","bottom","bottom","bottom","bottom"]))
     }
@@ -117,31 +121,45 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             }
             break
         case 30:
+            Loaf.dashBoard(dashSpacing: 30, dashRadius: 20, dashColor: .black, dashImage: "Logo", dashImageRadius: 0, dashTitle: "LOAFJET 🚀", dashTitleColor: .red, dashContent: "Loafjet is a light weight custom library used to add Toast, Popup Card and Loading indicator in your Swift project.", dashContentColor: .white, dashButtonTitle: "Customise Now", dashButtonTitleColor: .black, dashButtonColor: .white, dashButtonRadius: 20, dashButtonBorderColor: .black, dashButtonBorderWidth: 2, dashDuration: 0.75, mainView: view)
+            break
+        case 31:
+            Loaf.dashBoard(dashSpacing: 30, dashRadius: 0, dashColor: customGreen, dashImage: "tick", dashImageRadius: 0, dashTitle: "Verified!", dashTitleColor: .black, dashContent: "Your Verification was successful\nNow enjoy Loafjet+", dashContentColor: .black, dashButtonTitle: "Log In", dashButtonTitleColor: .black, dashButtonColor: .white, dashButtonRadius: 0, dashButtonBorderColor: .green, dashButtonBorderWidth: 1, dashDuration: 1.5, mainView: view)
+            break
+        case 32:
+            Loaf.dashBoard(dashSpacing: 40, dashRadius: 20, dashColor: .white, dashImage: "qr", dashImageRadius: 0, dashTitle: "QR Code", dashTitleColor: .black, dashContent: "Scan the QR Code, create an account and enjoy using Loafjet+.", dashContentColor: .black, dashButtonTitle: "Claim Now!", dashButtonTitleColor: .black, dashButtonColor: customYellow, dashButtonRadius: 20, dashButtonBorderColor: .white, dashButtonBorderWidth: 2, dashDuration: 1.5, mainView: view)
+            break
+        case 33:
+            if #available(iOS 13.0, *) {
+                Loaf.dashBoard(dashSpacing: 20, dashRadius: 20, dashColor: .label, dashImage: "new", dashImageRadius: 0, dashTitle: "Apple Music", dashTitleColor: customRed, dashContent: "Your Apple Music subscription will expire in 3 days.", dashContentColor: .systemBackground, dashButtonTitle: "Pay Now", dashButtonTitleColor: .label, dashButtonColor: .systemBackground, dashButtonRadius: 20, dashButtonBorderColor: .clear, dashButtonBorderWidth: 0, dashDuration: 1.0, mainView: view)
+            }
+            break
+        case 40:
             if #available(iOS 12.0, *) {
                 Loaf.LoafWheel(message: "LoafJet loading!", loafWidth: 250, loafHeight: 110, cornerRadius: 20, bgColor1: .systemPink, bgColor2: .systemOrange, fontStyle: "Avenir-Heavy", fontSize: 18, fontColor: .white, duration: 5, wheelStyle: .whiteLarge, blurEffect: .dark, loafWheelView: view)
             } else {
                 print("Pod LoafJet: Your device dont support this blur effect type (require iOS 10.0+)")
             }
             break
-        case 40:
+        case 50:
             Loaf.PlainLoaf(message: "Xcode", position: .top, loafWidth: 200, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .systemBlue, fontColor: .black, alphaValue: 1.0, loafImage: "Xcode", animationDirection: .Left, duration: 2, loafjetView: view)
             break
-        case 41:
+        case 51:
             Loaf.PlainLoaf(message: "AirPods Connected", position: .top, loafWidth: 245, loafHeight: 45, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 16, bgColor: .black, fontColor: .white, alphaValue: 1.0, loafImage: "Airpods", animationDirection: .Top, duration: 2, loafjetView: view)
             break
-        case 42:
+        case 52:
             Loaf.PlainLoaf(message: "Error Found! LoafJet", position: .bottom, loafWidth: 250, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Heavy", fontSize: 16, bgColor: .systemRed, fontColor: .white, alphaValue: 1.0, loafImage: "error", animationDirection: .Bottom, duration: 2, loafjetView: view)
             break
-        case 43:
+        case 53:
             Loaf.PlainLoaf(message: "Completion LoafJet", position: .bottom, loafWidth: 250, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 16, bgColor: .systemGreen, fontColor: .white, alphaValue: 1.0, loafImage: "success", animationDirection: .Bottom, duration: 2, loafjetView: view)
             break
-        case 44:
+        case 54:
             Loaf.PlainLoaf(message: "Warning LoafJet", position: .bottom, loafWidth: 250, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Heavy", fontSize: 17, bgColor: .systemYellow, fontColor: .white, alphaValue: 1.0, loafImage: "warning", animationDirection: .Bottom, duration: 2, loafjetView: view)
             break
-        case 45:
+        case 55:
             Loaf.PlainLoaf(message: "Information LoafJet", position: .bottom, loafWidth: 250, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .systemOrange, fontColor: .white, alphaValue: 1.0, loafImage: "info", animationDirection: .Bottom, duration: 2, loafjetView: view)
             break
-        case 46:
+        case 56:
             if #available(iOS 13.0, *) {
                 Loaf.PlainLoaf(message: "Do Not Disturb LoafJet", position: .bottom, loafWidth: 280, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 16, bgColor: .systemIndigo, fontColor: .white, alphaValue: 1.0, loafImage: "DND", animationDirection: .Bottom, duration: 2, loafjetView: view)
             } else {
