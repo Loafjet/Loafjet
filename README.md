@@ -220,7 +220,7 @@ Bottom | ✅ | ✅ | ❌ | ✅
 |<img src="https://user-images.githubusercontent.com/56252259/107311069-b13a2480-6ab3-11eb-8e06-9c9fc6cba61d.gif" width="345" height="300"/>|<img src="https://user-images.githubusercontent.com/56252259/107311073-b303e800-6ab3-11eb-9783-27a01fad8c4a.gif" width="345" height="300"/>|
 
 ## Dash Board 
-* This are some possible ways of customisation 💡 
+* These are some possible ways of customisation 💡 
 
 | Loafjet Proprietary | Alert Style | Successful Style |
 |-- |-- |-- |
@@ -268,7 +268,7 @@ Loaf Wheel |  ✅ | ✅
 |-- | -- |
 |<img src="https://user-images.githubusercontent.com/56252259/107311053-ac757080-6ab3-11eb-9e86-a50c0a68042d.gif" width="300" height="100"/>|<img src="https://user-images.githubusercontent.com/56252259/107311058-af706100-6ab3-11eb-9229-02ce2cf8be21.gif" width="300" height="100"/>|
 
-* This are some possible ```Position X Animation``` combination, Loafjet supports various other [combinations](https://github.com/Loafjet/Loafjet/blob/master/README.md#combination-of-position-and-animations-) too.
+* These are some possible ```Position X Animation``` combination, Loafjet supports various other [combinations](https://github.com/Loafjet/Loafjet/blob/master/README.md#combination-of-position-and-animations-) too.
 
 ## Instructions ⚠️
 
