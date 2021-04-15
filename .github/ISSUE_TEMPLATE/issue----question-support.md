@@ -2,7 +2,7 @@
 name: 'Issue: ❓ Question/Support'
 about: Ask a question about how to use Loafjet.
 title: ''
-labels: help wanted, good first issue, question
+labels: good first issue, help wanted, question
 assignees: ''
 
 ---
