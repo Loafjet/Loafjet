@@ -304,9 +304,13 @@ if #available(iOS 10.0, *) {.
 * All the Loafjets are created with default parameters too, so notice carefully which one you are using (Functions with and without default parameters are shown ⬆️).
 * **Loafjet is still in developement stage, you might face some bugs; do create an [issue](https://github.com/Loafjet/Loafjet/issues/new/choose) and inform us☮️.**
 
-## Author 😊
+## Project Admin 
 
-[Gokul Nair](https://twitter.com/GokulNair2303)
+|                                                                                         <a href="https://gokulnair2001.wixsite.com/mysite"><img src="https://user-images.githubusercontent.com/56252259/114967115-7aa4cf80-9e91-11eb-9e66-29830f72c018.jpg" width=140px height=180px /></a>                                                                                         |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                                                                                        **[Gokul Nair](https://www.linkedin.com/in/gokul-r-nair/)**                                                                                                                                        |
+| <a href="gokulair.2001@gmail.com"><img src="https://user-images.githubusercontent.com/56252259/114968212-8a251800-9e93-11eb-9b62-4b2611b7b23d.png" width="32px" height="32px"></a> <a href="https://twitter.com/GokulNair2303"><img src="https://user-images.githubusercontent.com/56252259/114967867-d6bc2380-9e92-11eb-8f89-c437f39a45de.png" width="32px" height="32px"></a>  <a href="https://www.linkedin.com/in/gokul-r-nair/"><img src="https://user-images.githubusercontent.com/56252259/114967871-d7ed5080-9e92-11eb-8781-cd7cf9bb52db.png" width="32px" height="32px"></a> |
+
 
 ## License ⚖️
 
