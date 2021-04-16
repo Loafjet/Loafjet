@@ -318,16 +318,6 @@ Loafjet is available under the MIT license. See the [LICENSE](https://github.com
 * Device running on iOS/iPadOS 12.0+ versions 📱.
 * Swift 5.1+ 💻
 
-# Community 🍕
-* Want to be a part of our Organisation 🚀, then:
-* Mail us [here](gokulnair.2001@gmail.com) ✉️
-* Do mention the following things: <br> 
-      1. Reason <br>
-      2. Motive <br>
-      3. Skills <br>
-      4. What you liked abou Loafjet❤️ <br>
-* We are eager to read you mail⚡️!
-
 # Additional Info
 
 ## Mentors 📱
@@ -346,6 +336,17 @@ Loafjet is available under the MIT license. See the [LICENSE](https://github.com
 |                                                                                                                                        **[Gokul Nair](https://www.linkedin.com/in/gokul-r-nair/)**                                                                                                                                        |
 | <a href="https://www.instagram.com/_gokul_r_nair_/"><img src="https://user-images.githubusercontent.com/56252259/114969025-24d22680-9e95-11eb-848d-b20e73269c4c.png" width="32px" height="32px"></a> <a href="https://twitter.com/GokulNair2303"><img src="https://user-images.githubusercontent.com/56252259/114967867-d6bc2380-9e92-11eb-8f89-c437f39a45de.png" width="32px" height="32px"></a>  <a href="https://www.linkedin.com/in/gokul-r-nair/"><img src="https://user-images.githubusercontent.com/56252259/114967871-d7ed5080-9e92-11eb-8781-cd7cf9bb52db.png" width="32px" height="32px"></a> |
 
+# Community 🍕
+* Want to be a part of our Organisation 🚀, then:
+* Mail us [here](gokulnair.2001@gmail.com) ✉️
+* Do mention the following things: <br> 
+      1. Reason <br>
+      2. Motive <br>
+      3. Skills <br>
+      4. What you liked abou Loafjet❤️ <br>
+* We are eager to read you mail⚡️!
+
+# Reward 🎁
 
 ## Like the Project ?
 If you like using any of my projects or like what I'm doing, please consider backing me with appreciating my work: [Message me](https://twitter.com/GokulNair2303)🥰
