@@ -19,6 +19,8 @@ Do follow our blog pages 📃
 ![Badge](https://img.shields.io/badge/Xcode-12.0-green)
 ![badge](https://img.shields.io/badge/Swift-5.1-red)
 ![Badgse](https://img.shields.io/badge/RepoSize-27kb-brown)
+[![Relative date](https://img.shields.io/date/1577392258?color=important&label=started&logo=github)](https://github.com/gokulnair2001/) [![Maintenance](https://img.shields.io/maintenance/yes/2021?color=green&logo=github)](https://github.com/Loafjet/Loafjet)
+
 
 ## About 📒
 Loafjet is a ***light weight*** Toast(Loaf) generator library which allows the user to add customised Toasts to their projects. Loafjet comes with various types of Toast Animations as well as Toast Positions. It can be used to add gradient and plain toasts. Loafjet comes with extra features like Popup Card and Loading Indicator which can be customised according to your needs.
@@ -329,7 +331,7 @@ Loafjet is available under the MIT license. See the [LICENSE](https://github.com
 
 ## Project Admin 👨🏻‍💻
 
-[![Relative date](https://img.shields.io/date/1577392258?color=important&label=started&logo=github)](https://github.com/gokulnair2001/) [![Maintenance](https://img.shields.io/maintenance/yes/2021?color=green&logo=github)](https://github.com/gokulnair2001/)
+[![Relative date](https://img.shields.io/date/1577392258?color=important&label=started&logo=github)](https://github.com/Loafjet/Loafjet [![Maintenance](https://img.shields.io/maintenance/yes/2021?color=green&logo=github)](https://github.com/gokulnair2001/)
 
 |                                                                                         <a href="https://gokulnair2001.wixsite.com/mysite"><img src="https://user-images.githubusercontent.com/56252259/114967115-7aa4cf80-9e91-11eb-9e66-29830f72c018.jpg" width=140px height=180px /></a>                                                                                         |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
