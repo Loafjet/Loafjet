@@ -331,7 +331,7 @@ Loafjet is available under the MIT license. See the [LICENSE](https://github.com
 
 ## Project Admin 👨🏻‍💻
 
-[![Relative date](https://img.shields.io/date/1577392258?color=important&label=started&logo=github)](https://github.com/Loafjet/Loafjet [![Maintenance](https://img.shields.io/maintenance/yes/2021?color=green&logo=github)](https://github.com/gokulnair2001/)
+[![Relative date](https://img.shields.io/date/1577392258?color=important&label=started&logo=github)](https://github.com/Loafjet/Loafjet) [![Maintenance](https://img.shields.io/maintenance/yes/2021?color=green&logo=github)](https://github.com/gokulnair2001/)
 
 |                                                                                         <a href="https://gokulnair2001.wixsite.com/mysite"><img src="https://user-images.githubusercontent.com/56252259/114967115-7aa4cf80-9e91-11eb-9e66-29830f72c018.jpg" width=140px height=180px /></a>                                                                                         |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
