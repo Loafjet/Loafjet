@@ -301,7 +301,7 @@ if #available(iOS 10.0, *) {.
 
 * Test Run of few Loafjets are given, have a look on it (Running all Loafjets at a time may lead to **irregular functioning!**).
 
-## Note 🔴
+# Note 🔴
 
 * Currently 'Loafjet' dont support SF Symbols, if you need it just raise an issue and I will try to add it ⚓️.
 * The Loafimage you add must be present in the `Images.xcassets` file .
@@ -309,7 +309,7 @@ if #available(iOS 10.0, *) {.
 * In the Test Run make sure you don't run all the Loafjets at a time, wait for one whole Loafjet to complete its task, then go for next.
 * All the Loafjets are created with default parameters too, so notice carefully which one you are using (Functions with and without default parameters are shown ⬆️).
 * **Loafjet is still in developement stage, you might face some bugs; do create an [issue](https://github.com/Loafjet/Loafjet/issues/new/choose) and inform us☮️.**
-
+* **You can use two or more different Loafjet type at a time, but you can't use 2 or more Loafjet of same type at a time**.
 ## License ⚖️
 
 Loafjet is available under the MIT license. See the [LICENSE](https://github.com/gokulnair2001/Loafjet) file for more info.
