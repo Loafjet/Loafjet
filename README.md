@@ -22,7 +22,7 @@
 ![contributors](https://img.shields.io/github/contributors/Loafjet/Loafjet)
 ![Badge](https://img.shields.io/badge/Xcode-12.0-green)
 ![badge](https://img.shields.io/badge/Swift-5.1-red)
-![Badge](https://img.shields.io/badge/RepoSize-27kb-brown)
+![Badge](https://img.shields.io/badge/RepoSize-29kb-brown)
 ![Watchers](https://img.shields.io/github/watchers/Loafjet/Loafjet?label=Watch)
 
 
