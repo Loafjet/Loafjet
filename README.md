@@ -350,7 +350,7 @@ Loafjet is available under the MIT license. See the [LICENSE](https://github.com
       2. Motive <br>
       3. Skills <br>
       4. What you liked abou Loafjet❤️ <br>
-* We are eager to read you mail⚡️!
+* We are eager to read you message⚡️!
 
 # Reward 🎁
 
