@@ -27,7 +27,7 @@
 
 
 ## About 📒
-Loafjet is a ***light weight*** Toast(Loaf) generator library which allows the user to add customised Toasts to their projects. Loafjet comes with various types of Toast Animations as well as Toast Positions. It can be used to add gradient and plain toasts. Loafjet comes with extra features like Popup Card and Loading Indicator which can be customised according to your needs.
+Loafjet is a ***light weight*** Toast(Loaf) generator framework which allows the user to add customised Toasts to their projects. Loafjet comes with various types of Toast Animations as well as Toast Positions. It can be used to add gradient and plain toasts. Loafjet comes with extra features like Popup Card and Loading Indicator which can be customised according to your needs.
 
 ## Now Customise Like Apple  !
 
