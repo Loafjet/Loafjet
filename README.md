@@ -378,6 +378,6 @@ OR
 </p>
 
 <p align="right" width="100%">
-   ©Gokul Nair   
+   © Gokul Nair   
 </p>
 
