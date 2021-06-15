@@ -377,3 +377,7 @@ OR
    Made with ❤️ in 🇮🇳 By Gokul Nair   
 </p>
 
+<p align="right" width="100%">
+   ©Gokul Nair   
+</p>
+
