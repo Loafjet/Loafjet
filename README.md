@@ -344,7 +344,7 @@ Loafjet is available under the MIT license. See the [LICENSE](https://github.com
 
 # Community 🍕
 * Want to be a part of our Organisation 🚀, then:
-* Mail us [here](gokulnair.2001@gmail.com) ✉️
+* Mail us at **gokulnair.2001@gmail.com** ✉️
 * Do mention the following things: <br> 
       1. Reason <br>
       2. Motive <br>
