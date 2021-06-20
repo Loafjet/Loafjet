@@ -18,7 +18,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet)
 [![Relative date](https://img.shields.io/date/1577392258?color=important&label=started&logo=github)](https://github.com/Loafjet/Loafjet) 
 [![Maintenance](https://img.shields.io/maintenance/yes/2021?color=green&logo=github)](https://github.com/Loafjet/Loafjet)
-![commits](https://img.shields.io/github/commits-since/Loafjet/Loafjet/2.0.0/master)
+![commit](https://img.shields.io/github/commits-since/Loafjet/Loafjet/2.0.0/master)
 ![contributors](https://img.shields.io/github/contributors/Loafjet/Loafjet)
 ![Badge](https://img.shields.io/badge/Xcode-12.0-green)
 ![badge](https://img.shields.io/badge/Swift-5.1-red)
