@@ -376,8 +376,8 @@ OR
 <p align="center" width="100%">
    Made with ❤️ in 🇮🇳 By Gokul Nair   
 </p>
-<!--
+
 <p align="right" width="100%">
    © Gokul Nair   
-</p>.  -->
+</p>. 
 
