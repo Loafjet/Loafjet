@@ -12,7 +12,11 @@
 </p>
 
 # Loafjet 🚀
-
+![Forks](https://img.shields.io/github/forks/Loafjet/Loafjet)
+![Stars](https://img.shields.io/github/stars/Loafjet/Loafjet)  
+![Issues](https://img.shields.io/github/issues/Loafjet/Loafjet) 
+![PRs](https://img.shields.io/github/issues-pr-raw/Loafjet/Loafjet)  
+![Languages](https://img.shields.io/github/languages/count/Loafjet/Loafjet)
 [![Version](https://img.shields.io/cocoapods/v/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet)
 ![Badges](https://img.shields.io/badge/License-MIT-yellow) 
 [![Platform](https://img.shields.io/cocoapods/p/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet)
