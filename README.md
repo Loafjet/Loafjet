@@ -346,9 +346,7 @@ Loafjet is available under the MIT license. See the [LICENSE](https://github.com
       4. What you liked abou Loafjet❤️ <br>
 * We are eager to read you message⚡️!
 
-# Reward 🎁
-
-## Like the Project ?
+# Like the Project ?
 If you like using any of my projects or like what I'm doing, please do consider backing me with appreciating my work: [Message me](https://twitter.com/GokulNair2303)🥰
 
 [<img width="200" alt="BMC logo+wordmark - Black" src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png">](https://www.buymeacoffee.com/gokulnair)
@@ -356,7 +354,9 @@ If you like using any of my projects or like what I'm doing, please do consider 
 OR
 
 **Drop a star ⭐ if you find this project interesting!**
-
+ 
+# Reward 🎁
+ 
 **If you ❤️ the project then there is a gift for you:**
 * [Gift from Loafjet Organisation](https://loafjet.github.io/LoafjetLogo.github.io/)
 * Set the following image as your iPhone's Lock Screen wallpaper and see the magic 🪄.
