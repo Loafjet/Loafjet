@@ -29,8 +29,9 @@ public class Loaf{
     private static let visualEffect = UIVisualEffectView()
     // DASH LOAF UTILITIES
     private static var dashSpacingCopy:CGFloat = 0            // Passing on spacing to @objc func
+    // public static let dashButton = UIButton()
     
-    //MARK:- Plain Loaf Method
+    //MARK: - Plain Loaf Method
     
     /// Plain Loaf is a Loaf view with custom background and various position placement option.
     /// - Parameters:
@@ -40,14 +41,14 @@ public class Loaf{
     ///   - loafHeight: Height of Loaf
     ///   - cornerRadius: CornerRadius of Loaf
     ///   - fontStyle: Font style of Loaf
-    ///   - fontSize: Fonst size of Loaf
-    ///   - fontColor: Font color of Loaf
-    ///   - bgColor: Background color of  Loaf
+    ///   - fontSize: Font size of Loaf
+    ///   - fontColor: Font colour of Loaf
+    ///   - bgColor: Background colour of  Loaf
     ///   - loafImage: Image to show on Loaf
     ///   - animationDirection: Loaf Animation Direction
     ///   - duration: Animation Duration
     ///   - loafjetView: UIView on which the Loaf is to be presented
-    ///   - alphaValue: The opacity value of the background color parameter, specified as a value from 0.0 to 1.0.
+    ///   - alphaValue: The opacity value of the background colour parameter, specified as a value from 0.0 to 1.0.
     
     public static func PlainLoaf(message: String, position:LoafPosition, loafWidth:CGFloat = 200 , loafHeight:CGFloat = 40,cornerRadius: CGFloat = 20, fontStyle: String = "Avenir-Medium", fontSize: CGFloat = 17, bgColor: UIColor = .gray,fontColor: UIColor = .black, alphaValue:CGFloat = 1.0, loafImage: String? = nil , animationDirection: LoafAnimation , duration: TimeInterval = 3.0, loafjetView: UIView){
         
@@ -68,11 +69,12 @@ public class Loaf{
         PlainLoafLabel.numberOfLines = 3
         PlainLoafLabel.center.y = Loaf.PlainLoafView.center.y
         
+        
         // LOAF IMAGE METHOD CALL
-        verifyLoafImage(view: loafjetView, Image: loafImage, Width: 25, Height: 25, LoafImageView: PlainLoafImageView, LoafView: PlainLoafView)
+        let imageView = verifyLoafImage(view: loafjetView, Image: loafImage, Width: 25, Height: 25, LoafImageView: PlainLoafImageView, LoafView: PlainLoafView)
         
         // Animation method call
-        Animation(Direction: animationDirection, View: loafjetView, DelayTime: duration, LoafLabel: PlainLoafLabel, LoafView: PlainLoafView, LoafImageView: PlainLoafImageView)
+        Animation(Direction: animationDirection, View: loafjetView, DelayTime: duration, LoafLabel: PlainLoafLabel, LoafView: PlainLoafView, LoafImageView: imageView)
         
         // ADDING LOAF TO THE VIEW
         loafjetView.addSubview(PlainLoafView)
@@ -80,7 +82,7 @@ public class Loaf{
         loafjetView.addSubview(PlainLoafImageView)
     }
     
-    //MARK:- Gradient Loaf Method
+    //MARK: - Gradient Loaf Method
     
     /// Gradient Loafis a Loaf view with different types of gradient background and various position placement support.
     /// - Parameters:
@@ -130,10 +132,10 @@ public class Loaf{
         gradientLayer.frame = GradientLoafView.bounds
         
         // LOAF IMAGE METHOD CALL
-        verifyLoafImage(view: loafjetView, Image: loafImage, Width: 25, Height: 25, LoafImageView: GradientLoafImageView, LoafView: GradientLoafView)
+        let imageView = verifyLoafImage(view: loafjetView, Image: loafImage, Width: 25, Height: 25, LoafImageView: GradientLoafImageView, LoafView: GradientLoafView)
         
         // Animation method call
-        Animation(Direction: animationDirection, View: loafjetView, DelayTime: duration, LoafLabel: GradientLoafLabel, LoafView: GradientLoafView, LoafImageView: GradientLoafImageView)
+        Animation(Direction: animationDirection, View: loafjetView, DelayTime: duration, LoafLabel: GradientLoafLabel, LoafView: GradientLoafView, LoafImageView: imageView)
         
         // ADDING LOAF TO THE VIEW
         loafjetView.addSubview(GradientLoafView)
@@ -142,7 +144,7 @@ public class Loaf{
     }
 }
 
-//MARK:- Popup Card Method
+//MARK: - Popup Card Method
 extension Loaf{
     
     /// PopupCard is a card animation used to display quick info on screen.
@@ -192,7 +194,7 @@ extension Loaf{
         }()
         gradientLayer.frame = PopUpCardView.bounds
         // LOAF IMAGE METHOD CALL
-        verifyLoafImage(view: loafjetView, Image: loafImage, Width: 100, Height: 100, LoafImageView: PopUpCardImageView, LoafView: PopUpCardView)
+        let _ = verifyLoafImage(view: loafjetView, Image: loafImage, Width: 100, Height: 100, LoafImageView: PopUpCardImageView, LoafView: PopUpCardView)
         
         // Blur Effect call
         applyBlurEffect(effect: blurEffect, view: loafjetView)
@@ -233,7 +235,7 @@ extension Loaf{
         }
     }
 }
-//MARK:- Loader Loaf Method
+//MARK: - Loader Loaf Method
 extension Loaf {
     
     // @available(iOS 12.0, *)
@@ -246,8 +248,8 @@ extension Loaf {
     ///   - bgColor1: Gradient color 1
     ///   - bgColor2: Gradient color 2
     ///   - fontStyle: Font style of Loaf
-    ///   - fontSize: Fonst size of Loaf
-    ///   - fontColor: Font color of Loaf
+    ///   - fontSize: Font size of Loaf
+    ///   - fontColor: Font colour of Loaf
     ///   - duration: Animation Duration
     ///   - wheelStyle: Activity Indicator type
     ///   - blurEffect: Blur Effect type
@@ -310,7 +312,7 @@ extension Loaf {
         }
     }
     
-    //MARK:- Loader Dismisal Method
+    //MARK: - Loader Dismissal Method
     public static func dismissWheel(loafWheelView:UIView){
         LoafWheelLabel.removeFromSuperview()
         LoafWheelView.removeFromSuperview()
@@ -320,30 +322,32 @@ extension Loaf {
     }
 }
 
-//MARK:- Dash Board Methods
+//MARK: - Dash Board Methods
 extension Loaf {
     
     /// Dash board is an user interactive Loaf with image, title , content and button support.
     /// - Parameters:
     ///   - dashSpacing: space to be left on both the sides of dashBoard
-    ///   - dashRadius: cornerRadius of dsahBoard
-    ///   - dashColor: dashBoard background Color
+    ///   - dashRadius: cornerRadius of dashBoard
+    ///   - dashColor: dashBoard background colour
     ///   - dashImage: image used in dashBoard
     ///   - dashImageRadius: cornerRadius of dash image
     ///   - dashTitle: main title of dashBoard
-    ///   - dashTitleColor: dashBoard Title color
+    ///   - dashTitleColor: dashBoard Title colour
     ///   - dashContent: content text on dashBoard
-    ///   - dashContentColor: content text color
-    ///   - dashButtonTitle: dashoard button title text
-    ///   - dashButtonTitleColor: dashoard button title color
-    ///   - dashButtonColor: dashoard button background color
-    ///   - dashButtonRadius: dashoard button cornerRadius
-    ///   - dashButtonBorderColor: dashoard button border color
-    ///   - dashButtonBorderWidth: dashoard button border width
+    ///   - dashContentColor: content text colour
+    ///   - dashButtonTitle: dashBoard button title text
+    ///   - dashButtonTitleColor: dashBoard button title colour
+    ///   - dashButtonColor: dashBoard button background colour
+    ///   - dashButtonRadius: dashBoard button cornerRadius
+    ///   - dashButtonBorderColor: dashBoard button border colour
+    ///   - dashButtonBorderWidth: dashBoard button border width
     ///   - dashDuration: duration of dashBoard presentation
     ///   - mainView: view in which dashBoard is to be presented
+    ///   - completion: completion handler to add button action
     
-    public static func dashBoard(dashSpacing: CGFloat = 40, dashRadius:CGFloat = 20, dashColor: UIColor = .white, dashImage: String, dashImageRadius: CGFloat = 20,dashTitle:String, dashTitleColor:UIColor = .black, dashContent: String, dashContentColor:UIColor = .black, dashButtonTitle:String, dashButtonTitleColor:UIColor = .black, dashButtonColor: UIColor = .white, dashButtonRadius:CGFloat = 20, dashButtonBorderColor: UIColor = .white, dashButtonBorderWidth:CGFloat = 2, dashDuration: TimeInterval = 0.75, mainView:UIView) {
+    @available(iOS 14.0, *)
+    public static func dashBoard(dashSpacing: CGFloat = 40, dashRadius:CGFloat = 20, dashColor: UIColor = .white, dashImage: String, dashImageRadius: CGFloat = 20,dashTitle:String, dashTitleColor:UIColor = .black, dashContent: String, dashContentColor:UIColor = .black, dashButtonTitle:String, dashButtonTitleColor:UIColor = .black, dashButtonColor: UIColor = .white, dashButtonRadius:CGFloat = 20, dashButtonBorderColor: UIColor = .white, dashButtonBorderWidth:CGFloat = 2, dashDuration: TimeInterval = 0.75, mainView:UIView, completion: @escaping () -> ()) {
         
         dashView.layer.sublayers = nil                // Important: to remove the previously added layer
         
@@ -352,10 +356,12 @@ extension Loaf {
         let titleLabel = UILabel()
         let dashPic = UIImageView()
         let dashButton = UIButton()
+        
         dashSpacingCopy = dashSpacing         // assigning value to dashPassOns
         
         // Main Card Setup
         dashView.frame = CGRect(x: dashSpacing, y: (mainView.frame.height/3)*2 + 1000, width: mainView.frame.width-(2*dashSpacing), height: mainView.frame.height/3)
+        dashView.center = mainView.center
         dashView.backgroundColor = dashColor
         dashView.layer.cornerRadius = dashRadius
         dashView.clipsToBounds = true
@@ -391,7 +397,11 @@ extension Loaf {
         dashButton.layer.borderWidth = dashButtonBorderWidth
         dashButton.layer.borderColor = dashButtonBorderColor.cgColor
         dashButton.clipsToBounds = true
-        dashButton.addTarget(self, action: #selector(pressed), for: .touchUpInside)
+        
+        // DashBoard button action
+        dashButton.addAction(UIAction(handler: { _ in
+            completion()
+        }), for: .touchUpInside)
         
         // ImageView Setup
         dashPic.frame = CGRect(x: dashView.frame.width/2 - 50, y: dashView.frame.height/4 - 50, width: 100, height: 100)
@@ -411,97 +421,66 @@ extension Loaf {
         dashView.addSubview(dashButton)
         dashView.addSubview(contentLabel)
         mainView.addSubview(dashView)
+        
     }
     
-    // Dash board elimination function
-    @objc static func pressed(inView: UIView) {
+    // Dash board dismissal function
+    public static func dismissDashBoard(inView: UIView) {
         UIView.animate(withDuration: 1.5, delay: 0, options: .curveEaseOut) {
-            // CGRect(x: dashSpacing, y: (mainView.frame.height/3)*2 + 1000, width: mainView.frame.width-(2*dashSpacing), height: mainView.frame.height/3)
             Loaf.dashView.frame = CGRect(x: dashSpacingCopy, y: (inView.frame.height/3)*2 + 1000, width: inView.frame.width-20, height: inView.frame.height/3)
         }
     }
 }
-//MARK:- Enumeration Keys
+//MARK: - Image verification method
 
 extension Loaf {
     
-    //MARK:- Position Method
-    public enum LoafPosition {
-        case top
-        case center
-        case bottom
-        fileprivate func centerPoint(view: UIView, width:CGFloat, height:CGFloat) -> CGRect{
-            switch self {
-            case .top:
-                return CGRect(x: view.frame.origin.x, y: view.frame.origin.y+45, width: width, height: height)
-            case .center:
-                return CGRect(x: view.center.x, y: view.center.y, width: width, height: height)
-                
-            case .bottom:
-                return CGRect(x: view.frame.origin.x-300, y: view.bounds.height-60, width: width, height: height)
-            }
+    private static func verifyLoafImage(view: UIView, Image:String!, Width: CGFloat, Height: CGFloat, LoafImageView: UIImageView, LoafView: UIView) -> UIImageView?{
+        guard Image != nil else {
+            return nil
         }
+        
+        let LoafImage = UIImage(named: Image)
+        LoafImageView.image = LoafImage!
+        LoafImageView.frame = CGRect(x: PlainLoafLabel.frame.origin.x - (PlainLoafLabel.frame.width/2) - 10, y: view.frame.origin.y, width: Width, height: Height)
+        LoafImageView.frame.origin.x = LoafView.frame.origin.x
+        LoafImageView.center.y = LoafView.center.y
+        return LoafImageView
     }
     
-    //MARK:- Toast Animation Method
-    public enum LoafAnimation {
-        case Left
-        case Right
-        case Bottom
-        case Top
-    }
-    
-    //MARK:- Image verification method
-    private static func verifyLoafImage(view: UIView,Image:String!, Width: CGFloat, Height: CGFloat, LoafImageView: UIImageView, LoafView: UIView){
-        if Image == nil {
-            // No image added
-        }else{
-            // If Image Added
-            let LoafImage = UIImage(named: Image)
-            LoafImageView.image = LoafImage!
-            LoafImageView.frame = CGRect(x: LoafView.frame.origin.x+7, y: view.frame.origin.y, width: Width, height: Height)
-            LoafImageView.frame.origin.x = LoafView.frame.origin.x
-            LoafImageView.center.y = LoafView.center.y
-        }
-    }
-    
-    //MARK:- Blur effect method
+    //MARK: - Blur effect method
     private static func applyBlurEffect(effect: UIBlurEffect.Style?, view: UIView){
-        if effect == nil {
-        }else{
-            let blurEffect = UIBlurEffect(style: effect!)
-            visualEffect.effect = blurEffect
-            view.addSubview(visualEffect)
-            visualEffect.frame = view.frame
+        guard let effect = effect else {
+            return
         }
+        
+        let blurEffect = UIBlurEffect(style: effect)
+        visualEffect.effect = blurEffect
+        view.addSubview(visualEffect)
+        visualEffect.frame = view.frame
     }
 }
 
-//MARK:- Animation Methods
+//MARK: - Animation Methods
 extension Loaf{
     
-    //MARK:- Loaf Animation
-    private static func Animation(Direction: LoafAnimation, View: UIView, DelayTime: TimeInterval, LoafLabel: UILabel, LoafView: UIView, LoafImageView: UIImageView){
+    // Loaf Animation
+    private static func Animation(Direction: LoafAnimation, View: UIView, DelayTime: TimeInterval, LoafLabel: UILabel, LoafView: UIView, LoafImageView: UIImageView?){
+        
         if Direction == .Left {
             LoafLabel.center.x = View.center.x - 4000
             LoafView.center.x = View.center.x - 4000
-            LoafImageView.center.x = LoafView.frame.origin.x - 4000
+            LoafImageView?.center.x = LoafView.frame.origin.x - 4000
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
                 //  For left to right
                 LoafLabel.center.x = View.center.x
                 LoafView.center.x = View.center.x
-                LoafImageView.center.x = LoafView.frame.origin.x+19
+                LoafImageView?.center.x = LoafView.frame.origin.x+19
             }completion: { (isCompleted) in
                 UIView.animate(withDuration: 0.5, delay: DelayTime, options: .curveEaseOut) {
                     LoafLabel.frame.origin.x += View.frame.maxX
                     LoafView.frame.origin.x += View.frame.maxX
-                    LoafImageView.frame.origin.x += View.frame.maxX
-                    // Important: To remove the used view from the screen
-                    DispatchQueue.main.asyncAfter(deadline: .now() + DelayTime+1){
-                        LoafLabel.removeFromSuperview()
-                        LoafView.removeFromSuperview()
-                        LoafImageView.removeFromSuperview()
-                    }
+                    LoafImageView?.frame.origin.x += View.frame.maxX
                 }
             }
         }
@@ -509,74 +488,62 @@ extension Loaf{
             // Placing the label in left to fix the position in the start
             LoafLabel.center.x = View.center.y
             LoafView.center.x = View.center.y
-            LoafImageView.frame.origin.x = LoafView.frame.origin.x+19
+            LoafImageView?.frame.origin.x = LoafView.frame.origin.x+19
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
                 LoafLabel.center.x = View.center.x
                 LoafView.center.x = View.center.x
-                LoafImageView.frame.origin.x = LoafView.frame.origin.x+19
+                LoafImageView?.frame.origin.x = LoafView.frame.origin.x+19
             }completion: { (isCompleted) in
                 UIView.animate(withDuration: 0.5, delay: DelayTime, options: .curveEaseOut) {
                     // centre to left direction
                     LoafLabel.frame.origin.x -= View.frame.maxX
                     LoafView.frame.origin.x -= View.frame.maxX
-                    LoafImageView.frame.origin.x -= View.frame.maxX
-                    // Important: To remove the used view from the screen
-                    DispatchQueue.main.asyncAfter(deadline: .now() + DelayTime+1){
-                        LoafLabel.removeFromSuperview()
-                        LoafView.removeFromSuperview()
-                        LoafImageView.removeFromSuperview()
-                    }
+                    LoafImageView?.frame.origin.x -= View.frame.maxX
                 }
             }
         }
         else if Direction == .Bottom {
             LoafLabel.center.x = View.center.x
             LoafView.center.x = View.center.x
-            LoafImageView.center.x = LoafView.frame.origin.x+29
+            LoafImageView?.center.x = LoafView.frame.origin.x+29
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
                 // For bottom to top
                 LoafLabel.frame.origin.y -= View.frame.origin.y+5
                 LoafView.frame.origin.y -= View.frame.origin.y+5
-                LoafImageView.frame.origin.y -= View.frame.origin.y+5
+                LoafImageView?.frame.origin.y -= View.frame.origin.y+5
             }completion: { (isCompleted) in
                 UIView.animate(withDuration: 0.5, delay: DelayTime, options: .curveEaseOut) {
                     // top to bottom direction
                     LoafLabel.frame.origin.y = View.frame.maxY
                     LoafView.frame.origin.y = View.frame.maxY
-                    LoafImageView.frame.origin.y = View.frame.maxY
-                    // Important: To remove the used view from the screen
-                    DispatchQueue.main.asyncAfter(deadline: .now() + DelayTime+1){
-                        LoafLabel.removeFromSuperview()
-                        LoafView.removeFromSuperview()
-                        LoafImageView.removeFromSuperview()
-                    }
+                    LoafImageView?.frame.origin.y = View.frame.maxY
                 }
             }
         }
         else if Direction == .Top {
             LoafLabel.center.x = View.center.x
             LoafView.center.x = View.center.x
-            LoafImageView.frame.origin.x = LoafView.frame.origin.x+19
+            LoafImageView?.frame.origin.x = LoafView.frame.origin.x+19
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
                 // For bottom to top
                 LoafLabel.frame.origin.y += View.frame.origin.y+5
                 LoafView.frame.origin.y += View.frame.origin.y+5
-                LoafImageView.frame.origin.y += View.frame.origin.x+5
+                LoafImageView?.frame.origin.y += View.frame.origin.x+5
             }completion: { (isCompleted) in
                 UIView.animate(withDuration: 1.5, delay: DelayTime, options: .curveEaseOut) {
                     
                     LoafLabel.frame.origin.y -= View.frame.midY
                     LoafView.frame.origin.y -= View.frame.midY
-                    LoafImageView.frame.origin.y -= View.frame.midY
-                    // Important: To remove the used view from the screen
-                    DispatchQueue.main.asyncAfter(deadline: .now() + DelayTime+1){
-                        LoafLabel.removeFromSuperview()
-                        LoafView.removeFromSuperview()
-                        LoafImageView.removeFromSuperview()
-                        
-                    }
+                    LoafImageView?.frame.origin.y -= View.frame.midY
                 }
             }
+        }
+        
+        // Important: To remove the used view from the screen
+        DispatchQueue.main.asyncAfter(deadline: .now() + DelayTime+1){
+            LoafLabel.removeFromSuperview()
+            LoafView.removeFromSuperview()
+            LoafImageView?.removeFromSuperview()
         }
     }
 }
