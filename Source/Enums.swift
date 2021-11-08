@@ -16,6 +16,7 @@ extension Loaf {
         case top
         case centre
         case bottom
+        
         func centerPoint(view: UIView, width:CGFloat, height:CGFloat) -> CGRect{
             switch self {
             case .top:

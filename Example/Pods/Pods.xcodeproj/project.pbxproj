@@ -12,6 +12,7 @@
 		29C0CD5431F381AEFDEF9606A2043D09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		5541507B27326E8200819B23 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5541507A27326E8200819B23 /* Enums.swift */; };
 		55C636A425BB31FA0055A79F /* Loaf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C636A325BB31FA0055A79F /* Loaf.swift */; };
+		55EC37812738E78E005D2A2A /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EC37802738E78E005D2A2A /* Animations.swift */; };
 		5F0B371BC93DE41F7788E7CF23A1D864 /* Loafjet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A8063F45A07881D65D541563FB2C93 /* Loafjet-dummy.m */; };
 		9C10616F6CCA8FC262B7C9A96A4B0B80 /* Pods-Loafjet_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37786471297974A16C7EC24C9C8542A6 /* Pods-Loafjet_Tests-dummy.m */; };
 		B4CBE0031AAE38649E6A3A391697EEE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -55,6 +56,7 @@
 		4F8CF0FCE5B9BD94FEF1051446B44AD0 /* Loafjet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Loafjet.debug.xcconfig; sourceTree = "<group>"; };
 		5541507A27326E8200819B23 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		55C636A325BB31FA0055A79F /* Loaf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loaf.swift; sourceTree = "<group>"; };
+		55EC37802738E78E005D2A2A /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		5E95D960F99F77ABDC08762196972B3A /* Pods-Loafjet_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Loafjet_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6ABB2B8F2139443A56373B3BD56C2DC3 /* Pods-Loafjet_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Loafjet_Tests-umbrella.h"; sourceTree = "<group>"; };
 		6BADB9110B223C7534B8051821E7A76E /* Loafjet-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Loafjet-Info.plist"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			children = (
 				55C636A325BB31FA0055A79F /* Loaf.swift */,
 				5541507A27326E8200819B23 /* Enums.swift */,
+				55EC37802738E78E005D2A2A /* Animations.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 			files = (
 				5F0B371BC93DE41F7788E7CF23A1D864 /* Loafjet-dummy.m in Sources */,
 				5541507B27326E8200819B23 /* Enums.swift in Sources */,
+				55EC37812738E78E005D2A2A /* Animations.swift in Sources */,
 				55C636A425BB31FA0055A79F /* Loaf.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

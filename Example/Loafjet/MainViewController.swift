@@ -37,7 +37,7 @@ class MainViewController: UIViewController {
         // Array Data
         loafTypes.append(LoafTypes.init(loafName: "Plain Loaf", loafType: ["Top","Centre", "Centre","Bottom"], loafAnimation: ["Top -> Bottom", "Left -> Right", "Right -> Left","Bottom -> Top"], loafImage: ["top","mid","mid","bottom"]))
         loafTypes.append(LoafTypes.init(loafName: "Gradient Loaf", loafType: ["Top","Centre", "Centre","Bottom"], loafAnimation: ["Top -> Bottom", "Left -> Right", "Right -> Left","Bottom -> Top"], loafImage: ["top","mid","mid","bottom"]))
-        loafTypes.append(LoafTypes.init(loafName: "Popup Card", loafType: ["Centre"], loafAnimation: ["Only one type of animation"], loafImage: ["pop"]))
+        loafTypes.append(LoafTypes.init(loafName: "Popup Card", loafType: ["Centre","Centre"], loafAnimation: ["Blur Background","Without Blur effect"], loafImage: ["pop","pop"]))
         loafTypes.append(LoafTypes.init(loafName: "Dash Board", loafType: ["Loafjet proprietary Style","Successful Style","Information Style","Alert Style"], loafAnimation: ["Bottom","Bottom","Bottom","Bottom"], loafImage: ["Dash","Dash","Dash","Dash"]))
         loafTypes.append(LoafTypes.init(loafName: "Loaf Wheel", loafType: ["Centre"], loafAnimation: ["Only one type of animation"], loafImage: ["wheel"]))
         loafTypes.append(LoafTypes.init(loafName: "Customized Loafs", loafType: ["Xcode","Airpods","Error","Sucessful","Warning","Information","Do Not Disturb"], loafAnimation: ["Optional","Optional","Optional","Optional","Optional","Optional","Optional"], loafImage: ["bottom","bottom","bottom","bottom","bottom","bottom","bottom"]))
@@ -92,16 +92,16 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     func performTask(cellNo: Int){
         switch cellNo {
         case 0:
-            Loaf.PlainLoaf(message: "Welcome", position: .top, loafWidth: 200, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .gray, fontColor: .black, alphaValue: 1.0, loafImage: nil, animationDirection: .Top, duration: 2, loafjetView: view)
+            Loaf.PlainLoaf(message: "Welcome", position: .top, loafWidth: 200, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .gray, fontColor: .black, alphaValue: 1.0, animationDirection: .Top, duration: 2, loafjetView: view)
             break
         case 1:
-            Loaf.PlainLoaf(message: "LOAFJET", position: .centre, loafWidth: 200, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir", fontSize: 17, bgColor: .systemOrange, fontColor: .black, alphaValue: 1.0, loafImage: nil, animationDirection: .Left, duration: 2, loafjetView: view)
+            Loaf.PlainLoaf(message: "LOAFJET", position: .centre, loafWidth: 200, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir", fontSize: 17, bgColor: .systemOrange, fontColor: .black, alphaValue: 1.0, animationDirection: .Left, duration: 2, loafjetView: view)
             break
         case 2:
             Loaf.PlainLoaf(message: "Plain Loafjet", position: .centre, loafWidth: 220, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .brown, fontColor: .white, alphaValue: 1.0, loafImage: "Logo", animationDirection: .Right, duration: 2, loafjetView: view)
             break
         case 3:
-            Loaf.PlainLoaf(message: "🚀 Loafjet   ", position: .bottom, loafWidth: 200, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir-Heavy", fontSize: 17, bgColor: .black, fontColor: .white, alphaValue: 1.0, loafImage: nil, animationDirection: .Bottom, duration: 2, loafjetView: view)
+            Loaf.PlainLoaf(message: "🚀 Loafjet   ", position: .bottom, loafWidth: 200, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir-Heavy", fontSize: 17, bgColor: .black, fontColor: .white, alphaValue: 1.0, animationDirection: .Bottom, duration: 2, loafjetView: view)
             break
         case 10:
             Loaf.GradientLoaf(message: "Grad LoafJet", position: .top, loafWidth: 250, loafHeight: 45, cornerRadius: 5, fontStyle: "Avenir-Heavy", fontSize: 17, bgColor1: .systemPink, bgColor2: .systemOrange, fontColor: .black, loafImage: "Logo", animationDirection: .Top, duration: 2, loafjetView: view)
@@ -122,12 +122,19 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
                 print("Pod LoafJet: Your device don't support this blur effect type (require iOS 10.0+)")
             }
             break
+        case 21:
+            if #available(iOS 15.0, *) {
+                Loaf.PopupCard(message: "Loafjet is a custom library used to add Toast, Popup Card and Loading indicator in your Swift project.", loafWidth: 250, loafHeight: 300, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor1: .systemMint, bgColor2: .systemOrange, fontColor: .darkGray, loafImage: "Logo", duration: 5, blurEffect: .none, loafjetView: view)
+            } else {
+                print("Pod LoafJet: Your device don't support this system Color (require iOS 15.0+)")
+            }
+            break
         case 30:
             if #available(iOS 14.0, *) {
                 Loaf.dashBoard(dashSpacing: 30, dashRadius: 20, dashColor: .black, dashImage: "Logo", dashImageRadius: 0, dashTitle: "LOAFJET 🚀", dashTitleColor: .red, dashContent: "Loafjet is a light weight custom library used to add Toast, Popup Card and Loading indicator in your Swift project.", dashContentColor: .white, dashButtonTitle: "Customise Now", dashButtonTitleColor: .black, dashButtonColor: .white, dashButtonRadius: 20, dashButtonBorderColor: .black, dashButtonBorderWidth: 2, dashDuration: 0.75, mainView: view){
                     
                     Loaf.dismissDashBoard(inView: self.view)
-            
+                    
                 }
             } else {
                 print("Pod LoafJet: Your device don't support this Loafjet type (require iOS 14.0+)")
