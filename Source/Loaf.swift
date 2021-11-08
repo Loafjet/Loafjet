@@ -26,7 +26,7 @@ public class Loaf{
     private static let LoafWheelView = UIView()
     private static let LoafWheelLabel = UILabel()
     private static let wheel = UIActivityIndicatorView()
-    private static let visualEffect = UIVisualEffectView()
+    public static let visualEffect = UIVisualEffectView()
     // DASH LOAF UTILITIES
     private static var dashSpacingCopy:CGFloat = 0            // Passing on spacing to @objc func
     // public static let dashButton = UIButton()
@@ -265,7 +265,7 @@ extension Loaf {
     
     public static func LoafWheel(message: String, loafWidth:CGFloat = 50, loafHeight:CGFloat = 50, cornerRadius:CGFloat = 20, bgColor1:UIColor, bgColor2:UIColor, fontStyle: String = "Avenir-Medium", fontSize: CGFloat = 17, fontColor: UIColor = .black, duration: TimeInterval = 2.0, wheelStyle: UIActivityIndicatorView.Style = .white, blurEffect: UIBlurEffect.Style? = .regular ,loafWheelView: UIView) {
         
-        LoafWheelView.layer.sublayers = nil        // Important: to remove the previously added layer
+        LoafWheelView.layer.sublayers?.remove(at: 0)            // To remove previously added gradient layer
         
         // LOAF VIEW METHOD
         LoafWheelView.frame = CGRect(x: loafWheelView.center.x , y: loafWheelView.center.y, width: loafWidth, height: loafHeight)
@@ -310,7 +310,7 @@ extension Loaf {
         LoafWheelView.addSubview(wheel)
         loafWheelView.isUserInteractionEnabled = false
         
-        // for dismisal of blur effect
+        // for dismissal of blur effect
         DispatchQueue.main.asyncAfter(deadline: .now() + duration-0.4) {
             LoafWheelLabel.removeFromSuperview()
             LoafWheelView.removeFromSuperview()
@@ -379,7 +379,6 @@ extension Loaf {
         dashPic.image = UIImage(named: dashImage)
         dashPic.backgroundColor = UIColor.clear
         dashPic.layer.cornerRadius = dashImageRadius
-        //dashPic.backgroundColor = .white
         
         // Title Label Setup
         titleLabel.frame = CGRect(x: 10, y: imageSize + 20, width: dashView.frame.width-20, height: 30)
@@ -439,19 +438,5 @@ extension Loaf {
         UIView.animate(withDuration: 1.5, delay: 0, options: .curveEaseOut) {
             Loaf.dashView.frame = CGRect(x: dashSpacingCopy, y: (inView.frame.height/3)*2 + 1000, width: inView.frame.width-20, height: inView.frame.height/3)
         }
-    }
-}
-//MARK: - Blur effect method
-extension Loaf {
-   
-    private static func applyBlurEffect(effect: UIBlurEffect.Style?, view: UIView){
-        guard let effect = effect else {
-            return
-        }
-        
-        let blurEffect = UIBlurEffect(style: effect)
-        visualEffect.effect = blurEffect
-        view.addSubview(visualEffect)
-        visualEffect.frame = view.frame
     }
 }
