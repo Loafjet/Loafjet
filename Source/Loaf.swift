@@ -289,14 +289,12 @@ extension Loaf {
         gradientLayer.frame = LoafWheelView.bounds
         
         // LOAF LABEL METHOD
-        LoafWheelLabel.frame = CGRect(x: loafWheelView.center.x, y: loafWheelView.center.y, width: loafWidth , height: loafHeight)
+        LoafWheelLabel.frame = CGRect(x: 0, y: 0, width: loafWidth , height: loafHeight)
         LoafWheelLabel.textAlignment = .center
         LoafWheelLabel.numberOfLines = .max
         LoafWheelLabel.text = message
         LoafWheelLabel.font = UIFont(name: fontStyle, size: fontSize)
         LoafWheelLabel.textColor = fontColor
-        LoafWheelLabel.center.x = loafWheelView.center.x
-        LoafWheelLabel.center.y = loafWheelView.center.y
         
         // Adding Indicator
         wheel.frame = CGRect(x: loafWheelView.frame.origin.x + loafWidth/2 - 25, y: loafHeight-50, width: 50, height: 50)
@@ -305,9 +303,9 @@ extension Loaf {
         
         // Apply Blur effect call
         applyBlurEffect(effect: blurEffect, view: loafWheelView)
-        loafWheelView.addSubview(LoafWheelView)
-        loafWheelView.addSubview(LoafWheelLabel)
+        LoafWheelView.addSubview(LoafWheelLabel)
         LoafWheelView.addSubview(wheel)
+        loafWheelView.addSubview(LoafWheelView)
         loafWheelView.isUserInteractionEnabled = false
         
         // for dismissal of blur effect
