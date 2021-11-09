@@ -26,6 +26,7 @@ class StudioViewController: UIViewController {
     
     @IBAction func executeButton(_ sender: Any) {
         Loaf.PlainLoaf(message: "Welcome", position: .top, loafWidth: 250, loafHeight: 90, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .gray, fontColor: .black, alphaValue: 1.0, animationDirection: .top, duration: 2, loafjetView: studioView)
+        
+        Loaf.GradientLoaf(message: "Xcode Loading", position: .centre, loafWidth: 250, loafHeight: 80, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 16, bgColor1: .systemRed, bgColor2: .systemBlue, fontColor: .black, loafImage: "Xcode", animationDirection: .left, duration: 2, loafjetView: studioView)
     }
-    
 }

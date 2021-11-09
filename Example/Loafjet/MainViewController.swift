@@ -96,7 +96,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     func performTask(cellNo: Int){
         switch cellNo {
         case 0:
-            Loaf.PlainLoaf(message: "Welcome", position: .top, loafWidth: 250, loafHeight: 90, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .gray, fontColor: .black, alphaValue: 1.0, animationDirection: .top, duration: 2, loafjetView: view)
+            Loaf.PlainLoaf(message: "Welcome", position: .top, loafWidth: 250, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .gray, fontColor: .black, alphaValue: 1.0, animationDirection: .top, duration: 2, loafjetView: view)
             break
         case 1:
             Loaf.PlainLoaf(message: "LOAFJET", position: .centre, loafWidth: 250, loafHeight: 90, cornerRadius: 20, fontStyle: "Avenir", fontSize: 17, bgColor: .systemOrange, fontColor: .black, alphaValue: 1.0, animationDirection: .left, duration: 2, loafjetView: view)
