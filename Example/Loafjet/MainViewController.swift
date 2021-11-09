@@ -60,6 +60,10 @@ class MainViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func studioButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "openStudio", sender: nil)
+    }
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource{

@@ -8,6 +8,102 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Studio View Controller-->
+        <scene sceneID="HnO-JW-eTU">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="NMX-ab-z5x" customClass="StudioViewController" customModule="Loafjet_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VTQ-Sc-P1q"/>
+                        <viewControllerLayoutGuide type="bottom" id="uex-Hp-d2o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uCE-Ye-ph0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPf-pa-KzE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9s-tA-Rwn">
+                                        <rect key="frame" x="15" y="52" width="33" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="VKZ-E1-OOh"/>
+                                            <constraint firstAttribute="width" constant="33" id="taC-Fk-drx"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="xmark" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="21" weight="medium"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismissButton:" destination="NMX-ab-z5x" eventType="touchUpInside" id="Lo9-Mm-zjn"/>
+                                            <action selector="studioButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Mz8-0E-faI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fN-Jv-OnC">
+                                        <rect key="frame" x="366" y="52" width="33" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="33" id="0I9-hw-13o"/>
+                                            <constraint firstAttribute="height" constant="33" id="8Kw-j0-tkx"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="play.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="21" weight="medium"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="executeButton:" destination="NMX-ab-z5x" eventType="touchUpInside" id="KqI-Ks-Qx2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="U9s-tA-Rwn" firstAttribute="leading" secondItem="GPf-pa-KzE" secondAttribute="leading" constant="15" id="618-dj-JS0"/>
+                                    <constraint firstAttribute="trailing" secondItem="3fN-Jv-OnC" secondAttribute="trailing" constant="15" id="8V6-Hz-wG2"/>
+                                    <constraint firstAttribute="height" constant="350" id="N56-2C-LJm"/>
+                                    <constraint firstItem="U9s-tA-Rwn" firstAttribute="top" secondItem="GPf-pa-KzE" secondAttribute="top" constant="52" id="lsv-Ko-jrb"/>
+                                    <constraint firstItem="3fN-Jv-OnC" firstAttribute="top" secondItem="GPf-pa-KzE" secondAttribute="top" constant="52" id="xrk-w3-rQz"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpw-fx-g9k">
+                                <rect key="frame" x="0.0" y="350" width="414" height="546"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4a-BA-tMr">
+                                        <rect key="frame" x="0.0" y="0.0" width="406" height="700"/>
+                                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="700" id="ypZ-B0-FOz"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="U4a-BA-tMr" firstAttribute="leading" secondItem="cpw-fx-g9k" secondAttribute="leading" id="59e-Qa-fJb"/>
+                                    <constraint firstItem="U4a-BA-tMr" firstAttribute="top" secondItem="cpw-fx-g9k" secondAttribute="top" id="EQB-4M-OPo"/>
+                                    <constraint firstAttribute="bottom" secondItem="U4a-BA-tMr" secondAttribute="bottom" id="EVn-TL-6ha"/>
+                                    <constraint firstAttribute="trailing" secondItem="U4a-BA-tMr" secondAttribute="trailing" id="JJ1-XP-mct"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GPf-pa-KzE" firstAttribute="leading" secondItem="uCE-Ye-ph0" secondAttribute="leading" id="0Gj-0P-Lnu"/>
+                            <constraint firstItem="cpw-fx-g9k" firstAttribute="leading" secondItem="uCE-Ye-ph0" secondAttribute="leading" id="Kya-ae-ckk"/>
+                            <constraint firstItem="cpw-fx-g9k" firstAttribute="top" secondItem="GPf-pa-KzE" secondAttribute="bottom" id="P7i-Mr-qVc"/>
+                            <constraint firstAttribute="bottom" secondItem="cpw-fx-g9k" secondAttribute="bottom" id="gWg-de-Daw"/>
+                            <constraint firstItem="GPf-pa-KzE" firstAttribute="top" secondItem="uCE-Ye-ph0" secondAttribute="top" id="h8W-B2-5GV"/>
+                            <constraint firstItem="U4a-BA-tMr" firstAttribute="width" secondItem="uCE-Ye-ph0" secondAttribute="width" multiplier="0.980676" id="nWt-Cg-8pK"/>
+                            <constraint firstAttribute="trailing" secondItem="GPf-pa-KzE" secondAttribute="trailing" id="olJ-Fg-Xd6"/>
+                            <constraint firstAttribute="trailing" secondItem="cpw-fx-g9k" secondAttribute="trailing" id="sMI-qM-uZ4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="i7H-z9-OMe"/>
+                    <connections>
+                        <outlet property="studioView" destination="GPf-pa-KzE" id="kU8-Gk-EbG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SFX-Yp-pXN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2818.840579710145" y="138.61607142857142"/>
+        </scene>
         <!--LOAFJET-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -108,13 +204,30 @@
                                             <action selector="segemntAction:" destination="vXZ-lx-hvc" eventType="valueChanged" id="8B7-F5-4Vj"/>
                                         </connections>
                                     </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psQ-Xx-e9Q">
+                                        <rect key="frame" x="15" y="61" width="33" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="33" id="CEf-EY-AvP"/>
+                                            <constraint firstAttribute="height" constant="33" id="CjN-ez-TkT"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="wand.and.stars.inverse" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="23" weight="regular"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="studioButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rRP-kW-rbU"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="psQ-Xx-e9Q" firstAttribute="leading" secondItem="4UP-dj-Djw" secondAttribute="leading" constant="15" id="7ZF-ju-XTn"/>
                                     <constraint firstItem="SFP-Ez-VrL" firstAttribute="centerX" secondItem="4UP-dj-Djw" secondAttribute="centerX" id="8W2-eg-zNH"/>
                                     <constraint firstItem="nGS-F9-OFh" firstAttribute="top" secondItem="4UP-dj-Djw" secondAttribute="top" constant="62" id="E9t-v5-vtg"/>
                                     <constraint firstAttribute="height" constant="100" id="FrX-v2-0Pn"/>
                                     <constraint firstItem="SFP-Ez-VrL" firstAttribute="top" secondItem="4UP-dj-Djw" secondAttribute="top" constant="63" id="HH5-fB-5cH"/>
+                                    <constraint firstItem="psQ-Xx-e9Q" firstAttribute="top" secondItem="4UP-dj-Djw" secondAttribute="top" constant="61" id="N9F-8p-lqT"/>
                                     <constraint firstAttribute="trailing" secondItem="nGS-F9-OFh" secondAttribute="trailing" constant="15" id="XYc-nz-Tlx"/>
                                 </constraints>
                             </view>
@@ -135,20 +248,30 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="TvN-SC-VGU" id="c5g-ek-Vh9"/>
+                        <segue destination="NMX-ab-z5x" kind="show" identifier="openStudio" id="n1H-lq-Mm6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957.9710144927537" y="133.92857142857142"/>
+            <point key="canvasLocation" x="2158" y="139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="top" width="341" height="640"/>
+        <image name="wand.and.stars.inverse" catalog="system" width="128" height="113"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
