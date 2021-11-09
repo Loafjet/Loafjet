@@ -92,28 +92,28 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     func performTask(cellNo: Int){
         switch cellNo {
         case 0:
-            Loaf.PlainLoaf(message: "Welcome", position: .top, loafWidth: 200, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .gray, fontColor: .black, alphaValue: 1.0, animationDirection: .Top, duration: 2, loafjetView: view)
+            Loaf.PlainLoaf(message: "Welcome", position: .top, loafWidth: 250, loafHeight: 90, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .gray, fontColor: .black, alphaValue: 1.0, animationDirection: .top, duration: 2, loafjetView: view)
             break
         case 1:
-            Loaf.PlainLoaf(message: "LOAFJET", position: .centre, loafWidth: 200, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir", fontSize: 17, bgColor: .systemOrange, fontColor: .black, alphaValue: 1.0, animationDirection: .Left, duration: 2, loafjetView: view)
+            Loaf.PlainLoaf(message: "LOAFJET", position: .centre, loafWidth: 250, loafHeight: 90, cornerRadius: 20, fontStyle: "Avenir", fontSize: 17, bgColor: .systemOrange, fontColor: .black, alphaValue: 1.0, animationDirection: .left, duration: 2, loafjetView: view)
             break
         case 2:
-            Loaf.PlainLoaf(message: "Plain Loafjet", position: .centre, loafWidth: 220, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .brown, fontColor: .white, alphaValue: 1.0, loafImage: "Logo", animationDirection: .Right, duration: 2, loafjetView: view)
+            Loaf.PlainLoaf(message: "Plain Loafjet", position: .bottom, loafWidth: view.frame.width - 30, loafHeight: 90, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .brown, fontColor: .white, alphaValue: 1.0, loafImage: "Logo", animationDirection: .bottom, duration: 2, loafjetView: view)
             break
         case 3:
-            Loaf.PlainLoaf(message: "🚀 Loafjet   ", position: .bottom, loafWidth: 200, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir-Heavy", fontSize: 17, bgColor: .black, fontColor: .white, alphaValue: 1.0, animationDirection: .Bottom, duration: 2, loafjetView: view)
+            Loaf.PlainLoaf(message: "🚀 Loafjet   ", position: .bottom, loafWidth: 250, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir-Heavy", fontSize: 17, bgColor: .black, fontColor: .white, alphaValue: 1.0, animationDirection: .bottom, duration: 2, loafjetView: view)
             break
         case 10:
-            Loaf.GradientLoaf(message: "Grad LoafJet", position: .top, loafWidth: 250, loafHeight: 45, cornerRadius: 5, fontStyle: "Avenir-Heavy", fontSize: 17, bgColor1: .systemPink, bgColor2: .systemOrange, fontColor: .black, loafImage: "Logo", animationDirection: .Top, duration: 2, loafjetView: view)
+            Loaf.GradientLoaf(message: "Grad LoafJet", position: .top, loafWidth: 250, loafHeight: 45, cornerRadius: 5, fontStyle: "Avenir-Heavy", fontSize: 17, bgColor1: .systemPink, bgColor2: .systemOrange, fontColor: .black, loafImage: "Logo", animationDirection: .top, duration: 2, loafjetView: view)
             break
         case 11:
-            Loaf.GradientLoaf(message: "Xcode Loading", position: .centre, loafWidth: 250, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 16, bgColor1: .systemRed, bgColor2: .systemBlue, fontColor: .black, loafImage: "Xcode", animationDirection: .Left, duration: 2, loafjetView: view)
+            Loaf.GradientLoaf(message: "Xcode Loading", position: .centre, loafWidth: 250, loafHeight: 80, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 16, bgColor1: .systemRed, bgColor2: .systemBlue, fontColor: .black, loafImage: "Xcode", animationDirection: .left, duration: 2, loafjetView: view)
             break
         case 12:
-            Loaf.GradientLoaf(message: "Airpods Detected", position: .centre, loafWidth: 250, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 16, bgColor1: .brown, bgColor2: .cyan, fontColor: .black, loafImage: "Airpods", animationDirection: .Right, duration: 2, loafjetView: view)
+            Loaf.GradientLoaf(message: "Airpods Detected", position: .centre, loafWidth: 250, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 16, bgColor1: .brown, bgColor2: .cyan, fontColor: .black, loafImage: "Airpods", animationDirection: .right, duration: 2, loafjetView: view)
             break
         case 13:
-            Loaf.GradientLoaf(message: "HomePod Mini Detected", position: .bottom, loafWidth: 300, loafHeight: 50, cornerRadius: 20, fontStyle: "Avenir-Heavy", fontSize: 17, bgColor1: .systemPink, bgColor2: .black, fontColor: .white, loafImage: "HomePodMini", animationDirection: .Bottom, duration: 2, loafjetView: view)
+            Loaf.GradientLoaf(message: "HomePod Mini Detected", position: .bottom, loafWidth: 300, loafHeight: 50, cornerRadius: 20, fontStyle: "Avenir-Heavy", fontSize: 17, bgColor1: .systemPink, bgColor2: .black, fontColor: .white, loafImage: "HomePodMini", animationDirection: .bottom, duration: 2, loafjetView: view)
             break
         case 20:
             if #available(iOS 12.0, *) {
@@ -181,26 +181,26 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             }
             break
         case 50:
-            Loaf.PlainLoaf(message: "Xcode", position: .top, loafWidth: 200, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .systemBlue, fontColor: .black, alphaValue: 1.0, loafImage: "Xcode", animationDirection: .Left, duration: 2, loafjetView: view)
+            Loaf.PlainLoaf(message: "Xcode", position: .top, loafWidth: 200, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .systemBlue, fontColor: .black, alphaValue: 1.0, loafImage: "Xcode", animationDirection: .left, duration: 2, loafjetView: view)
             break
         case 51:
-            Loaf.PlainLoaf(message: "AirPods Connected", position: .top, loafWidth: 245, loafHeight: 45, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 16, bgColor: .black, fontColor: .white, alphaValue: 1.0, loafImage: "Airpods", animationDirection: .Top, duration: 2, loafjetView: view)
+            Loaf.PlainLoaf(message: "AirPods Connected", position: .top, loafWidth: 245, loafHeight: 45, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 16, bgColor: .black, fontColor: .white, alphaValue: 1.0, loafImage: "Airpods", animationDirection: .top, duration: 2, loafjetView: view)
             break
         case 52:
-            Loaf.PlainLoaf(message: "Error Found! LoafJet", position: .bottom, loafWidth: 250, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Heavy", fontSize: 16, bgColor: .systemRed, fontColor: .white, alphaValue: 1.0, loafImage: "error", animationDirection: .Bottom, duration: 2, loafjetView: view)
+            Loaf.PlainLoaf(message: "Error Found! LoafJet", position: .bottom, loafWidth: 250, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Heavy", fontSize: 16, bgColor: .systemRed, fontColor: .white, alphaValue: 1.0, loafImage: "error", animationDirection: .bottom, duration: 2, loafjetView: view)
             break
         case 53:
-            Loaf.PlainLoaf(message: "Completion LoafJet", position: .bottom, loafWidth: 250, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 16, bgColor: .systemGreen, fontColor: .white, alphaValue: 1.0, loafImage: "success", animationDirection: .Bottom, duration: 2, loafjetView: view)
+            Loaf.PlainLoaf(message: "Completion LoafJet", position: .bottom, loafWidth: 250, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 16, bgColor: .systemGreen, fontColor: .white, alphaValue: 1.0, loafImage: "success", animationDirection: .bottom, duration: 2, loafjetView: view)
             break
         case 54:
-            Loaf.PlainLoaf(message: "Warning LoafJet", position: .bottom, loafWidth: 250, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Heavy", fontSize: 17, bgColor: .systemYellow, fontColor: .white, alphaValue: 1.0, loafImage: "warning", animationDirection: .Bottom, duration: 2, loafjetView: view)
+            Loaf.PlainLoaf(message: "Warning LoafJet", position: .bottom, loafWidth: 250, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Heavy", fontSize: 17, bgColor: .systemYellow, fontColor: .white, alphaValue: 1.0, loafImage: "warning", animationDirection: .bottom, duration: 2, loafjetView: view)
             break
         case 55:
-            Loaf.PlainLoaf(message: "Information LoafJet", position: .bottom, loafWidth: 250, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .systemOrange, fontColor: .white, alphaValue: 1.0, loafImage: "info", animationDirection: .Bottom, duration: 2, loafjetView: view)
+            Loaf.PlainLoaf(message: "Information LoafJet", position: .bottom, loafWidth: 250, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .systemOrange, fontColor: .white, alphaValue: 1.0, loafImage: "info", animationDirection: .bottom, duration: 2, loafjetView: view)
             break
         case 56:
             if #available(iOS 13.0, *) {
-                Loaf.PlainLoaf(message: "Do Not Disturb LoafJet", position: .bottom, loafWidth: 280, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 16, bgColor: .systemIndigo, fontColor: .white, alphaValue: 1.0, loafImage: "DND", animationDirection: .Bottom, duration: 2, loafjetView: view)
+                Loaf.PlainLoaf(message: "Do Not Disturb LoafJet", position: .bottom, loafWidth: 280, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 16, bgColor: .systemIndigo, fontColor: .white, alphaValue: 1.0, loafImage: "DND", animationDirection: .bottom, duration: 2, loafjetView: view)
             } else {
                 print("Pod LoafJet: Your device dont support this color type (require iOS 13.0+)")
             }

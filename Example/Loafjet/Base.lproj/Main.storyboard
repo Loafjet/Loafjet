@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Es8-aO-KFV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Loafjet-->
+        <!--LOAFJET-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="MainViewController" customModule="Loafjet_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TvN-SC-VGU">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="75" id="U73-Sk-xKa" customClass="loafjetTableViewCell" customModule="Loafjet_Example" customModuleProvider="target">
@@ -81,35 +81,57 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="tbF-so-3TN"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4UP-dj-Djw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOAFJET" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFP-Ez-VrL">
+                                        <rect key="frame" x="163.5" y="63" width="87" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="87" id="Inn-qE-Ykh"/>
+                                            <constraint firstAttribute="height" constant="28" id="OeP-Mm-woJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nGS-F9-OFh">
+                                        <rect key="frame" x="299" y="62" width="100" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="JrA-Ys-mCW"/>
+                                            <constraint firstAttribute="width" constant="100" id="o4T-9s-UIq"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="☀️"/>
+                                            <segment title="🌗"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segemntAction:" destination="vXZ-lx-hvc" eventType="valueChanged" id="8B7-F5-4Vj"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="SFP-Ez-VrL" firstAttribute="centerX" secondItem="4UP-dj-Djw" secondAttribute="centerX" id="8W2-eg-zNH"/>
+                                    <constraint firstItem="nGS-F9-OFh" firstAttribute="top" secondItem="4UP-dj-Djw" secondAttribute="top" constant="62" id="E9t-v5-vtg"/>
+                                    <constraint firstAttribute="height" constant="100" id="FrX-v2-0Pn"/>
+                                    <constraint firstItem="SFP-Ez-VrL" firstAttribute="top" secondItem="4UP-dj-Djw" secondAttribute="top" constant="63" id="HH5-fB-5cH"/>
+                                    <constraint firstAttribute="trailing" secondItem="nGS-F9-OFh" secondAttribute="trailing" constant="15" id="XYc-nz-Tlx"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TvN-SC-VGU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="3rw-dX-gI6"/>
+                            <constraint firstAttribute="trailing" secondItem="4UP-dj-Djw" secondAttribute="trailing" id="759-6u-Kgs"/>
+                            <constraint firstItem="4UP-dj-Djw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="8NC-1G-zWz"/>
+                            <constraint firstItem="4UP-dj-Djw" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Cig-2Y-T9b"/>
                             <constraint firstAttribute="trailing" secondItem="TvN-SC-VGU" secondAttribute="trailing" id="ffD-I9-poG"/>
                             <constraint firstAttribute="bottom" secondItem="TvN-SC-VGU" secondAttribute="bottom" id="pmr-dh-jog"/>
+                            <constraint firstItem="TvN-SC-VGU" firstAttribute="top" secondItem="4UP-dj-Djw" secondAttribute="bottom" id="sOs-eH-sEF"/>
                             <constraint firstItem="TvN-SC-VGU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="sqF-Bb-NGq"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Loafjet" largeTitleDisplayMode="never" id="ebq-ix-8HD">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="3av-2q-KhA">
-                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="m0R-0X-tJe">
-                                <rect key="frame" x="20" y="6" width="80" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Ut5-LW-s0a"/>
-                                    <constraint firstAttribute="width" constant="80" id="zno-Ax-rX1"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="☀️"/>
-                                    <segment title="🌒"/>
-                                </segments>
-                                <connections>
-                                    <action selector="segemntAction:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Q7n-tk-eeX"/>
-                                </connections>
-                            </segmentedControl>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="LOAFJET" largeTitleDisplayMode="always" id="ebq-ix-8HD"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="TvN-SC-VGU" id="c5g-ek-Vh9"/>
@@ -119,24 +141,6 @@
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="133.92857142857142"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="4bC-bn-aa1">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Es8-aO-KFV" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ic5-Jk-rht">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="j2v-NK-Zk6"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F2o-Ok-4zh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="133.92857142857142"/>
-        </scene>
     </scenes>
     <resources>
         <image name="top" width="341" height="640"/>
@@ -145,6 +149,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

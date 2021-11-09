@@ -48,9 +48,17 @@ public class Loaf{
     ///   - animationDirection: Loaf Animation Direction
     ///   - duration: Animation Duration
     ///   - loafjetView: UIView on which the Loaf is to be presented
-    ///   - alphaValue: The opacity value of the background colour parameter, specified as a value from 0.0 to 1.0.
+    ///   - alphaValue: The opacity value of the background colour parameter, specified as a value from 0.0 to 1.0
     
-    public static func PlainLoaf(message: String, position:LoafPosition, loafWidth:CGFloat = 200 , loafHeight:CGFloat = 40,cornerRadius: CGFloat = 20, fontStyle: String = "Avenir-Medium", fontSize: CGFloat = 17, bgColor: UIColor = .gray,fontColor: UIColor = .black, alphaValue:CGFloat = 1.0, loafImage: String = "", animationDirection: LoafAnimation , duration: TimeInterval = 3.0, loafjetView: UIView){
+    public static func PlainLoaf(message: String, position:LoafPosition, loafWidth:CGFloat = 240 , loafHeight:CGFloat = 40,cornerRadius: CGFloat = 20, fontStyle: String = "Avenir-Medium", fontSize: CGFloat = 17, bgColor: UIColor = .black,fontColor: UIColor = .darkGray, alphaValue:CGFloat = 1.0, loafImage: String = "", animationDirection: LoafAnimation , duration: TimeInterval = 3.0, loafjetView: UIView){
+        
+        guard (loafHeight >= 40 && loafHeight <= 90 && loafWidth >= 240) else {
+            print("Pod Loafjet: Loafjet must have Height varying from 90 - 40 and Width greater than 240")
+            return
+        }
+        
+        /// Label & Image size calculation according to the parameters added
+        let metrics = getImageDynamics(height: loafHeight, imageName: loafImage)
         
         // LOAF VIEW METHOD
         PlainLoafView.frame = position.centerPoint(view: loafjetView, width: loafWidth, height: loafHeight)
@@ -59,22 +67,26 @@ public class Loaf{
         PlainLoafView.clipsToBounds = true
         
         // LOAF LABEL METHOD
-        PlainLoafLabel.frame = CGRect(x: 0, y: 0, width: loafWidth , height: loafHeight)
+        let labelWidth = (loafWidth/2 - (metrics.labelSpace))*2
+        PlainLoafLabel.frame = CGRect(x: metrics.labelSpace , y: 0, width: labelWidth , height: loafHeight)
         PlainLoafLabel.textAlignment = .center
         PlainLoafLabel.text = message
         PlainLoafLabel.font = UIFont(name: fontStyle, size: fontSize)
         PlainLoafLabel.textColor = fontColor
         PlainLoafLabel.numberOfLines = 3
+        PlainLoafLabel.adjustsFontSizeToFitWidth = true
         
         // LOAF IMAGE METHOD
-        PlainLoafImageView.frame = CGRect(x: 10, y: loafHeight/2 - 12.5, width: 25, height: 25)
+        
+        PlainLoafImageView.frame = CGRect(x: 15, y: loafHeight/2 - metrics.imageLength/2, width: metrics.imageLength, height: metrics.imageLength)
+        PlainLoafImageView.contentMode = .scaleAspectFit
         if loafImage.trimmingCharacters(in: .whitespaces) != "" {
             PlainLoafImageView.isHidden = false
             PlainLoafImageView.image = UIImage(named: loafImage)
         }else {
             PlainLoafImageView.isHidden = true
         }
-        
+       
         // Animation method call
         Animation(Direction: animationDirection, View: loafjetView, DelayTime: duration, LoafLabel: PlainLoafLabel, LoafView: PlainLoafView, LoafImageView: PlainLoafImageView)
         
@@ -104,9 +116,18 @@ public class Loaf{
     ///   - duration: Animation Duration
     ///   - loafjetView: UIView on which the Loaf is to be presented
     
-    public static func GradientLoaf(message: String, position:LoafPosition, loafWidth:CGFloat = 150,loafHeight:CGFloat = 40,cornerRadius: CGFloat = 20, fontStyle: String = "Avenir-Medium", fontSize: CGFloat = 17, bgColor1: UIColor, bgColor2: UIColor, fontColor: UIColor, loafImage: String = "", animationDirection: LoafAnimation, duration: TimeInterval = 2.0, loafjetView: UIView) {
+    public static func GradientLoaf(message: String, position:LoafPosition, loafWidth:CGFloat = 240,loafHeight:CGFloat = 40,cornerRadius: CGFloat = 20, fontStyle: String = "Avenir-Medium", fontSize: CGFloat = 17, bgColor1: UIColor, bgColor2: UIColor, fontColor: UIColor, loafImage: String = "", animationDirection: LoafAnimation, duration: TimeInterval = 2.0, loafjetView: UIView) {
         
-        GradientLoafView.layer.sublayers?.remove(at: 0)            // To remove previously added gradient layer
+        guard (loafHeight >= 40 && loafHeight <= 90 && loafWidth >= 240) else {
+            print("Pod Loafjet: Loafjet must have Height varying from 90 - 40 and Width greater than 240")
+            return
+        }
+        
+        /// Label & Image size calculation according to the parameters added
+        let metrics = getImageDynamics(height: loafHeight, imageName: loafImage)
+        
+        /// To remove previously added gradient layer
+        GradientLoafView.layer.sublayers?.remove(at: 0)
         
         // LOAF VIEW METHOD
         GradientLoafView.frame = position.centerPoint(view: loafjetView, width: loafWidth, height: loafHeight)
@@ -114,11 +135,13 @@ public class Loaf{
         GradientLoafView.clipsToBounds = true
         
         // LOAF LABEL METHOD
-        GradientLoafLabel.frame = CGRect(x: 0, y: 0, width: loafWidth , height: loafHeight)
+        let labelWidth = (loafWidth/2 - (metrics.labelSpace))*2
+        GradientLoafLabel.frame = CGRect(x: metrics.labelSpace, y: 0, width: labelWidth , height: loafHeight)
         GradientLoafLabel.textAlignment = .center
         GradientLoafLabel.text = message
         GradientLoafLabel.font = UIFont(name: fontStyle, size: fontSize)
         GradientLoafLabel.textColor = fontColor
+        GradientLoafLabel.adjustsFontSizeToFitWidth = true
         
         // GRADIENT BG METHOD
         let gradientLayer: CAGradientLayer = {
@@ -135,7 +158,8 @@ public class Loaf{
         gradientLayer.frame = GradientLoafView.bounds
         
         // LOAF IMAGE METHOD
-        GradientLoafImageView.frame = CGRect(x: 10, y: loafHeight/2 - 12.5, width: 25, height: 25)
+        GradientLoafImageView.frame = CGRect(x: 15, y: loafHeight/2 - metrics.imageLength/2, width: metrics.imageLength, height: metrics.imageLength)
+        GradientLoafView.contentMode = .scaleAspectFit
         if loafImage.trimmingCharacters(in: .whitespaces) != "" {
             GradientLoafImageView.isHidden = false
             GradientLoafImageView.image = UIImage(named: loafImage)
@@ -183,7 +207,7 @@ extension Loaf{
         PopUpCardView.clipsToBounds = true
         
         // LOAF LABEL METHOD
-        let estimatedLabelHeight = loafHeight - 150   // Space left after addition of Image 
+        let estimatedLabelHeight = loafHeight - 150   // Space left after addition of Image
         PopUpCardLabel.frame = CGRect(x: loafWidth/2 - ((loafWidth-8)/2), y: 140, width: loafWidth-8 , height: estimatedLabelHeight)
         PopUpCardLabel.text = message
         PopUpCardLabel.font = UIFont(name: fontStyle, size: fontSize)
@@ -221,7 +245,7 @@ extension Loaf{
         loafjetView.addSubview(PopUpCardView)
         
         // Animation method call
-    
+        
         PopUpCardView.center.x = loafjetView.center.x
         PopUpCardView.center.y = loafjetView.center.y + 4000
         
@@ -246,7 +270,7 @@ extension Loaf{
 }
 //MARK: - Loader Loaf Method
 extension Loaf {
-   
+    
     /// LoafWheel is a custom loader view with gradient background support
     /// - Parameters:
     ///   - message: Message to show on Loaf
