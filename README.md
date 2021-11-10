@@ -34,12 +34,6 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'Loafjet'
 ```
-## STUDIO 💻
-
-* Clone the repo and open `Loafjet.xcworkspace`.
-* There is a live Studio made for developers to customise their Loaf in live. The live preview allows to select the best customisation possible.
-* I've provided a demo project to showcase the uses of Loafjet! too.
-* Here you can see and experiment custom Loaf styles in `Examples.swift`.
 
 # How To Use 📁 ?
 From any view controller, a Loaf can be presented by following this two steps:
@@ -127,6 +121,20 @@ Loaf.LoafWheel(message: String, loafWidth:CGFloat, loafHeight:CGFloat, cornerRad
 ```swift
 Loaf.dismissWheel(loafWheelView:UIView)
 ```
+
+## STUDIO 💻
+
+* Clone the repo and open `Loafjet.xcworkspace`.
+* There is a live Studio made for developers to customise their Loaf in live. The live preview allows to select the best customisation possible.
+* I've provided a demo project to showcase the uses of Loafjet! too.
+* Here you can see and experiment custom Loaf styles in `Examples.swift`.
+
+| Examples | Studio  | Studio  |             
+| --- | --- | -- |
+| <img src="https://user-images.githubusercontent.com/56252259/141103473-0ce1edd9-0521-46f1-a07f-aa477ec53835.png" width = 240, height = 450></img> | <img src="https://user-images.githubusercontent.com/56252259/141103830-d0addf08-5518-4d24-abc1-0d42bfe81526.png" width = 240, height = 450></img> |
+<img src="https://user-images.githubusercontent.com/56252259/141103867-d1866652-e686-4ec6-87d9-5a38549f1996.png" width = 240, height = 450></img> |
+
+
 ## Don't want to use CocoaPods❗️
 <details>
 <summary>
