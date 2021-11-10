@@ -137,7 +137,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             if #available(iOS 14.0, *) {
                 Loaf.dashBoard(dashSpacing: 30, dashRadius: 20, dashColor: .black, dashImage: "Logo", dashImageRadius: 0, dashTitle: "LOAFJET 🚀", dashTitleColor: .red, dashContent: "Loafjet is a light weight custom library used to add Toast, Popup Card and Loading indicator in your Swift project.", dashContentColor: .white, dashButtonTitle: "Customise Now", dashButtonTitleColor: .black, dashButtonColor: .white, dashButtonRadius: 20, dashButtonBorderColor: .black, dashButtonBorderWidth: 2, dashDuration: 0.75, mainView: view){
                     
-                    Loaf.dismissDashBoard(inView: self.view)
+                    Loaf.dismissDashBoard(dashBoardView: self.view)
                     
                 }
             } else {
@@ -148,7 +148,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             if #available(iOS 14.0, *) {
                 Loaf.dashBoard(dashSpacing: 30, dashRadius: 0, dashColor: customGreen, dashImage: "tick", dashImageRadius: 0, dashTitle: "Verified!", dashTitleColor: .black, dashContent: "Your Verification was successful\nNow enjoy Loafjet+", dashContentColor: .black, dashButtonTitle: "Log In", dashButtonTitleColor: .black, dashButtonColor: .white, dashButtonRadius: 0, dashButtonBorderColor: .green, dashButtonBorderWidth: 1, dashDuration: 1.5, mainView: view) {
                     
-                    Loaf.dismissDashBoard(inView: self.view)
+                    Loaf.dismissDashBoard(dashBoardView: self.view)
             
                 }
             } else {
@@ -159,7 +159,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             if #available(iOS 14.0, *) {
                 Loaf.dashBoard(dashSpacing: 40, dashRadius: 20, dashColor: .white, dashImage: "qr", dashImageRadius: 0, dashTitle: "QR Code", dashTitleColor: .black, dashContent: "Scan the QR Code, create an account and enjoy using Loafjet+.", dashContentColor: .black, dashButtonTitle: "Claim Now!", dashButtonTitleColor: .black, dashButtonColor: customYellow, dashButtonRadius: 20, dashButtonBorderColor: .white, dashButtonBorderWidth: 2, dashDuration: 1.5, mainView: view) {
                     
-                    Loaf.dismissDashBoard(inView: self.view)
+                    Loaf.dismissDashBoard(dashBoardView: self.view)
                 
                 }
             } else {
@@ -170,7 +170,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             if #available(iOS 14.0, *) {
                 Loaf.dashBoard(dashSpacing: 20, dashRadius: 20, dashColor: .label, dashImage: "new", dashImageRadius: 0, dashTitle: "Apple Music", dashTitleColor: customRed, dashContent: "Your Apple Music subscription will expire in 3 days.", dashContentColor: .systemBackground, dashButtonTitle: "Pay Now", dashButtonTitleColor: .label, dashButtonColor: .systemBackground, dashButtonRadius: 20, dashButtonBorderColor: .clear, dashButtonBorderWidth: 0, dashDuration: 1.0, mainView: view){
                     
-                    Loaf.dismissDashBoard(inView: self.view)
+                    Loaf.dismissDashBoard(dashBoardView: self.view)
             
                 }
             }else {

@@ -466,9 +466,9 @@ extension Loaf {
     }
     
     // Dash board dismissal function
-    public static func dismissDashBoard(inView: UIView) {
+    public static func dismissDashBoard(dashBoardView: UIView) {
         UIView.animate(withDuration: 1.5, delay: 0, options: .curveEaseOut) {
-            Loaf.dashView.frame = CGRect(x: dashSpacingCopy, y: (inView.frame.height/3)*2 + 1000, width: inView.frame.width-20, height: inView.frame.height/3)
+            Loaf.dashView.frame = CGRect(x: dashSpacingCopy, y: (dashBoardView.frame.height/3)*2 + 1000, width: dashBoardView.frame.width-20, height: dashBoardView.frame.height/3)
         }
     }
 }
