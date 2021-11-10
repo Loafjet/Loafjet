@@ -2,7 +2,7 @@
 <img src = "https://user-images.githubusercontent.com/56252259/105874888-21ac6480-6023-11eb-9915-954f2d41f5d0.png" width = 800, height = 400>
 </p>
 
-<p align="center">
+<!-- <p align="center">
 <a href="https://gokulnair-2001.medium.com/loafjet-a-toast-replacement-for-swift-3fd9a1563401"><img src="https://user-images.githubusercontent.com/56252259/112606155-0fda1880-8e3e-11eb-94b8-3e3db08fe822.png" width = 50, height = 50></img></a>
 <a href="https://dev.to/gokulnair2001/loafjet-a-toast-replacement-for-swift-51e0"><img src="https://user-images.githubusercontent.com/56252259/114194494-308d8c80-996d-11eb-9ad5-46fde7028a3f.png" width = 50, height = 50></img></a>
 </p>
@@ -10,7 +10,7 @@
 <p align="center">
  Do follow our blog pages to know more about us 📃
 </p>
-
+-->
 # Loafjet 🚀
 ![Forks](https://img.shields.io/github/forks/Loafjet/Loafjet) ![Stars](https://img.shields.io/github/stars/Loafjet/Loafjet)  ![Issues](https://img.shields.io/github/issues/Loafjet/Loafjet) ![PRs](https://img.shields.io/github/issues-pr-raw/Loafjet/Loafjet) ![Languages](https://img.shields.io/github/languages/count/Loafjet/Loafjet) [![Version](https://img.shields.io/cocoapods/v/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet) ![Badges](https://img.shields.io/badge/License-MIT-yellow)  [![Platform](https://img.shields.io/cocoapods/p/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet) [![Relative date](https://img.shields.io/date/1577392258?color=important&label=started&logo=github)](https://github.com/Loafjet/Loafjet)  [![Maintenance](https://img.shields.io/maintenance/yes/2021?color=green&logo=github)](https://github.com/Loafjet/Loafjet) ![commit](https://img.shields.io/github/commits-since/Loafjet/Loafjet/2.0.0/master) ![contributors](https://img.shields.io/github/contributors/Loafjet/Loafjet)![Badge](https://img.shields.io/badge/Xcode-12.0-green) ![badge](https://img.shields.io/badge/Swift-5.1-red) ![size](https://img.shields.io/github/languages/code-size/Loafjet/Loafjet) ![Watchers](https://img.shields.io/github/watchers/Loafjet/Loafjet?label=Watch)
 
@@ -140,7 +140,7 @@ Loaf.dismissWheel(loafWheelView:UIView)
  I have a solution 👀
 </summary>
  
- * Add this [Loaf.swift file](https://github.com/Loafjet/Loafjet/tree/master/Source) into your project.</br>
+ * Add the [Source Folder](https://github.com/Loafjet/Loafjet/tree/master/Source) into your project.</br>
  * Now you are ready to use Loafjet 🚀.</br>
  * Remaining steps are same 😁.</br>
  * Do read the documentation till the end to get a reward 🎁 from [Loafjet](https://github.com/Loafjet) organisation. </br>
