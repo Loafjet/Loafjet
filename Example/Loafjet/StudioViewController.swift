@@ -49,6 +49,20 @@ class StudioViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         colorPicker.delegate = self
+        
+        //MARK:- keyboard dismissal method
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        tap.cancelsTouchesInView = false
+        
+        UIApplication.shared.windows.forEach { window in
+            view.overrideUserInterfaceStyle = .light
+        }
+    }
+    
+    // Keyboard dismiss method
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction func dismissButton(_ sender: Any) {
@@ -113,7 +127,6 @@ class StudioViewController: UIViewController {
             Loaf.PopupCard(message: messageTF.text!, loafWidth: CGFloat(Double(widthTF.text!) ?? 250), loafHeight: CGFloat(Double(heightTF.text!) ?? 300), cornerRadius: cornerRadius, fontStyle: fontStyleTF.text!, fontSize: fontSize, bgColor1: bg1Color, bgColor2: bg2Color, fontColor: fontColor, loafImage: imageNameTF.text!, duration: TimeInterval(durationTF.text!) ?? 2, blurEffect: blurType, loafjetView: studioView)
         case 3:
             Loaf.LoafWheel(message: messageTF.text!, loafWidth: CGFloat(Double(widthTF.text!) ?? 250), loafHeight: CGFloat(Double(heightTF.text!) ?? 300), cornerRadius: cornerRadius, bgColor1: bg1Color, bgColor2: bg2Color, fontStyle: fontStyleTF.text!, fontSize: fontSize, fontColor: fontColor, duration: TimeInterval(durationTF.text!) ?? 2, wheelStyle: wheelType, blurEffect: blurType, loafWheelView: studioView)
-            
         default:
             Loaf.PlainLoaf(message: "Welcome", position: .top, loafWidth: 250, loafHeight: 90, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .gray, fontColor: .black, alphaValue: 1.0, animationDirection: .top, duration: 2, loafjetView: studioView)
         }

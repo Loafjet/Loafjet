@@ -99,10 +99,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             Loaf.PlainLoaf(message: "Welcome", position: .top, loafWidth: 250, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .gray, fontColor: .black, alphaValue: 1.0, animationDirection: .top, duration: 2, loafjetView: view)
             break
         case 1:
-            Loaf.PlainLoaf(message: "LOAFJET", position: .centre, loafWidth: 250, loafHeight: 90, cornerRadius: 20, fontStyle: "Avenir", fontSize: 17, bgColor: .systemOrange, fontColor: .black, alphaValue: 1.0, animationDirection: .left, duration: 2, loafjetView: view)
+            Loaf.PlainLoaf(message: "LOAFJET", position: .centre, loafWidth: 250, loafHeight: 50, cornerRadius: 20, fontStyle: "Avenir", fontSize: 17, bgColor: .systemOrange, fontColor: .black, alphaValue: 1.0, animationDirection: .left, duration: 2, loafjetView: view)
             break
         case 2:
-            Loaf.PlainLoaf(message: "Plain Loafjet", position: .bottom, loafWidth: view.frame.width - 30, loafHeight: 90, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .brown, fontColor: .white, alphaValue: 1.0, loafImage: "Logo", animationDirection: .bottom, duration: 2, loafjetView: view)
+            Loaf.PlainLoaf(message: "Plain Loafjet", position: .centre, loafWidth: view.frame.width - 30, loafHeight: 90, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .brown, fontColor: .white, alphaValue: 1.0, loafImage: "Logo", animationDirection: .right, duration: 2, loafjetView: view)
             break
         case 3:
             Loaf.PlainLoaf(message: "🚀 Loafjet   ", position: .bottom, loafWidth: 250, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir-Heavy", fontSize: 17, bgColor: .black, fontColor: .white, alphaValue: 1.0, animationDirection: .bottom, duration: 2, loafjetView: view)
@@ -111,7 +111,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             Loaf.GradientLoaf(message: "Grad LoafJet", position: .top, loafWidth: 250, loafHeight: 45, cornerRadius: 5, fontStyle: "Avenir-Heavy", fontSize: 17, bgColor1: .systemPink, bgColor2: .systemOrange, fontColor: .black, loafImage: "Logo", animationDirection: .top, duration: 2, loafjetView: view)
             break
         case 11:
-            Loaf.GradientLoaf(message: "Xcode Loading", position: .centre, loafWidth: 250, loafHeight: 80, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 16, bgColor1: .systemRed, bgColor2: .systemBlue, fontColor: .black, loafImage: "Xcode", animationDirection: .left, duration: 2, loafjetView: view)
+            Loaf.GradientLoaf(message: "Xcode Loading", position: .centre, loafWidth: 280, loafHeight: 70, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 16, bgColor1: .systemRed, bgColor2: .systemBlue, fontColor: .black, loafImage: "Xcode", animationDirection: .left, duration: 2, loafjetView: view)
             break
         case 12:
             Loaf.GradientLoaf(message: "Airpods Detected", position: .centre, loafWidth: 250, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 16, bgColor1: .brown, bgColor2: .cyan, fontColor: .black, loafImage: "Airpods", animationDirection: .right, duration: 2, loafjetView: view)
@@ -127,10 +127,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             }
             break
         case 21:
-            if #available(iOS 15.0, *) {
-                Loaf.PopupCard(message: "Loafjet is a custom library used to add Toast, Popup Card and Loading indicator in your Swift project.", loafWidth: 250, loafHeight: 300, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor1: .systemMint, bgColor2: .systemOrange, fontColor: .darkGray, loafImage: "Logo", duration: 5, blurEffect: .none, loafjetView: view)
+            if #available(iOS 12.0, *) {
+                Loaf.PopupCard(message: "Loafjet is a custom library used to add Toast, Popup Card and Loading indicator in your Swift project.", loafWidth: 250, loafHeight: 300, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor1: .black, bgColor2: .black, fontColor: .white, loafImage: "Logo", duration: 5, blurEffect: .none, loafjetView: view)
             } else {
-                print("Pod LoafJet: Your device don't support this system Color (require iOS 15.0+)")
+                print("Pod LoafJet: Your device don't support this blur effect type (require iOS 10.0+)")
             }
             break
         case 30:
