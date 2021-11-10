@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Loafjet'
-  s.version          = '2.1.0'
-  s.summary          = 'Loafjet is a custom library used to add Toast, Popup Card and Loading indicator in your Swift project'
+  s.version          = '2.2.0'
+  s.summary          = 'Loafjet is a lightweight custom framework used to add Loafs, Dash Board, Popup Card, and Loading indicator in your Swift project'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
