@@ -19,6 +19,8 @@ class StudioViewController: UIViewController {
     @IBOutlet weak var heightTF: UITextField!
     @IBOutlet weak var fontStyleTF: UITextField!
     
+    @IBOutlet weak var sizeLabel: UILabel!
+    
     @IBOutlet weak var bgBtn: UIButton!
     @IBOutlet weak var bg1Btn: UIButton!
     @IBOutlet weak var bg2Btn: UIButton!
@@ -122,12 +124,16 @@ class StudioViewController: UIViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             loafType = 0
+            sizeLabel.text = " Width (>240) x Height (90-40)"
         case 1:
             loafType = 1
+            sizeLabel.text = " Width (>240) x Height (90-40)"
         case 2:
             loafType = 2
+            sizeLabel.text = " Width (>250) x Height (>300)"
         case 3:
             loafType = 3
+            sizeLabel.text = " Width (>100) x Height (>100)"
         default:
             break
         }
