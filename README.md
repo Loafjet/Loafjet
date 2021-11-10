@@ -94,14 +94,20 @@ Loaf.PopupCard(message: String, position:LoafPosition, loafWidth:CGFloat, loafHe
 ```swift
 * With Default Parameters 📗
 
-Loaf.dashBoard(dashImage: String, dashTitle: String, dashContent: String, dashButtonTitle: String, mainView: UIView)
+Loaf.dashBoard(dashImage: String, dashTitle: String, dashContent: String, dashButtonTitle: String, mainView: UIView, completion: () -> ())
 
 * Without Default Parameters 📘
 
-Loaf.dashBoard(dashSpacing: CGFloat, dashRadius: CGFloat, dashColor: UIColor, dashImage: String, dashImageRadius: CGFloat, dashTitle: String, dashTitleColor: UIColor, dashContent: String, dashContentColor: UIColor, dashButtonTitle: String, dashButtonTitleColor: UIColor, dashButtonColor: UIColor, dashButtonRadius: CGFloat, dashButtonBorderColor: UIColor, dashButtonBorderWidth: CGFloat, dashDuration: TimeInterval, mainView: UIView)
+Loaf.dashBoard(dashSpacing: CGFloat, dashRadius: CGFloat, dashColor: UIColor, dashImage: String, dashImageRadius: CGFloat, dashTitle: String, dashTitleColor: UIColor, dashContent: String, dashContentColor: UIColor, dashButtonTitle: String, dashButtonTitleColor: UIColor, dashButtonColor: UIColor, dashButtonRadius: CGFloat, dashButtonBorderColor: UIColor, dashButtonBorderWidth: CGFloat, dashDuration: TimeInterval, mainView: UIView, completion: () -> ())
 
 ```
 * Dash Board [Demo Photo 🌁](https://github.com/Loafjet/Loafjet/blob/master/README.md#dash-board-1)
+* Calling `Dasboard Dismissal` is required when Dash Board is used❕.
+
+### Dash Board Dismissal 📕
+```swift
+Loaf.dismissDashBoard(dashBoardView: UIView)
+```
 
 ### LoafWheel
 ```swift
@@ -127,7 +133,7 @@ Loaf.dismissWheel(loafWheelView:UIView)
 * Clone the repo and open `Loafjet.xcworkspace`.
 * There is a live Studio made for developers to customise their Loaf in live. The live preview allows to select the best customisation possible.
 * I've provided a demo project to showcase the uses of Loafjet! too.
-* Here you can see and experiment custom Loaf styles in `Examples.swift`.
+* Now you can experiment in the **Studio** and design the best suitable loafjet for your projects.
 
 | Examples | Studio | Studio |  Studio |           
 | --- | --- | -- | -- |
@@ -170,6 +176,7 @@ Loaf.dismissWheel(loafWheelView:UIView)
 | alphaValue | Opacity value for Loaf's background|
 | loafImage | Image on Loaf |
 | duration | Loaf Duration |
+| completion | Closure to add actions to be performed|
 | animationDirection | Loaf Animation type |
 | blurEffect | Blur effect type |
 | wheelStyle | Wheel Style |
