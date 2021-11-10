@@ -2,7 +2,7 @@
 <img src = "https://user-images.githubusercontent.com/56252259/105874888-21ac6480-6023-11eb-9915-954f2d41f5d0.png" width = 800, height = 400>
 </p>
 
-<p align="center">
+<!-- <p align="center">
 <a href="https://gokulnair-2001.medium.com/loafjet-a-toast-replacement-for-swift-3fd9a1563401"><img src="https://user-images.githubusercontent.com/56252259/112606155-0fda1880-8e3e-11eb-94b8-3e3db08fe822.png" width = 50, height = 50></img></a>
 <a href="https://dev.to/gokulnair2001/loafjet-a-toast-replacement-for-swift-51e0"><img src="https://user-images.githubusercontent.com/56252259/114194494-308d8c80-996d-11eb-9ad5-46fde7028a3f.png" width = 50, height = 50></img></a>
 </p>
@@ -10,7 +10,7 @@
 <p align="center">
  Do follow our blog pages to know more about us 📃
 </p>
-
+-->
 # Loafjet 🚀
 ![Forks](https://img.shields.io/github/forks/Loafjet/Loafjet) ![Stars](https://img.shields.io/github/stars/Loafjet/Loafjet)  ![Issues](https://img.shields.io/github/issues/Loafjet/Loafjet) ![PRs](https://img.shields.io/github/issues-pr-raw/Loafjet/Loafjet) ![Languages](https://img.shields.io/github/languages/count/Loafjet/Loafjet) [![Version](https://img.shields.io/cocoapods/v/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet) ![Badges](https://img.shields.io/badge/License-MIT-yellow)  [![Platform](https://img.shields.io/cocoapods/p/Loafjet.svg?style=flat)](https://cocoapods.org/pods/Loafjet) [![Relative date](https://img.shields.io/date/1577392258?color=important&label=started&logo=github)](https://github.com/Loafjet/Loafjet)  [![Maintenance](https://img.shields.io/maintenance/yes/2021?color=green&logo=github)](https://github.com/Loafjet/Loafjet) ![commit](https://img.shields.io/github/commits-since/Loafjet/Loafjet/2.0.0/master) ![contributors](https://img.shields.io/github/contributors/Loafjet/Loafjet)![Badge](https://img.shields.io/badge/Xcode-12.0-green) ![badge](https://img.shields.io/badge/Swift-5.1-red) ![size](https://img.shields.io/github/languages/code-size/Loafjet/Loafjet) ![Watchers](https://img.shields.io/github/watchers/Loafjet/Loafjet?label=Watch)
 
@@ -34,11 +34,6 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'Loafjet'
 ```
-## Playground 💻
-
-* I've provided a demo project to showcase the uses of Loafjet! Simply clone this repo, and open `Loafjet.xcworkspace`.
-* Run `pod install`.
-* Here you can see and experiment custom Loaf styles in `Examples.swift`.
 
 # How To Use 📁 ?
 From any view controller, a Loaf can be presented by following this two steps:
@@ -99,14 +94,20 @@ Loaf.PopupCard(message: String, position:LoafPosition, loafWidth:CGFloat, loafHe
 ```swift
 * With Default Parameters 📗
 
-Loaf.dashBoard(dashImage: String, dashTitle: String, dashContent: String, dashButtonTitle: String, mainView: UIView)
+Loaf.dashBoard(dashImage: String, dashTitle: String, dashContent: String, dashButtonTitle: String, mainView: UIView, completion: () -> ())
 
 * Without Default Parameters 📘
 
-Loaf.dashBoard(dashSpacing: CGFloat, dashRadius: CGFloat, dashColor: UIColor, dashImage: String, dashImageRadius: CGFloat, dashTitle: String, dashTitleColor: UIColor, dashContent: String, dashContentColor: UIColor, dashButtonTitle: String, dashButtonTitleColor: UIColor, dashButtonColor: UIColor, dashButtonRadius: CGFloat, dashButtonBorderColor: UIColor, dashButtonBorderWidth: CGFloat, dashDuration: TimeInterval, mainView: UIView)
+Loaf.dashBoard(dashSpacing: CGFloat, dashRadius: CGFloat, dashColor: UIColor, dashImage: String, dashImageRadius: CGFloat, dashTitle: String, dashTitleColor: UIColor, dashContent: String, dashContentColor: UIColor, dashButtonTitle: String, dashButtonTitleColor: UIColor, dashButtonColor: UIColor, dashButtonRadius: CGFloat, dashButtonBorderColor: UIColor, dashButtonBorderWidth: CGFloat, dashDuration: TimeInterval, mainView: UIView, completion: () -> ())
 
 ```
 * Dash Board [Demo Photo 🌁](https://github.com/Loafjet/Loafjet/blob/master/README.md#dash-board-1)
+* Calling `Dasboard Dismissal` is required when Dash Board is used❕.
+
+### Dash Board Dismissal 📕
+```swift
+Loaf.dismissDashBoard(dashBoardView: UIView)
+```
 
 ### LoafWheel
 ```swift
@@ -126,13 +127,26 @@ Loaf.LoafWheel(message: String, loafWidth:CGFloat, loafHeight:CGFloat, cornerRad
 ```swift
 Loaf.dismissWheel(loafWheelView:UIView)
 ```
+
+## STUDIO 💻
+
+* Clone the repo and open `Loafjet.xcworkspace`.
+* There is a live Studio made for developers to customise their Loaf in live. The live preview allows to select the best customisation possible.
+* I've provided a demo project to showcase the uses of Loafjet! too.
+* Now you can experiment in the **Studio** and design the best suitable loafjet for your projects.
+
+| Examples | Studio | Studio |  Studio |           
+| --- | --- | -- | -- |
+| <img src="https://user-images.githubusercontent.com/56252259/141103473-0ce1edd9-0521-46f1-a07f-aa477ec53835.png" width = 240, height = 420></img> | <img src="https://user-images.githubusercontent.com/56252259/141103830-d0addf08-5518-4d24-abc1-0d42bfe81526.png" width = 240, height = 420></img> | <img src="https://user-images.githubusercontent.com/56252259/141103867-d1866652-e686-4ec6-87d9-5a38549f1996.png" width = 240, height = 420></img> | <img src="https://user-images.githubusercontent.com/56252259/141104332-f6d869d2-850a-44c2-a5ed-43402995b4a3.png" width = 240, height = 420></img> |
+
+
 ## Don't want to use CocoaPods❗️
 <details>
 <summary>
  I have a solution 👀
 </summary>
  
- * Add this [Loaf.swift file](https://github.com/Loafjet/Loafjet/tree/master/Source) into your project.</br>
+ * Add the [Source Folder](https://github.com/Loafjet/Loafjet/tree/master/Source) into your project.</br>
  * Now you are ready to use Loafjet 🚀.</br>
  * Remaining steps are same 😁.</br>
  * Do read the documentation till the end to get a reward 🎁 from [Loafjet](https://github.com/Loafjet) organisation. </br>
@@ -162,6 +176,7 @@ Loaf.dismissWheel(loafWheelView:UIView)
 | alphaValue | Opacity value for Loaf's background|
 | loafImage | Image on Loaf |
 | duration | Loaf Duration |
+| completion | Closure to add actions to be performed|
 | animationDirection | Loaf Animation type |
 | blurEffect | Blur effect type |
 | wheelStyle | Wheel Style |
