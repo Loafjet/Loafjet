@@ -34,10 +34,11 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'Loafjet'
 ```
-## Playground 💻
+## STUDIO 💻
 
-* I've provided a demo project to showcase the uses of Loafjet! Simply clone this repo, and open `Loafjet.xcworkspace`.
-* Run `pod install`.
+* Clone the repo and open `Loafjet.xcworkspace`.
+* There is a live Studio made for developers to customise their Loaf in live. The live preview allows to select the best customisation possible.
+* I've provided a demo project to showcase the uses of Loafjet! too.
 * Here you can see and experiment custom Loaf styles in `Examples.swift`.
 
 # How To Use 📁 ?
