@@ -129,10 +129,9 @@ Loaf.dismissWheel(loafWheelView:UIView)
 * I've provided a demo project to showcase the uses of Loafjet! too.
 * Here you can see and experiment custom Loaf styles in `Examples.swift`.
 
-| Examples | Studio  | Studio  |             
-| --- | --- | -- |
-| <img src="https://user-images.githubusercontent.com/56252259/141103473-0ce1edd9-0521-46f1-a07f-aa477ec53835.png" width = 240, height = 450></img> | <img src="https://user-images.githubusercontent.com/56252259/141103830-d0addf08-5518-4d24-abc1-0d42bfe81526.png" width = 240, height = 450></img> |
-<img src="https://user-images.githubusercontent.com/56252259/141103867-d1866652-e686-4ec6-87d9-5a38549f1996.png" width = 240, height = 450></img> |
+| Examples | Studio | Studio |  Studio |           
+| --- | --- | -- | -- |
+| <img src="https://user-images.githubusercontent.com/56252259/141103473-0ce1edd9-0521-46f1-a07f-aa477ec53835.png" width = 240, height = 430></img> | <img src="https://user-images.githubusercontent.com/56252259/141103830-d0addf08-5518-4d24-abc1-0d42bfe81526.png" width = 240, height = 430></img> | <img src="https://user-images.githubusercontent.com/56252259/141103867-d1866652-e686-4ec6-87d9-5a38549f1996.png" width = 240, height = 430></img> | <img src="https://user-images.githubusercontent.com/56252259/141104332-f6d869d2-850a-44c2-a5ed-43402995b4a3.png" width = 240, height = 430></img> |
 
 
 ## Don't want to use CocoaPods❗️
