@@ -53,7 +53,7 @@ public class Loaf{
     public static func PlainLoaf(message: String, position:LoafPosition, loafWidth:CGFloat = 240 , loafHeight:CGFloat = 40,cornerRadius: CGFloat = 20, fontStyle: String = "Avenir-Medium", fontSize: CGFloat = 17, bgColor: UIColor = .black,fontColor: UIColor = .darkGray, alphaValue:CGFloat = 1.0, loafImage: String = "", animationDirection: LoafAnimation , duration: TimeInterval = 3.0, loafjetView: UIView){
         
         guard (loafHeight >= 40 && loafHeight <= 90 && loafWidth >= 240) else {
-            print("Pod Loafjet: Loafjet must have Height varying from 90 - 40 and Width greater than 240")
+            print("Pod Loafjet: Plain Loaf must have Height varying from 90 - 40 and Width greater than 240")
             return
         }
         
@@ -119,7 +119,7 @@ public class Loaf{
     public static func GradientLoaf(message: String, position:LoafPosition, loafWidth:CGFloat = 240,loafHeight:CGFloat = 40,cornerRadius: CGFloat = 20, fontStyle: String = "Avenir-Medium", fontSize: CGFloat = 17, bgColor1: UIColor, bgColor2: UIColor, fontColor: UIColor, loafImage: String = "", animationDirection: LoafAnimation, duration: TimeInterval = 2.0, loafjetView: UIView) {
         
         guard (loafHeight >= 40 && loafHeight <= 90 && loafWidth >= 240) else {
-            print("Pod Loafjet: Loafjet must have Height varying from 90 - 40 and Width greater than 240")
+            print("Pod Loafjet: Gradient Loaf must have Height varying from 90 - 40 and Width greater than 240")
             return
         }
         
@@ -198,6 +198,11 @@ extension Loaf{
     ///   - loafjetView: UIView on which the Card is to be presented
     
     public static func PopupCard(message: String, loafWidth:CGFloat = 150,loafHeight:CGFloat = 40,cornerRadius: CGFloat = 20, fontStyle: String = "Avenir-Medium", fontSize: CGFloat = 17, bgColor1: UIColor, bgColor2: UIColor, fontColor: UIColor,loafImage: String, duration: TimeInterval = 2.0, blurEffect: UIBlurEffect.Style?, loafjetView: UIView) {
+        
+        guard (loafHeight >= 300 && loafWidth >= 250) else {
+            print("Pod Loafjet: Popup card must have Height greater than 300 and Width greater than 250")
+            return
+        }
         
         PopUpCardView.layer.sublayers?.remove(at: 0)            // To remove previously added gradient layer
         
@@ -288,6 +293,11 @@ extension Loaf {
     ///   - loafjetView: UIView on which the Loaf is to be presented
     
     public static func LoafWheel(message: String, loafWidth:CGFloat = 50, loafHeight:CGFloat = 50, cornerRadius:CGFloat = 20, bgColor1:UIColor, bgColor2:UIColor, fontStyle: String = "Avenir-Medium", fontSize: CGFloat = 17, fontColor: UIColor = .black, duration: TimeInterval = 2.0, wheelStyle: UIActivityIndicatorView.Style = .white, blurEffect: UIBlurEffect.Style? = .regular ,loafWheelView: UIView) {
+        
+        guard (loafHeight >= 100 && loafWidth >= 100) else {
+            print("Pod Loafjet: Loaf Wheel must have Height and Width greater than 100")
+            return
+        }
         
         LoafWheelView.layer.sublayers?.remove(at: 0)            // To remove previously added gradient layer
         

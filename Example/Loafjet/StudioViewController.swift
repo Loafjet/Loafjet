@@ -11,7 +11,7 @@ import Loafjet
 
 @available(iOS 14.0, *)
 class StudioViewController: UIViewController {
-
+    
     @IBOutlet weak var studioView: UIView!
     
     @IBOutlet weak var messageTF: UITextField!
@@ -19,7 +19,6 @@ class StudioViewController: UIViewController {
     @IBOutlet weak var heightTF: UITextField!
     @IBOutlet weak var fontStyleTF: UITextField!
     
-   
     @IBOutlet weak var bgBtn: UIButton!
     @IBOutlet weak var bg1Btn: UIButton!
     @IBOutlet weak var bg2Btn: UIButton!
@@ -37,9 +36,11 @@ class StudioViewController: UIViewController {
     var selectedColor:UIColor = .yellow
     var selectColorFor = 0
     var bgColor:UIColor = .systemIndigo
-    var fontColor:UIColor = .systemOrange
-    var bg1Color:UIColor = .systemPink
+    var fontColor:UIColor = .black
+    var bg1Color:UIColor = .systemYellow
     var bg2Color:UIColor = .systemRed
+    var blurType:UIBlurEffect.Style = .regular
+    var wheelType:UIActivityIndicatorView.Style = .medium
     
     var colorPicker = UIColorPickerViewController()
     
@@ -55,15 +56,37 @@ class StudioViewController: UIViewController {
     @IBAction func executeButton(_ sender: Any) {
         
         if messageTF.text?.trimmingCharacters(in: .whitespaces) == "" {
-            messageTF.text = "Loafjet"
+            switch loafType {
+            case 0:
+                messageTF.text = "Loafjet"
+            case 1:
+                messageTF.text = "Loafjet"
+            case 2:
+                messageTF.text = "Loafjet is a custom library used to add Toast, Popup Card and Loading indicator in your Swift project."
+            case 3:
+                messageTF.text = "LoafJet loading!"
+            default:
+                messageTF.text = "Loafjet"
+            }
         }
         
         if widthTF.text?.trimmingCharacters(in: .whitespaces) == "" {
             widthTF.text = "250"
         }
-        
+       
         if heightTF.text?.trimmingCharacters(in: .whitespaces) == "" {
-            heightTF.text = "50"
+            switch loafType {
+            case 0:
+                heightTF.text = "50"
+            case 1:
+                heightTF.text = "50"
+            case 2:
+                heightTF.text = "300"
+            case 3:
+                heightTF.text = "110"
+            default:
+                heightTF.text = "50"
+            }
         }
         
         if fontStyleTF.text?.trimmingCharacters(in: .whitespaces) == "" {
@@ -78,11 +101,17 @@ class StudioViewController: UIViewController {
             durationTF.text = "2"
         }
         
+        
         switch loafType {
         case 0:
             Loaf.PlainLoaf(message: messageTF.text!, position: positionType, loafWidth: CGFloat(Double(widthTF.text!) ?? 250), loafHeight: CGFloat(Double(heightTF.text!) ?? 50), cornerRadius: cornerRadius, fontStyle: fontStyleTF.text!, fontSize: fontSize, bgColor: bgColor, fontColor: fontColor, alphaValue: alpha, loafImage: imageNameTF.text!, animationDirection: animationType, duration: TimeInterval(durationTF.text!) ?? 2, loafjetView: studioView)
         case 1:
             Loaf.GradientLoaf(message: messageTF.text!, position: positionType, loafWidth: CGFloat(Double(widthTF.text!) ?? 250), loafHeight: CGFloat(Double(heightTF.text!) ?? 50), cornerRadius: cornerRadius, fontStyle: fontStyleTF.text!, fontSize: fontSize, bgColor1: bg1Color, bgColor2: bg2Color, fontColor: fontColor, loafImage: imageNameTF.text!, animationDirection: animationType, duration: TimeInterval(durationTF.text!) ?? 2, loafjetView: studioView)
+        case 2:
+            Loaf.PopupCard(message: messageTF.text!, loafWidth: CGFloat(Double(widthTF.text!) ?? 250), loafHeight: CGFloat(Double(heightTF.text!) ?? 300), cornerRadius: cornerRadius, fontStyle: fontStyleTF.text!, fontSize: fontSize, bgColor1: bg1Color, bgColor2: bg2Color, fontColor: fontColor, loafImage: imageNameTF.text!, duration: TimeInterval(durationTF.text!) ?? 2, blurEffect: blurType, loafjetView: studioView)
+        case 3:
+            Loaf.LoafWheel(message: messageTF.text!, loafWidth: CGFloat(Double(widthTF.text!) ?? 250), loafHeight: CGFloat(Double(heightTF.text!) ?? 300), cornerRadius: cornerRadius, bgColor1: bg1Color, bgColor2: bg2Color, fontStyle: fontStyleTF.text!, fontSize: fontSize, fontColor: fontColor, duration: TimeInterval(durationTF.text!) ?? 2, wheelStyle: wheelType, blurEffect: blurType, loafWheelView: studioView)
+            
         default:
             Loaf.PlainLoaf(message: "Welcome", position: .top, loafWidth: 250, loafHeight: 90, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .gray, fontColor: .black, alphaValue: 1.0, animationDirection: .top, duration: 2, loafjetView: studioView)
         }
@@ -95,6 +124,10 @@ class StudioViewController: UIViewController {
             loafType = 0
         case 1:
             loafType = 1
+        case 2:
+            loafType = 2
+        case 3:
+            loafType = 3
         default:
             break
         }
@@ -160,6 +193,30 @@ class StudioViewController: UIViewController {
         alpha = CGFloat(sender.value)
     }
     
+    @IBAction func blurSlider(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            blurType = .regular
+        case 1:
+            blurType = .light
+        case 2:
+            blurType = .dark
+        default:
+            blurType = .regular
+        }
+    }
+    
+    @IBAction func wheelSlider(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            wheelType = .medium
+        case 1:
+            wheelType = .large
+        default:
+            wheelType = .medium
+        }
+    }
+    
     func openColorPicker() {
         colorPicker.supportsAlpha = true
         present(colorPicker, animated: true, completion: nil)
@@ -170,7 +227,7 @@ class StudioViewController: UIViewController {
 
 @available(iOS 14.0, *)
 extension StudioViewController: UIColorPickerViewControllerDelegate {
-
+    
     func colorPickerViewControllerDidSelectColor(_ viewController: UIColorPickerViewController) {
         selectedColor = colorPicker.selectedColor
     }
