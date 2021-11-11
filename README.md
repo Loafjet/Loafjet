@@ -314,7 +314,7 @@ if #available(iOS 10.0, *) {.
 * Loafimages which you add must be of A x A Size(Else images may get cutout!).
 * In the Test Run make sure you don't run all the Loafjets at a time, wait for one whole Loafjet to complete its task, then go for next.
 * All the Loafjets are created with default parameters too, so notice carefully which one you are using (Functions with and without default parameters are shown ⬆️).
-* **Loafjet is still in developement stage, you might face some bugs; do create an [issue](https://github.com/Loafjet/Loafjet/issues/new/choose) and inform us☮️.**
+<!--* **Loafjet is still in developement stage, you might face some bugs; do create an [issue](https://github.com/Loafjet/Loafjet/issues/new/choose) and inform us☮️.**-->
 * **You can use two or more different Loafjet type at a time, but you can't use 2 or more Loafjet of same type at a time**.
 ## License ⚖️
 
