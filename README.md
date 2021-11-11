@@ -101,6 +101,7 @@ Loaf.dashBoard(dashImage: String, dashTitle: String, dashContent: String, dashBu
 Loaf.dashBoard(dashSpacing: CGFloat, dashRadius: CGFloat, dashColor: UIColor, dashImage: String, dashImageRadius: CGFloat, dashTitle: String, dashTitleColor: UIColor, dashContent: String, dashContentColor: UIColor, dashButtonTitle: String, dashButtonTitleColor: UIColor, dashButtonColor: UIColor, dashButtonRadius: CGFloat, dashButtonBorderColor: UIColor, dashButtonBorderWidth: CGFloat, dashDuration: TimeInterval, mainView: UIView, completion: () -> ())
 
 ```
+* Available for **iOS 14** and above
 * Dash Board [Demo Photo 🌁](https://github.com/Loafjet/Loafjet/blob/master/README.md#dash-board-1)
 * Calling `Dasboard Dismissal` is required when Dash Board is used❕.
 
@@ -242,6 +243,7 @@ Bottom | ✅ | ✅ | ❌ | ✅
 |-- |-- |
 | <img width="245" alt="Screenshot 2021-01-27 at 2 04 10 AM" src="https://user-images.githubusercontent.com/56252259/113347792-4be80e80-9353-11eb-9715-bd0c77da3f85.png">|<img width="245" alt="Screenshot 2021-01-27 at 2 04 10 AM" src="https://user-images.githubusercontent.com/56252259/113347784-4985b480-9353-11eb-944c-92a71905239c.png"> |
 
+* Dash Board is available for iOS 14 and above.
 * The above shown are some possible ways, How you can customise?, do try making your own and post it in the [issue](https://github.com/Loafjet/Loafjet/issues) section and get featured⚡️.
 * What are you waiting for, write `pod Loafjet` and `pod install` it .
 * Done?, Now enjoy using Loafjet🚀.
