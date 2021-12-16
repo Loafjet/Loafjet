@@ -353,6 +353,8 @@ Loafjet is available under the MIT license. See the [LICENSE](https://github.com
 | ----- |
 | <a href="https://apps.apple.com/in/app/dock/id1569386912"><img src = "https://user-images.githubusercontent.com/56252259/127950419-06629304-973a-4e6d-9a90-040af7beb61d.png" width = 150, height = 150> |
 
+* If your App uses **LOAFJET**, then let us know to get your app featured on our [Website](https://loafjet.github.io/Loafjet/).
+ 
 # Community 🍕
 * Want to be a part of our Organisation 🚀, then:
 * Mail us at **gokulnair.2001@gmail.com** ✉️
