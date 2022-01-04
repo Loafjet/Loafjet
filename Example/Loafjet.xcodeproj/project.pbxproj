@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		551152962614C38B00A5E92B /* loafjetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551152952614C38B00A5E92B /* loafjetTableViewCell.swift */; };
 		551A4886273AB05100567846 /* StudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A4885273AB05100567846 /* StudioViewController.swift */; };
+		55C1F5A727842496003D7B96 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C1F5A627842496003D7B96 /* Utilities.swift */; };
+		55C1F5AC27843CF7003D7B96 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C1F5AB27843CF7003D7B96 /* OnBoardingViewController.swift */; };
+		55C1F5AE27845CEF003D7B96 /* hapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C1F5AD27845CEF003D7B96 /* hapticFeedback.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* MainViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -35,6 +38,9 @@
 		341852D3930DD1301C7118BD /* Pods-Loafjet_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loafjet_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Loafjet_Tests/Pods-Loafjet_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		551152952614C38B00A5E92B /* loafjetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loafjetTableViewCell.swift; sourceTree = "<group>"; };
 		551A4885273AB05100567846 /* StudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioViewController.swift; sourceTree = "<group>"; };
+		55C1F5A627842496003D7B96 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		55C1F5AB27843CF7003D7B96 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		55C1F5AD27845CEF003D7B96 /* hapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hapticFeedback.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Loafjet_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loafjet_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +88,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		55C1F5A8278424A5003D7B96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				551152952614C38B00A5E92B /* loafjetTableViewCell.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		55C1F5A9278424AA003D7B96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		55C1F5AA278424AF003D7B96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				55C1F5AB27843CF7003D7B96 /* OnBoardingViewController.swift */,
+				607FACD71AFB9204008FA782 /* MainViewController.swift */,
+				551A4885273AB05100567846 /* StudioViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -107,13 +141,11 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* MainViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				551A4885273AB05100567846 /* StudioViewController.swift */,
-				551152952614C38B00A5E92B /* loafjetTableViewCell.swift */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				55C1F5AA278424AF003D7B96 /* Controller */,
+				55C1F5A9278424AA003D7B96 /* View */,
+				55C1F5A8278424A5003D7B96 /* Model */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				55C1F5A627842496003D7B96 /* Utilities.swift */,
 			);
 			name = "Example for Loafjet";
 			path = Loafjet;
@@ -123,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD41AFB9204008FA782 /* Info.plist */,
+				55C1F5AD27845CEF003D7B96 /* hapticFeedback.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -223,6 +256,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = GJM8829Q7N;
 						LastSwiftMigration = 1230;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -339,7 +373,10 @@
 			files = (
 				551A4886273AB05100567846 /* StudioViewController.swift in Sources */,
 				551152962614C38B00A5E92B /* loafjetTableViewCell.swift in Sources */,
+				55C1F5AC27843CF7003D7B96 /* OnBoardingViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* MainViewController.swift in Sources */,
+				55C1F5AE27845CEF003D7B96 /* hapticFeedback.swift in Sources */,
+				55C1F5A727842496003D7B96 /* Utilities.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,7 +468,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -481,7 +518,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -494,12 +531,14 @@
 			baseConfigurationReference = 981245B4EBF9A74856DDD377 /* Pods-Loafjet_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = GJM8829Q7N;
 				INFOPLIST_FILE = Loafjet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 2.2.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.loafjet.gokulnair;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
@@ -511,12 +550,14 @@
 			baseConfigurationReference = 6F3FE9E1FBEAF8144DF7600D /* Pods-Loafjet_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = GJM8829Q7N;
 				INFOPLIST_FILE = Loafjet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 2.2.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.loafjet.gokulnair;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
@@ -527,6 +568,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 341852D3930DD1301C7118BD /* Pods-Loafjet_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = GJM8829Q7N;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -549,6 +591,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1BB206D12AE3608A0BD9B5FE /* Pods-Loafjet_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = GJM8829Q7N;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
