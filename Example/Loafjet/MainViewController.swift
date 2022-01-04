@@ -9,6 +9,10 @@
 import UIKit
 import Loafjet
 
+protocol showIntroDelegate {
+    func showIntro()
+}
+
 class LoafTypes{
     var loafName: String?
     var loafType: [String]?
@@ -22,7 +26,19 @@ class LoafTypes{
         self.loafImage = loafImage
     }
 }
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, showIntroDelegate {
+    
+    func showIntro() {
+        Loaf.dashBoard(dashSpacing: 20, dashRadius: 20, dashColor: .label, dashImage: "Logo", dashImageRadius: 0, dashTitle: "LOAFJET 🚀", dashTitleColor: customRed, dashContent: "Welcome to Loafjet, an Open Source Library used to add Loafs, Dash Board, Popup Card, and Loading indicator in your Swift project", dashContentColor: .systemBackground, dashButtonTitle: "Lets Dive in!", dashButtonTitleColor: .label, dashButtonColor: .systemBackground, dashButtonRadius: 20, dashButtonBorderColor: .clear, dashButtonBorderWidth: 0, dashDuration: 1.0, mainView: view){
+            
+            hapticFeedback.haptic.lightFeedbackGenerator()
+            
+            Loaf.dismissDashBoard(dashBoardView: self.view)
+            
+            Loaf.GradientLoaf(message: "Start Experimenting", position: .top, loafWidth: 250, loafHeight: 45, cornerRadius: 5, fontStyle: "Avenir-Medium", fontSize: 16, bgColor1: .black, bgColor2: .systemTeal, fontColor: .white, loafImage: "Logo", animationDirection: .top, duration: 2, loafjetView: self.view)
+
+        }
+    }
     
     var loafTypes = [LoafTypes]()
     let customGreen:UIColor = #colorLiteral(red: 0, green: 0.9810667634, blue: 0.5736914277, alpha: 1)
@@ -44,7 +60,20 @@ class MainViewController: UIViewController {
 
     }
     
-    //MARK:- Dark / Light mode toggle
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //MARK: - Onboarding Stuffs
+        if core.shared.isNewUser() {
+            let VC = storyboard?.instantiateViewController(withIdentifier: "onboarding") as! OnBoardingViewController
+            VC.isModalInPresentation = true
+            VC.introDelegate = self
+            present(VC, animated: true)
+        }
+        
+    }
+    
+    //MARK: - Dark / Light mode toggle
     @IBAction func segemntAction(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             changeAppearance(mode: .light)
@@ -62,6 +91,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func studioButton(_ sender: Any) {
+        hapticFeedback.haptic.lightFeedbackGenerator()
         self.performSegue(withIdentifier: "openStudio", sender: nil)
     }
 }
@@ -94,6 +124,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     
     //MARK:- Test run method
     func performTask(cellNo: Int){
+        
         switch cellNo {
         case 0:
             Loaf.PlainLoaf(message: "Welcome", position: .top, loafWidth: 250, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .gray, fontColor: .black, alphaValue: 1.0, animationDirection: .top, duration: 2, loafjetView: view)
@@ -120,18 +151,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             Loaf.GradientLoaf(message: "HomePod Mini Detected", position: .bottom, loafWidth: 300, loafHeight: 50, cornerRadius: 20, fontStyle: "Avenir-Heavy", fontSize: 17, bgColor1: .systemPink, bgColor2: .black, fontColor: .white, loafImage: "HomePodMini", animationDirection: .bottom, duration: 2, loafjetView: view)
             break
         case 20:
-            if #available(iOS 12.0, *) {
-                Loaf.PopupCard(message: "Loafjet is a custom library used to add Toast, Popup Card and Loading indicator in your Swift project.", loafWidth: 250, loafHeight: 300, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor1: .black, bgColor2: .systemRed, fontColor: .white, loafImage: "Logo", duration: 3, blurEffect: .dark, loafjetView: view)
-            } else {
-                print("Pod LoafJet: Your device don't support this blur effect type (require iOS 10.0+)")
-            }
+                Loaf.PopupCard(message: "Loafjet is a custom library used to add Loafs, Popup Card and Loading indicator in your Swift project.", loafWidth: 250, loafHeight: 300, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor1: .black, bgColor2: .systemRed, fontColor: .white, loafImage: "Logo", duration: 3, blurEffect: .dark, loafjetView: view)
             break
         case 21:
-            if #available(iOS 12.0, *) {
                 Loaf.PopupCard(message: "Loafjet is a custom library used to add Toast, Popup Card and Loading indicator in your Swift project.", loafWidth: 250, loafHeight: 300, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor1: .black, bgColor2: .black, fontColor: .white, loafImage: "Logo", duration: 5, blurEffect: .none, loafjetView: view)
-            } else {
-                print("Pod LoafJet: Your device don't support this blur effect type (require iOS 10.0+)")
-            }
             break
         case 30:
             if #available(iOS 14.0, *) {
@@ -178,11 +201,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             }
             
         case 40:
-            if #available(iOS 12.0, *) {
-                Loaf.LoafWheel(message: "LoafJet loading!", loafWidth: 250, loafHeight: 110, cornerRadius: 20, bgColor1: .systemPink, bgColor2: .systemOrange, fontStyle: "Avenir-Heavy", fontSize: 18, fontColor: .white, duration: 5, wheelStyle: .whiteLarge, blurEffect: .dark, loafWheelView: view)
-            } else {
-                print("Pod LoafJet: Your device dont support this blur effect type (require iOS 10.0+)")
-            }
+            Loaf.LoafWheel(message: "LoafJet loading!", loafWidth: 250, loafHeight: 110, cornerRadius: 20, bgColor1: .systemPink, bgColor2: .systemOrange, fontStyle: "Avenir-Heavy", fontSize: 18, fontColor: .white, duration: 5, wheelStyle: .large, blurEffect: .dark, loafWheelView: view)
             break
         case 50:
             Loaf.PlainLoaf(message: "Xcode", position: .top, loafWidth: 200, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .systemBlue, fontColor: .black, alphaValue: 1.0, loafImage: "Xcode", animationDirection: .left, duration: 2, loafjetView: view)
@@ -203,14 +222,25 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             Loaf.PlainLoaf(message: "Information LoafJet", position: .bottom, loafWidth: 250, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .systemOrange, fontColor: .white, alphaValue: 1.0, loafImage: "info", animationDirection: .bottom, duration: 2, loafjetView: view)
             break
         case 56:
-            if #available(iOS 13.0, *) {
                 Loaf.PlainLoaf(message: "Do Not Disturb LoafJet", position: .bottom, loafWidth: 280, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 16, bgColor: .systemIndigo, fontColor: .white, alphaValue: 1.0, loafImage: "DND", animationDirection: .bottom, duration: 2, loafjetView: view)
-            } else {
-                print("Pod LoafJet: Your device dont support this color type (require iOS 13.0+)")
-            }
             break
         default:
             print("Error")
         }
     }
 }
+
+//MARK: -  Onboarding Code
+
+class core{
+    static let shared = core()
+    func isNewUser()->Bool {
+        return !UserDefaults.standard.bool(forKey: "onboarding")
+    }
+    
+    func setIsNotNewUser() {
+        UserDefaults.standard.set(true, forKey: "onboarding")
+    }
+}
+
+

@@ -9,7 +9,6 @@
 import UIKit
 import Loafjet
 
-@available(iOS 14.0, *)
 class StudioViewController: UIViewController {
     
     @IBOutlet weak var studioView: UIView!
@@ -66,10 +65,18 @@ class StudioViewController: UIViewController {
     }
     
     @IBAction func dismissButton(_ sender: Any) {
+        hapticFeedback.haptic.lightFeedbackGenerator()
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func loafjet(_ sender: Any) {
+        hapticFeedback.haptic.lightFeedbackGenerator()
+        UIApplication.shared.open(URL(string: "https://github.com/Loafjet/Loafjet")! as URL, options: [:], completionHandler: nil)
+    }
+    
     @IBAction func executeButton(_ sender: Any) {
+        
+        hapticFeedback.haptic.successFeedbackGenerator()
         
         if messageTF.text?.trimmingCharacters(in: .whitespaces) == "" {
             switch loafType {
@@ -89,7 +96,7 @@ class StudioViewController: UIViewController {
         if widthTF.text?.trimmingCharacters(in: .whitespaces) == "" {
             widthTF.text = "250"
         }
-       
+        
         if heightTF.text?.trimmingCharacters(in: .whitespaces) == "" {
             switch loafType {
             case 0:
@@ -104,6 +111,8 @@ class StudioViewController: UIViewController {
                 heightTF.text = "50"
             }
         }
+        
+        checkDimensions(width: CGFloat(Double(widthTF.text!) ?? 0), height: CGFloat(Double(heightTF.text!) ?? 0))
         
         if fontStyleTF.text?.trimmingCharacters(in: .whitespaces) == "" {
             fontStyleTF.text = "Avenir-Medium"
@@ -189,21 +198,25 @@ class StudioViewController: UIViewController {
     }
     
     @IBAction func backgroundColor(_ sender: Any) {
+        hapticFeedback.haptic.lightFeedbackGenerator()
         openColorPicker()
         selectColorFor = 0
     }
     
     @IBAction func fontcolor(_ sender: Any) {
+        hapticFeedback.haptic.lightFeedbackGenerator()
         openColorPicker()
         selectColorFor = 1
     }
     
     @IBAction func background1Color(_ sender: Any) {
+        hapticFeedback.haptic.lightFeedbackGenerator()
         openColorPicker()
         selectColorFor = 2
     }
     
     @IBAction func background2color(_ sender: Any) {
+        hapticFeedback.haptic.lightFeedbackGenerator()
         openColorPicker()
         selectColorFor = 3
     }
@@ -267,6 +280,36 @@ extension StudioViewController: UIColorPickerViewControllerDelegate {
             bg2Color = selectedColor
         default:
             break
+        }
+    }
+}
+
+//MARK: - Alert Generator
+extension StudioViewController {
+    
+    func checkDimensions(width: CGFloat, height: CGFloat) {
+        let newHeight = Int(height)
+        let newWidth = Int(width)
+        
+        switch loafType {
+        case 0:
+            if newHeight > 90 || newHeight < 40  || newWidth < 240 {
+                self.presentAlert(message: "Check dimensions\n Width (>240) x Height (90-40)")
+            }
+        case 1:
+            if newHeight > 90 || newHeight < 40  || newWidth < 240 {
+                self.presentAlert(message: "Check dimensions\n Width (>240) x Height (90-40)")
+            }
+        case 2:
+            if newHeight < 300 || newWidth < 250 {
+                self.presentAlert(message: "Check dimensions\n Width (>250) x Height (>300)")
+            }
+        case 3:
+            if newHeight < 100 || newWidth < 100 {
+                self.presentAlert(message: "Check dimensions\n Width (>100) x Height (>100)")
+            }
+        default:
+            self.presentAlert(message: "Check dimensions\n Check the dimension of selected Loafjet")
         }
     }
 }
