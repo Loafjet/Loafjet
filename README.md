@@ -18,6 +18,11 @@
 ## About 📒
 Loafjet is a ***light weight*** Toast(Loaf) generator framework which allows the user to add customised Toasts to their projects. Loafjet comes with various types of Toast Animations as well as Toast Positions. It can be used to add gradient and plain toasts. Loafjet comes with extra features like Popup Card and Loading Indicator which can be customised according to your needs.
 
+
+**Our Simulation App is available on App Store, Go check it out** 
+
+[<img src = "https://user-images.githubusercontent.com/56252259/148154222-3db54beb-2916-419b-996c-4d57d2ee3e3d.png" width = 210, height = 60>](https://apps.apple.com/in/app/loafjet/id1603181291)
+
 ## Now Customise Like Apple  !
 
 |Airpods Detection|Silent|Normal|
@@ -131,9 +136,12 @@ Loaf.dismissWheel(loafWheelView:UIView)
 
 ## STUDIO 💻
 
-* Clone the repo and open `Loafjet.xcworkspace`.
-* There is a live Studio made for developers to customise their Loaf in live. The live preview allows to select the best customisation possible.
-* I've provided a demo project to showcase the uses of Loafjet! too.
+* **Our Simulation App is available on App Store, Go check it out!** 
+
+[<img src = "https://user-images.githubusercontent.com/56252259/148154222-3db54beb-2916-419b-996c-4d57d2ee3e3d.png" width = 210, height = 60>](https://apps.apple.com/in/app/loafjet/id1603181291)
+
+* There app consists of a live Studio made for developers to customise their Loaf in live. The live preview allows to select the best customisation possible.
+* The app also have various prebuilt Loafjets, do check it out to get a better idea😃.
 * Now you can experiment in the **Studio** and design the best suitable loafjet for your projects.
 
 | Examples | Studio | Studio |  Studio |           
