@@ -127,7 +127,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
         
         switch cellNo {
         case 0:
-            Loaf.PlainLoaf(message: "Welcome", position: .top, loafWidth: 250, loafHeight: 40, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .gray, fontColor: .black, alphaValue: 1.0, animationDirection: .top, duration: 2, loafjetView: view)
+            Loaf.PlainLoaf(message: "Welcome", position: .top, loafWidth: 250, loafHeight: 45, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .systemGray, fontColor: .black, alphaValue: 1.0, animationDirection: .top, duration: 2, loafjetView: view)
             break
         case 1:
             Loaf.PlainLoaf(message: "LOAFJET", position: .centre, loafWidth: 250, loafHeight: 50, cornerRadius: 20, fontStyle: "Avenir", fontSize: 17, bgColor: .systemOrange, fontColor: .black, alphaValue: 1.0, animationDirection: .left, duration: 2, loafjetView: view)
@@ -204,7 +204,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
             Loaf.LoafWheel(message: "LoafJet loading!", loafWidth: 250, loafHeight: 110, cornerRadius: 20, bgColor1: .systemPink, bgColor2: .systemOrange, fontStyle: "Avenir-Heavy", fontSize: 18, fontColor: .white, duration: 5, wheelStyle: .large, blurEffect: .dark, loafWheelView: view)
             break
         case 50:
-            Loaf.PlainLoaf(message: "Xcode", position: .top, loafWidth: 200, loafHeight: 40, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .systemBlue, fontColor: .black, alphaValue: 1.0, loafImage: "Xcode", animationDirection: .left, duration: 2, loafjetView: view)
+            Loaf.PlainLoaf(message: "Xcode", position: .top, loafWidth: 250, loafHeight: 45, cornerRadius: 10, fontStyle: "Avenir-Medium", fontSize: 17, bgColor: .systemBlue, fontColor: .black, alphaValue: 1.0, loafImage: "Xcode", animationDirection: .top, duration: 2, loafjetView: view)
             break
         case 51:
             Loaf.PlainLoaf(message: "AirPods Connected", position: .top, loafWidth: 245, loafHeight: 45, cornerRadius: 20, fontStyle: "Avenir-Medium", fontSize: 16, bgColor: .black, fontColor: .white, alphaValue: 1.0, loafImage: "Airpods", animationDirection: .top, duration: 2, loafjetView: view)
