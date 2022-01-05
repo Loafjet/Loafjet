@@ -200,9 +200,9 @@ Loaf.dismissWheel(loafWheelView:UIView)
 
 Position & Animation | Left | Right | Top | Bottom 
 --- | --- | --- | --- | --- 
-Top | ✅ | ✅ | ✅ | ❌ 
+Top | ❌ | ❌ | ✅ | ❌ 
 Centre | ✅ | ✅ | ❌ | ❌ 
-Bottom | ✅ | ✅ | ❌ | ✅ 
+Bottom | ❌ | ❌ | ❌ | ✅ 
 
 - The above mentioned ❌ means that particular combination of position & animation won't be working accurately .
 
