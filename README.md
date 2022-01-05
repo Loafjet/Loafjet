@@ -198,13 +198,20 @@ Loaf.dismissWheel(loafWheelView:UIView)
 
 * Customise your Loaf according to the below given chart 🎛.
 
-Position & Animation | Left | Right | Top | Bottom 
+<!-- Position & Animation | Left | Right | Top | Bottom 
 --- | --- | --- | --- | --- 
-Top | ❌ | ❌ | ✅ | ❌ 
-Centre | ✅ | ✅ | ❌ | ❌ 
-Bottom | ❌ | ❌ | ❌ | ✅ 
+Top | - | - | ✅ | - 
+Centre | ✅ | ✅ | - | - 
+Bottom | - | - | - | ✅ -->
 
-- The above mentioned ❌ means that particular combination of position & animation won't be working accurately .
+Position | Animation |
+-- | -- |
+Top | Top 
+Centre | Left & Right
+Bottom | Bottom
+
+- The above mentioned are the possible combination of position & animation which are possible.
+- The remaining combinations are something which are not correct with UX prospect, so we have ignored them😃
 
 # Snapshots 📸
 
