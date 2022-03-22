@@ -265,7 +265,6 @@ Bottom | Bottom
 
 # Portrait + Landscape Support 🔄
 * Loafjet is made with Landscape + Portrait support* 🔓.
-* Now You can use your favourite Loaf without taking care of orientation🌀.
 * Have a look on your favourite Loafjet supports 📇
 
 Loafjet | Portrait | Landscape
